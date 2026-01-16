@@ -1,12 +1,66 @@
+# Claude Code / IDE
 .claude
 .kiro
 .tinkersan
 .playwright-mcp
+
+# Composer dependencies
+/vendor/
+/vendor-prefixed/
+composer.lock
+
+# Strauss
+/bin/strauss.phar
+
+# PHPUnit
+.phpunit.cache/
+.phpunit.result.cache
+coverage/
+phpunit.xml
+
+# Build artifacts
+/build/
+/dist/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.project
+.settings/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+error_log
+debug.log
+
+# Backup files
+*.bak
+*.backup
+*.sql
+*.tar.gz
+*.zip
+
+# Development
 tests
 zip.sh
-build
 docs
 CLAUDE.md
-composer.json
-composer.lock
-phpunit.xml
