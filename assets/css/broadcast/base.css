@@ -1,0 +1,142 @@
+/**
+ * OrderChatz 推播編輯介面 - 基礎樣式
+ *
+ * 提供基礎容器、共用元素和全域樣式
+ *
+ * @package OrderChatz
+ * @since 1.1.3
+ */
+
+/* ==========================================================================
+   基礎容器
+   ========================================================================== */
+
+.orderchatz-broadcast-page {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.wrap.orderchatz-admin-page h1 {
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   表單元素
+   ========================================================================== */
+
+.orderchatz-broadcast-page input[type="text"],
+.orderchatz-broadcast-page input[type="number"],
+.orderchatz-broadcast-page input[type="date"],
+.orderchatz-broadcast-page input[type="datetime-local"],
+.orderchatz-broadcast-page textarea,
+.orderchatz-broadcast-page select {
+    width: 100%;
+    max-width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.orderchatz-broadcast-page input[type="text"]:focus,
+.orderchatz-broadcast-page input[type="number"]:focus,
+.orderchatz-broadcast-page input[type="date"]:focus,
+.orderchatz-broadcast-page textarea:focus,
+.orderchatz-broadcast-page select:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.orderchatz-broadcast-page textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ==========================================================================
+   按鈕樣式
+   ========================================================================== */
+
+.orderchatz-broadcast-page .button,
+.orderchatz-broadcast-page .button-primary,
+.orderchatz-broadcast-page .button-secondary {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 2.15384615;
+    min-height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.orderchatz-broadcast-page .button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+.orderchatz-broadcast-page .button-primary:hover {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+/* ==========================================================================
+   輔助類別
+   ========================================================================== */
+
+.orderchatz-broadcast-page .description {
+    color: #646970;
+    font-size: 12px;
+    font-style: normal;
+    margin: 4px 0 8px;
+}
+
+.orderchatz-broadcast-page .required {
+    color: #d63638;
+}
+
+.orderchatz-broadcast-page .notice {
+    margin: 5px 0 15px;
+}
+
+/* ==========================================================================
+   載入中狀態
+   ========================================================================== */
+
+.orderchatz-broadcast-page .loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.orderchatz-broadcast-page .spinner {
+    float: none;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   響應式基礎
+   ========================================================================== */
+
+@media (max-width: 782px) {
+    .orderchatz-broadcast-page {
+        padding: 10px;
+    }
+
+    .orderchatz-broadcast-page input[type="text"],
+    .orderchatz-broadcast-page input[type="number"],
+    .orderchatz-broadcast-page input[type="date"],
+    .orderchatz-broadcast-page textarea,
+    .orderchatz-broadcast-page select {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+}

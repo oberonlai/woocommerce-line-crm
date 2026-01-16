@@ -1,0 +1,169 @@
+/**
+ * OrderChatz 推播編輯介面 - 表單佈局
+ *
+ * WordPress 標準 post.php 風格的表單佈局
+ *
+ * @package OrderChatz
+ * @since 1.1.3
+ */
+
+/* ==========================================================================
+   WordPress 標準佈局結構
+   ========================================================================== */
+
+#poststuff {
+    padding-top: 10px;
+    min-width: 763px;
+}
+
+#post-body {
+    float: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#post-body-content {
+    float:none;
+    min-width: 0;
+    width: 100%;
+}
+
+#post-body.columns-2 #postbox-container-1 {
+    float: none;
+}
+
+.postbox h2 {
+    background: #efefef!important;
+}
+
+/* ==========================================================================
+   標題輸入框
+   ========================================================================== */
+
+#titlediv {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#titlewrap {
+    border: 0;
+    padding: 0;
+}
+
+#title {
+    font-size: 1.7em;
+    line-height: 1.4;
+    width: 100%;
+    height: auto;
+    padding: 3px 8px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    font-weight: 400;
+    outline: 0;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+#title:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+#title-prompt-text {
+    position: absolute;
+    font-size: 1.7em;
+    padding: 11px 10px;
+    color: #646970;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   描述欄位
+   ========================================================================== */
+
+#descriptiondiv {
+    margin-bottom: 20px;
+}
+
+#descriptiondiv label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+#campaign_description {
+    width: 100%;
+    min-height: 80px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Postbox 容器
+   ========================================================================== */
+
+.postbox {
+    margin-bottom: 20px;
+    padding: 0;
+    line-height: 1;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.postbox .inside {
+    padding: 12px;
+    margin: 0;
+}
+
+.postbox .inside:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ==========================================================================
+   響應式佈局
+   ========================================================================== */
+
+@media (max-width: 850px) {
+    #poststuff {
+        min-width: 0;
+    }
+
+    #post-body {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #post-body-content {
+        margin-right: 0;
+    }
+
+    #postbox-container-1 {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    #postbox-container-2 .inside {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 782px) {
+    #title {
+        font-size: 1.4em;
+        padding: 5px 10px;
+    }
+
+    #title-prompt-text {
+        font-size: 1.4em;
+        padding: 12px 11px;
+    }
+}

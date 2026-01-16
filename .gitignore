@@ -1,0 +1,12 @@
+.claude
+.kiro
+.tinkersan
+.playwright-mcp
+tests
+zip.sh
+build
+docs
+CLAUDE.md
+composer.json
+composer.lock
+phpunit.xml

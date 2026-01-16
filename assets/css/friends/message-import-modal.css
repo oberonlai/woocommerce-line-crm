@@ -1,0 +1,530 @@
+/**
+ * OrderChatz 訊息匯入燈箱樣式
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+/* 燈箱基礎樣式 */
+#message-import-modal.otz-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+}
+
+#message-import-modal .otz-modal-content {
+    max-width: 800px;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* 好友資訊區域 */
+.friend-info {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.friend-info h4 {
+    margin: 0 0 10px 0;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.friend-details {
+    display: flex;
+    align-items: center;
+}
+
+#friend-display-name {
+    font-weight: 600;
+    color: #212529;
+}
+
+#friend-line-id {
+    color: #6c757d;
+    font-size: 13px;
+    font-family: monospace;
+    margin-left: 10px;
+}
+
+/* 檔案上傳區域 */
+.file-upload-area {
+    margin: 20px 0;
+}
+
+.file-drop-zone {
+    border: 2px dashed #007cba;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f8f9ff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-drop-zone:hover {
+    border-color: #005a87;
+    background: #f0f6ff;
+}
+
+.file-drop-zone.dragover {
+    border-color: #0073aa;
+    background: #e6f3ff;
+    border-style: solid;
+}
+
+.drop-zone-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drop-zone-text {
+    margin: 0 0 15px 0;
+    color: #495057;
+    font-size: 16px;
+}
+
+/* 檔案選擇資訊 */
+.file-selected-info {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e3f2fd;
+    border: 1px solid #1976d2;
+    border-radius: 6px;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-info .dashicons {
+    color: #1976d2;
+}
+
+#selected-file-name {
+    font-weight: 600;
+    color: #1976d2;
+}
+
+#selected-file-size {
+    color: #6c757d;
+    font-size: 13px;
+}
+
+#remove-file-btn {
+    color: #dc3545;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+#remove-file-btn:hover {
+    color: #c82333;
+    text-decoration: underline;
+}
+
+/* 預覽區域 */
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.preview-header h4 {
+    margin: 0;
+    color: #495057;
+}
+
+.statistics-info {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #007cba;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* 篩選控制項 */
+.filter-controls {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-row label {
+    font-weight: 600;
+    color: #495057;
+    margin: 0;
+}
+
+.filter-row input[type="date"] {
+    padding: 4px 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.filter-row input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* 選擇控制項 */
+.selection-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.selection-controls label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+#selection-count {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* 訊息列表 */
+.messages-preview-list {
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    background: #fff;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.message-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.message-item:last-child {
+    border-bottom: none;
+}
+
+.message-item:hover {
+    background-color: #f8f9fa;
+}
+
+.message-item.selected {
+    background-color: #e3f2fd;
+}
+
+.message-checkbox-container {
+    margin-right: 12px;
+    margin-top: 2px;
+}
+
+.message-checkbox {
+    margin: 0;
+}
+
+.message-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.message-sender {
+    color: #666;
+    font-size: 12px;
+}
+
+.message-sender.sender-user {
+    color: #007cba;
+}
+
+.message-datetime {
+    color: #6c757d;
+    font-size: 12px;
+    font-family: monospace;
+    white-space: nowrap;
+}
+
+.message-text {
+    color: #212529;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message-status {
+    margin-left: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.message-status.status-new {
+    background: #d4edda;
+    color: #155724;
+}
+
+.message-status.status-duplicate {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* 分頁控制項 */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.pagination-controls button {
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-controls .current-page {
+    background: #007cba;
+    color: #fff;
+    border-color: #007cba;
+}
+
+.pagination-info {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+/* 進度條和狀態 */
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #007cba, #0073aa);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.import-status {
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.import-details {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* 結果統計 */
+.import-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.result-stat {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.result-number {
+    font-size: 24px;
+    font-weight: 600;
+    color: #007cba;
+    margin-bottom: 5px;
+}
+
+.result-label {
+    font-size: 12px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 載入動畫 */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 錯誤狀態 */
+#preview-error {
+    text-align: center;
+    padding: 40px;
+}
+
+#preview-error .dashicons {
+    font-size: 48px;
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+#error-message {
+    color: #dc3545;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    #message-import-modal .otz-modal-content {
+        width: 95%;
+        margin: 20px auto;
+        max-height: 95vh;
+    }
+
+    .preview-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .statistics-info {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .selection-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .message-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .import-results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pagination-controls {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .pagination-info {
+        margin: 5px 0;
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .file-drop-zone {
+        padding: 30px 15px;
+    }
+
+    .drop-zone-text {
+        font-size: 14px;
+    }
+
+    .message-item {
+        padding: 10px;
+    }
+
+    .import-results {
+        grid-template-columns: 1fr;
+    }
+}

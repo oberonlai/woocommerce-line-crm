@@ -1,0 +1,679 @@
+/**
+ * OrderChatz Push Subscription UI Styles
+ * 
+ * Styling for push notification subscription interface elements
+ * including buttons, prompts, indicators, and guides.
+ */
+
+/* =============================================================================
+   Push Controls Button
+   ============================================================================= */
+
+.otz-push-controls {
+    display: inline-flex !important;
+    align-items: center;
+    margin-left: 8px;
+    position: relative;
+    z-index: 1000;
+}
+
+.otz-push-btn {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    background: #007cba !important;
+    border: 1px solid #005a87 !important;
+    border-radius: 6px;
+    padding: 8px 12px !important;
+    font-size: 13px;
+    color: #ffffff !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 100px;
+    box-shadow: 0 2px 4px rgba(0,124,186,0.2);
+}
+
+.otz-push-btn:hover {
+    background: #005a87 !important;
+    border-color: #004a73 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,124,186,0.3);
+}
+
+.otz-push-btn.subscribed {
+    background: #28a745 !important;
+    border-color: #1e7e34 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(40,167,69,0.2);
+}
+
+.otz-push-btn.subscribed:hover {
+    background: #1e7e34 !important;
+    border-color: #155724 !important;
+    box-shadow: 0 4px 8px rgba(40,167,69,0.3);
+}
+
+.otz-push-btn.denied {
+    background: #dc3545 !important;
+    border-color: #c82333 !important;
+    color: #ffffff !important;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(220,53,69,0.2);
+}
+
+.otz-push-btn.denied:hover {
+    background: #c82333 !important;
+    border-color: #bd2130 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220,53,69,0.3);
+}
+
+.otz-push-icon {
+    font-size: 16px;
+    line-height: 1;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+}
+
+.otz-push-text {
+    font-weight: 500;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.otz-push-status {
+    font-size: 14px;
+    opacity: 0.9;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+}
+
+/* Header integration */
+.otz-push-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* =============================================================================
+   Status Indicator
+   ============================================================================= */
+
+.otz-push-status-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    max-width: 320px;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+}
+
+.otz-push-status-indicator.hidden {
+    transform: translateX(400px);
+    pointer-events: none;
+}
+
+.otz-push-status-indicator.success {
+    border-color: #c3e6cb;
+    background: #d4edda;
+}
+
+.otz-push-status-indicator.error {
+    border-color: #f1aeb5;
+    background: #f8d7da;
+}
+
+.otz-push-status-indicator.info {
+    border-color: #b3d4fc;
+    background: #cce7ff;
+}
+
+.otz-status-content {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+}
+
+.otz-status-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.otz-status-text {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.otz-status-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.otz-status-action-btn {
+    background: #007cba;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.otz-status-action-btn:hover {
+    background: #005a87;
+}
+
+.otz-status-close-btn {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px;
+    line-height: 1;
+}
+
+.otz-status-close-btn:hover {
+    color: #495057;
+}
+
+/* =============================================================================
+   Subscription Prompt Modal
+   ============================================================================= */
+
+.otz-subscription-prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    animation: fadeIn 0.3s ease;
+}
+
+.otz-prompt-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.otz-prompt-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+}
+
+.otz-prompt-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.otz-prompt-icon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.otz-prompt-header h3 {
+    flex: 1;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.otz-prompt-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.otz-prompt-close:hover {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.otz-prompt-body {
+    padding: 20px 24px;
+}
+
+.otz-prompt-body p {
+    margin: 0 0 16px 0;
+    color: #495057;
+    line-height: 1.5;
+}
+
+.otz-prompt-body ul {
+    margin: 0 0 16px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.otz-prompt-body li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #495057;
+    line-height: 1.5;
+}
+
+.otz-prompt-note {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 16px;
+}
+
+.otz-prompt-note small {
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.otz-prompt-actions {
+    display: flex;
+    gap: 12px;
+    padding: 16px 24px 24px;
+    justify-content: flex-end;
+}
+
+.otz-prompt-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.otz-prompt-btn.primary {
+    background: #007cba;
+    color: white;
+}
+
+.otz-prompt-btn.primary:hover {
+    background: #005a87;
+    transform: translateY(-1px);
+}
+
+.otz-prompt-btn.secondary {
+    background: #f8f9fa;
+    color: #495057;
+    border-color: #dee2e6;
+}
+
+.otz-prompt-btn.secondary:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* =============================================================================
+   Permission Guide Modal
+   ============================================================================= */
+
+.otz-permission-guide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10002;
+    animation: fadeIn 0.3s ease;
+}
+
+.otz-guide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.otz-guide-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+}
+
+.otz-guide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.otz-guide-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.otz-guide-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.otz-guide-close:hover {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.otz-guide-body {
+    padding: 20px 24px;
+}
+
+.otz-guide-body p {
+    margin: 0 0 20px 0;
+    color: #495057;
+    line-height: 1.5;
+}
+
+.otz-guide-steps {
+    margin: 20px 0;
+}
+
+.otz-guide-step {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.otz-guide-step:last-child {
+    margin-bottom: 0;
+}
+
+.otz-guide-step strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #212529;
+    font-weight: 600;
+}
+
+.otz-guide-step p {
+    margin: 0;
+    color: #495057;
+    line-height: 1.4;
+}
+
+.otz-guide-actions {
+    display: flex;
+    gap: 12px;
+    padding: 16px 24px 24px;
+    justify-content: flex-end;
+}
+
+.otz-guide-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #dee2e6;
+    background: #007cba;
+    color: white;
+}
+
+.otz-guide-btn:hover {
+    background: #005a87;
+    transform: translateY(-1px);
+}
+
+.otz-guide-btn.secondary {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.otz-guide-btn.secondary:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* =============================================================================
+   Responsive Design
+   ============================================================================= */
+
+@media (max-width: 768px) {
+    /* Push button - mobile adjustments */
+    .otz-push-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .otz-push-text {
+        display: none; /* Hide text on mobile, show only icon */
+    }
+
+    .otz-push-controls {
+        margin-left: 4px;
+    }
+
+    /* Status indicator - mobile positioning */
+    .otz-push-status-indicator {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+
+    .otz-status-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .otz-status-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Prompt modals - mobile adjustments */
+    .otz-prompt-overlay,
+    .otz-guide-overlay {
+        padding: 10px;
+        align-items: flex-end;
+    }
+
+    .otz-prompt-content,
+    .otz-guide-content {
+        border-radius: 12px 12px 0 0;
+        max-height: 85vh;
+    }
+
+    .otz-prompt-header,
+    .otz-guide-header {
+        padding: 16px 20px 12px;
+    }
+
+    .otz-prompt-body,
+    .otz-guide-body {
+        padding: 16px 20px;
+    }
+
+    .otz-prompt-actions,
+    .otz-guide-actions {
+        padding: 12px 20px 20px;
+        flex-direction: column-reverse;
+    }
+
+    .otz-prompt-btn,
+    .otz-guide-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .otz-push-btn {
+        padding: 6px 8px;
+        gap: 4px;
+    }
+
+    .otz-push-icon {
+        font-size: 14px;
+    }
+
+    .otz-prompt-header h3,
+    .otz-guide-header h3 {
+        font-size: 18px;
+    }
+
+    .otz-prompt-icon {
+        font-size: 28px;
+    }
+
+    .otz-guide-step {
+        padding: 12px;
+    }
+}
+
+/* =============================================================================
+   Dark Mode Support (if needed)
+   ============================================================================= */
+
+@media (prefers-color-scheme: dark) {
+    .otz-push-btn {
+        background: #343a40;
+        border-color: #495057;
+        color: #f8f9fa;
+    }
+
+    .otz-push-btn:hover {
+        background: #495057;
+        border-color: #6c757d;
+    }
+
+    .otz-push-status-indicator {
+        background: #343a40;
+        border-color: #495057;
+        color: #f8f9fa;
+    }
+
+    .otz-prompt-content,
+    .otz-guide-content {
+        background: #333;
+        color: #f8f9fa;
+    }
+
+    .otz-prompt-header,
+    .otz-guide-header {
+        border-bottom-color: #495057;
+    }
+
+    .otz-prompt-body p,
+    .otz-prompt-body li,
+    .otz-guide-body p {
+        color: #ced4da;
+    }
+
+    .otz-guide-step {
+        background: #495057;
+        border-color: #6c757d;
+    }
+}
+
+/* =============================================================================
+   Animations
+   ============================================================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =============================================================================
+   PWA Installation Integration
+   ============================================================================= */
+
+/* Show push controls only after PWA is ready */
+.otz-push-controls {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.pwa-ready .otz-push-controls {
+    opacity: 1;
+}
+
+/* Hide push controls if not supported */
+body.push-not-supported .otz-push-controls {
+    display: none;
+}
+
+/* PWA installed state styling */
+body.otz-pwa-installed .otz-push-btn {
+    border-color: #28a745;
+}
+
+body.otz-pwa-installed .otz-push-btn:hover {
+    background: #e8f5e8;
+    border-color: #1e7e34;
+}

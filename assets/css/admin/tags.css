@@ -1,0 +1,434 @@
+/**
+ * OrderChatz 標籤管理頁面樣式
+ *
+ * WordPress 原生標籤頁面風格
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+/* ==========================================================================
+   WordPress 原生左右分欄布局
+   ========================================================================== */
+
+#col-container {
+	display: flex;
+	gap: 20px;
+	margin: 20px 0;
+}
+
+#col-left {
+	float: left;
+	width: 40%;
+}
+
+#col-right {
+	float: right;
+	width: 57%;
+}
+
+.col-wrap {
+	padding: 0;
+}
+
+/* ==========================================================================
+   左側表單樣式 (WordPress 原生 .form-wrap)
+   ========================================================================== */
+
+.form-wrap {
+	margin: 0;
+	padding: 0;
+}
+
+.form-wrap h2 {
+	margin: 0 0 15px;
+	padding: 0;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+.form-wrap p {
+	margin-top: 4px;
+	margin-bottom: 0;
+}
+
+.form-field {
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.form-field label {
+	display: block;
+	font-weight: 600;
+	margin: 0 0 .2em;
+	padding: 0;
+}
+
+.form-field input[type="text"],
+.form-field textarea {
+	width: 95%;
+	padding: 8px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+.form-field input[type="text"]:focus,
+.form-field textarea:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: 2px solid transparent;
+}
+
+.form-field p {
+	color: #646970;
+	font-size: 13px;
+	margin: 4px 0 0;
+}
+
+.form-required {
+	color: #d63638;
+}
+
+p.submit {
+	margin: 1.5em 0 0;
+	padding: 0;
+}
+
+.form-wrap .button-group {
+	display: flex;
+	gap: 10px;
+	margin-top: 0;
+}
+
+.form-wrap .button-group .button {
+	margin-right: 0;
+}
+
+#cancel-edit-tag {
+    border-left: 1px solid #2271B1!important;
+    border-radius: 3px!important;
+}
+#tag_name {
+    padding: 4px 8px;
+}
+
+/* ==========================================================================
+   右側列表樣式
+   ========================================================================== */
+
+.col-wrap .wp-heading-inline {
+	margin: 0 0 1em;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+.col-wrap .search-box {
+	float: right;
+	margin: 0 0 1em;
+}
+
+.col-wrap .tablenav {
+	margin: 0 0 1em;
+	clear: both;
+}
+
+/* 好友人數欄位 - 可點擊樣式 */
+.column-usage_count a {
+	color: #2271b1;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.column-usage_count a:hover {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+.column-usage_count a.no-users {
+	color: #8c8f94;
+	cursor: default;
+	pointer-events: none;
+}
+
+/* ==========================================================================
+   好友清單燈箱樣式
+   ========================================================================== */
+
+.otz-modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100000;
+}
+
+.otz-modal.active {
+	display: block;
+}
+
+.otz-modal-backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+
+.otz-modal-content {
+	position: relative;
+	z-index: 2;
+	background: #fff;
+	margin: 50px auto;
+	max-width: 800px;
+	max-height: calc(100vh - 100px);
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.otz-modal-header {
+	padding: 16px 20px;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.otz-modal-header h2 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.otz-modal-body {
+	padding: 20px;
+	overflow-y: auto;
+	flex: 1;
+	max-height: 500px;
+}
+
+.otz-modal-footer {
+	padding: 16px 20px;
+	border-top: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+/* 統計資訊 */
+.tag-users-stats {
+	color: #666;
+	font-size: 14px;
+}
+
+.tag-users-stats strong {
+	color: #2271b1;
+	font-size: 16px;
+}
+
+/* 好友列表表格樣式 */
+.tag-users-table {
+	margin-top: 16px;
+}
+
+.tag-users-table table {
+	width: 100%;
+	border-collapse: collapse;
+    border: 0;
+}
+
+.tag-users-table th,
+.tag-users-table td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.tag-users-table th {
+	background: #f6f7f7;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.tag-users-table td {
+	font-size: 14px;
+}
+
+.tag-users-table tr:last-child td {
+	border-bottom: none;
+}
+
+/* 好友名稱欄位 - 包含頭像 */
+.tag-user-name-cell {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.tag-user-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+/* 好友名稱連結樣式 */
+.friend-name-link {
+	color: #2271b1;
+	text-decoration: none;
+	font-weight: 600;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.friend-name-link:hover {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+.tag-users-table .user-display-name {
+	font-weight: 600;
+}
+
+.tag-users-table .user-line-id {
+	font-size: 12px;
+	color: #666;
+	font-family: monospace;
+	margin-top: 4px;
+}
+
+.tag-users-table .wp-user-link {
+	color: #2271b1;
+	text-decoration: none;
+}
+
+.tag-users-table .wp-user-link:hover {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+.tag-users-table .not-bound {
+	color: #8c8f94;
+	font-style: italic;
+}
+
+.tag-users-table .user-not-exist {
+	color: #d63638;
+}
+
+/* 載入中狀態 */
+.tag-users-loading {
+	text-align: center;
+	padding: 40px 20px;
+	color: #666;
+}
+
+.tag-users-loading .dashicons {
+	font-size: 32px;
+	width: 32px;
+	height: 32px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* 空狀態 */
+.no-tag-users {
+	text-align: center;
+	padding: 40px 20px;
+	color: #666;
+}
+
+.no-tag-users .dashicons {
+	font-size: 48px;
+	width: 48px;
+	height: 48px;
+	color: #8c8f94;
+	margin-bottom: 12px;
+}
+
+/* 載入更多中 */
+.tag-users-loading-more {
+	text-align: center;
+	padding: 20px;
+	color: #666;
+}
+
+.tag-users-loading-more .dashicons {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+	animation: spin 1s linear infinite;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+/* 全部載入完畢 */
+.tag-users-no-more {
+	text-align: center;
+	padding: 16px;
+	color: #8c8f94;
+	font-size: 13px;
+	border-top: 1px solid #f0f0f0;
+	margin-top: 16px;
+}
+
+/* ==========================================================================
+   響應式設計
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+	#col-container {
+		flex-direction: column;
+	}
+
+	#col-left {
+		float: none;
+		width: 100%;
+		order: 2;
+	}
+
+	#col-right {
+		float: none;
+		width: 100%;
+		order: 1;
+	}
+
+	.otz-modal-content {
+		margin: 20px;
+		max-width: calc(100% - 40px);
+		max-height: calc(100vh - 40px);
+	}
+
+	.form-field input[type="text"],
+	.form-field textarea {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.form-wrap .button-group {
+		flex-direction: column;
+	}
+
+	.form-wrap .button-group .button {
+		width: 100%;
+	}
+}

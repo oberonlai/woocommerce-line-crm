@@ -1,0 +1,90 @@
+/**
+ * 好友會員綁定編輯樣式
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+/* 編輯按鈕樣式 */
+.edit-user-binding {
+    padding: 2px 6px !important;
+    min-height: auto !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+}
+
+.edit-user-binding:hover {
+    background: #f0f0f1 !important;
+    border-radius: 3px !important;
+}
+
+.edit-user-binding .dashicons {
+    color: #646970;
+    transition: color 0.2s ease;
+}
+
+.edit-user-binding:hover .dashicons {
+    color: #2271b1;
+}
+
+/* 表格行 hover 效果 */
+.wp-list-table tbody tr:hover {
+    background-color: #f6f7f7;
+}
+
+/* 會員綁定容器 */
+.wp-user-binding {
+    width: 100%;
+}
+
+.wp-user-display {
+    display: flex;
+    align-items: center;
+}
+
+/* 編輯模式樣式 */
+.wp-user-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wp-user-edit .user-select {
+    min-width: 200px;
+    width: 100% !important;
+}
+
+.wp-user-edit .button-group {
+    display: flex;
+    gap: 5px;
+}
+
+/* Select2 容器調整 */
+.wp-user-edit .select2-container {
+    width: 100% !important;
+}
+
+/* 載入狀態 */
+.save-user-binding:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* 成功/錯誤訊息樣式 */
+.otz-inline-message {
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

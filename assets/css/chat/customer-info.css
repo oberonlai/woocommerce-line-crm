@@ -1,0 +1,1195 @@
+/**
+ * OrderChatz 客戶資訊面板樣式
+ *
+ * @package OrderChatz
+ * @since 1.0.22
+ */
+
+/* ===== 右側：客戶資訊面板 ===== */
+
+.customer-info-panel {
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.customer-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: #f8f9fa;
+    flex-shrink: 0;
+}
+
+.customer-info-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* 排序控制按鈕 */
+.sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-reset-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.sort-reset-button:hover {
+    background: #06c755;
+    border-color: #06c755;
+    color: white;
+    transform: rotate(180deg);
+}
+
+.sort-reset-button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+}
+
+.sort-help-text {
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.customer-info-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.customer-info {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0;
+}
+
+/* 無客戶選擇狀態 */
+.no-customer-selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.no-customer-icon {
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.no-customer-selected p {
+    margin: 0;
+}
+
+/* 客戶資訊區塊 */
+.customer-basic-info,
+.customer-orders,
+.customer-notes,
+.customer-tags {
+    margin-bottom: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.customer-basic-info:last-child,
+.customer-orders:last-child,
+.customer-notes:last-child,
+.customer-tags:last-child {
+    border-bottom: none;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e5e5;
+    user-select: none;
+}
+
+.info-header .dashicons:not(.drag-handle .dashicons) {
+    font-size: 16px;
+    margin-right: 2px;
+    color: #666;
+    position: relative;
+    top: 2px;
+}
+
+.info-header h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    flex: 1;
+}
+
+.info-content {
+    padding: 15px;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: flex-start;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-row label {
+    font-weight: 600;
+    color: #666;
+    min-width: 60px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    font-size: 13px;
+}
+
+.info-row span {
+    flex: 1;
+    word-break: break-word;
+}
+
+.customer-level {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.level-vip {
+    background: #ffd700;
+    color: #8b7500;
+}
+
+.level-gold {
+    background: #ff6b35;
+    color: #fff;
+}
+
+.level-normal {
+    background: #e9ecef;
+    color: #495057;
+}
+
+/* 訂單記錄樣式 */
+.orders-content {
+    padding: 15px;
+}
+
+/* 訂單搜尋框樣式 */
+.order-search-container {
+    margin-bottom: 15px;
+}
+
+.order-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.order-search-input {
+    flex: 1;
+    border: none !important;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.order-search-input:focus {
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+.order-search-btn,
+.order-search-clear {
+    border: none;
+    background: #0073aa;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4px 4px 0;
+}
+
+.order-search-btn:hover {
+    background: #005a87;
+}
+
+.order-search-clear {
+    background: #dc3545;
+    border-radius: 0 4px 4px 0;
+}
+
+.order-search-clear:hover {
+    background: #c82333;
+}
+
+.order-search-btn .dashicons,
+.order-search-clear .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* 載入更多按鈕樣式 */
+.load-more-orders {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.load-more-orders-btn {
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.load-more-orders-btn:hover {
+    background: #e1e1e1;
+    border-color: #999;
+}
+
+/* 訂單載入狀態樣式 */
+.orders-loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.orders-loading .loading-spinner {
+    margin: 0 auto 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.orders-loading p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+/* 訂單錯誤樣式 */
+.orders-error {
+    text-align: center;
+    padding: 20px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.orders-error p {
+    margin: 0;
+    color: #721c24;
+    font-size: 13px;
+}
+
+.order-item {
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.order-item:last-child {
+    margin-bottom: 0;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.order-number {
+    font-weight: 600;
+    font-size: 13px;
+    color: #2c3e50;
+}
+
+.order-status {
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-processing {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-pending {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.order-details {
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #666;
+}
+
+.order-amount {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.order-products {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* 備註樣式 */
+.note-item {
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #06c755;
+}
+
+.note-item:last-child {
+    margin-bottom: 0;
+}
+
+.note-content {
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.note-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #666;
+}
+
+.note-author {
+    font-weight: 600;
+}
+
+/* 備註操作區域 */
+.notes-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.notes-message {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 5px;
+}
+
+.notes-message.success {
+    color: #06c755;
+    opacity: 1;
+}
+
+.notes-message.error {
+    color: #dc3545;
+    opacity: 1;
+}
+
+.notes-message .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+}
+
+/* 標籤樣式 - 仿照 WordPress 內建樣式 */
+.tags-content {
+    padding: 15px;
+}
+
+/* 標籤區域容器 */
+.tagsdiv {
+    margin-bottom: 15px;
+}
+
+/* 現有標籤列表 */
+.tagchecklist {
+    line-height: 1.8;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 12px;
+}
+
+.tagchecklist .customer-tag {
+    display: inline-block;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #333;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0 5px 5px 0;
+    padding: 0 8px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.tagchecklist .customer-tag:hover {
+    background: #e5e5e5;
+    border-color: #ccc;
+}
+
+/* 刪除標籤按鈕 */
+.tagchecklist .ntdelbutton {
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    position: absolute;
+    right: -10px;
+    top: 2px;
+}
+
+.tagchecklist .ntdelbutton:hover {
+    color: #d54e21;
+}
+
+.tagchecklist .ntdelbutton:focus {
+    outline: 0;
+    box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, .8);
+}
+
+/* 新增標籤區域 */
+.ajaxtag {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.ajaxtag .newtag {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0 5px 0 0;
+    padding: 6px 8px;
+    width: 180px;
+}
+
+.ajaxtag .newtag:focus {
+    border-color: #5b9dd9;
+    box-shadow: 0 0 0 1px #5b9dd9;
+    outline: 0;
+}
+
+/* Select2 標籤選擇器樣式 */
+.ajaxtag .newtag-select {
+    width: 100% !important;
+}
+
+.ajaxtag .select2-container {
+    width: 100% !important;
+}
+
+.ajaxtag .select2-container .select2-selection--multiple {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    min-height: 32px;
+    font-size: 13px;
+}
+
+.ajaxtag .select2-container .select2-selection--multiple:focus {
+    border-color: #5b9dd9;
+    box-shadow: 0 0 0 1px #5b9dd9;
+    outline: 0;
+}
+
+.ajaxtag .select2-container .select2-selection--multiple .select2-selection__choice {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #333;
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 2px;
+    padding: 2px 6px;
+}
+
+.ajaxtag .select2-container .select2-selection--multiple .select2-selection__choice__remove {
+    color: #999;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.ajaxtag .select2-container .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: #d54e21;
+}
+
+.ajaxtag .select2-container .select2-search--inline .select2-search__field {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    min-width: 150px;
+}
+
+.ajaxtag .tagadd {
+    background: #0073aa;
+    border: 1px solid #0073aa;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 6px 12px;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .1);
+    transition: all .1s ease-in-out;
+    vertical-align: top;
+}
+
+.ajaxtag .tagadd:hover {
+    background: #005a87;
+    border-color: #005a87;
+}
+
+.ajaxtag .tagadd:focus {
+    background: #005a87;
+    border-color: #005a87;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #0073aa;
+    outline: 0;
+}
+
+.ajaxtag .tagadd:active {
+    transform: translateY(1px);
+}
+
+/* 說明文字 */
+.howto {
+    color: #646970;
+    font-size: 11px;
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+/* 標籤操作訊息 */
+.tags-message {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 0 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tags-message.success {
+    color: #06c755;
+    opacity: 1;
+}
+
+.tags-message.error {
+    color: #dc3545;
+    opacity: 1;
+}
+
+.tags-message .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+}
+
+/* 標籤 Tooltip */
+.tag-tooltip {
+    position: absolute;
+    z-index: 10000;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    min-width: 280px;
+    max-width: 400px;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tag-tooltip-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+    border-radius: 4px 4px 0 0;
+}
+
+.tag-tooltip-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.tag-tooltip-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    line-height: 1;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.tag-tooltip-close:hover {
+    background: #eee;
+    color: #333;
+}
+
+.tag-tooltip-times {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.tag-time-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+.tag-time {
+    font-size: 12px;
+    color: #555;
+}
+
+.tag-time-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.tag-time-delete:hover {
+    opacity: 1;
+    background: #fee;
+}
+
+.tag-time-delete .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: #dc3545;
+}
+
+/* 標籤可點擊樣式 */
+.customer-tag {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.customer-tag:hover {
+    background-color: #e8e8e8;
+}
+
+/* 屏幕閱讀器隱藏 */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+/* 客戶資訊載入狀態 */
+
+.customer-info-panel .chat-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+}
+
+.customer-info-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    z-index: 10;
+}
+
+.customer-info-loading .loading-content {
+    text-align: center;
+}
+
+.customer-info-loading .loading-spinner {
+    margin: 0 auto 15px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.customer-info-loading .spinner-circle {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e3e3e3;
+    border-top: 3px solid #007cba;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.customer-info-loading .loading-text {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ajaxtag .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    margin: 0 !important;
+}
+
+.ajaxtag .select2-container .select2-search--inline .select2-search__field {
+    margin-top: 0 !important;
+}
+
+/* ===== 關聯訊息預覽樣式 ===== */
+
+.related-message-preview {
+    background: #F0F0F0;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.related-message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.related-message-header .header-label {
+    font-weight: 600;
+}
+
+.related-message-header .header-timestamp {
+    font-size: 11px;
+}
+
+.related-message-content {
+    color: #495057;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.related-message-image {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.related-message-image img {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.related-message-image .image-label {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.related-message-sticker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.related-message-sticker img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 4px;
+}
+
+.related-message-sticker .sticker-label {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.related-message-file {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.related-message-file .file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.related-message-file .file-icon {
+    color: #28a745;
+    font-size: 16px;
+}
+
+.related-message-file .file-name {
+    font-weight: 500;
+    color: #495057;
+    flex: 1;
+    word-break: break-all;
+}
+
+.related-message-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #007cba;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.related-message-download:hover {
+    color: #005a87;
+    background-color: #f0f8ff;
+    text-decoration: none;
+}
+
+.related-message-download .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.related-message-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #495057;
+}
+
+/* ===== 新增備註燈箱樣式 ===== */
+
+.add-note-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-note-lightbox .lightbox-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.add-note-lightbox .lightbox-content h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.add-note-lightbox .lightbox-field {
+    margin-bottom: 16px;
+}
+
+.add-note-lightbox .lightbox-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.add-note-lightbox .lightbox-note-category-select + span {
+    width: 100% !important;
+}
+
+.add-note-lightbox .lightbox-add-note-textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.add-note-lightbox .lightbox-actions {
+    margin-top: 16px;
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.add-note-lightbox .cancel-add-lightbox {
+    margin-right: 8px;
+}
+
+.add-note-lightbox .lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== 編輯備註燈箱樣式 ===== */
+
+.note-edit-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-edit-lightbox .lightbox-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.note-edit-lightbox .lightbox-content h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.note-edit-lightbox .lightbox-field {
+    margin-bottom: 16px;
+}
+
+.note-edit-lightbox .lightbox-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.note-edit-lightbox .lightbox-note-category-select + span {
+    width: 100% !important;
+}
+
+.note-edit-lightbox .lightbox-note-textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.note-edit-lightbox .lightbox-actions {
+    margin-top: 16px;
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.note-edit-lightbox .cancel-edit-lightbox {
+    margin-right: 8px;
+}
+
+.note-edit-lightbox .lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== 備註中可點擊的原始訊息預覽樣式 ===== */
+
+.note-card .related-message-preview.clickable-message-preview {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.note-card .related-message-preview.clickable-message-preview:hover {
+    background-color: #ccc;
+}
+
+.note-card .related-message-preview.clickable-message-preview:hover::after {
+    content: "點擊查看對話";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.note-card .related-message-preview.clickable-message-preview.loading {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.note-product-link {
+    font-size: 12px;
+    border-top: 1px solid #f0f0f0;
+    padding: 10px 0;
+}
+
+.note-content-display .note-text {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.note-content-display .note-meta {
+    font-size: 11px;
+    color: #888;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 6px;
+}

@@ -1,0 +1,594 @@
+/**
+ * Bot 編輯器樣式
+ *
+ * WordPress 文章編輯頁面風格的 Bot 編輯器介面
+ *
+ * @package OrderChatz
+ */
+
+/* ==========================================================================
+   基礎布局
+   ========================================================================== */
+
+.orderchatz-bot-page #poststuff {
+	padding-top: 10px;
+}
+
+.orderchatz-bot-page #post-body-content {
+	margin-bottom: 20px;
+}
+
+.orderchatz-bot-page .postbox {
+	margin-bottom: 20px;
+}
+
+.orderchatz-bot-page .postbox h2 {
+	padding: 12px;
+	font-size: 14px;
+	line-height: 1.4;
+	margin: 0;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.orderchatz-bot-page .postbox .inside {
+	padding: 12px;
+}
+
+/* ==========================================================================
+   標題輸入區
+   ========================================================================== */
+
+#titlediv {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#titlewrap {
+	border: 0;
+	padding: 0;
+}
+
+#titlewrap input[type="text"] {
+	width: 100%;
+	font-size: 1.7em;
+	line-height: 1.4;
+	font-weight: 400;
+	padding: 3px 8px;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	background: transparent;
+}
+
+/* ==========================================================================
+   描述區域
+   ========================================================================== */
+
+#descriptiondiv {
+	margin-bottom: 20px;
+}
+
+#descriptiondiv label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+#descriptiondiv textarea {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+#descriptiondiv textarea:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+/* ==========================================================================
+   表單欄位
+   ========================================================================== */
+
+.form-field {
+    width: 48%;
+	margin-bottom: 20px;
+}
+
+.form-field:last-child {
+    width: 100%;
+}
+
+.form-field label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="number"],
+.form-field select,
+.form-field textarea {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+.form-field .description {
+	margin-top: 8px;
+	color: #646970;
+	font-size: 13px;
+}
+
+.form-field .required {
+	color: #d63638;
+}
+
+/* ==========================================================================
+   關鍵字標籤輸入
+   ========================================================================== */
+
+.tag-input-wrapper {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.tag-input-wrapper input {
+	flex: 1;
+}
+
+.keywords-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 12px;
+	min-height: 40px;
+	padding: 8px;
+	background: #f6f7f7;
+	border-radius: 4px;
+}
+
+.keyword-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 12px;
+	background: #2271b1;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 13px;
+}
+
+.keyword-item .remove-keyword {
+	background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 1;
+	padding: 0;
+	margin: 0;
+	width: 16px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.keyword-item .remove-keyword:hover {
+	opacity: 0.8;
+}
+
+/* ==========================================================================
+   Action Type 選擇器
+   ========================================================================== */
+
+.action-type-selector {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.action-type-selector label {
+    display: flex;
+	flex: 1;
+    align-items: center;
+	min-width: 200px;
+	padding: 16px;
+	border: 2px solid #dcdcde;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.action-type-selector label:hover {
+	border-color: #2271b1;
+	background: #f6f7f7;
+}
+
+.action-type-selector input[type="radio"] {
+    display: none;
+}
+
+.action-type-selector input[type="radio"]:checked + .option-label {
+	font-weight: 600;
+}
+
+.action-type-selector label:has(input:checked) {
+	border-color: #2271b1;
+	background: #f0f6fc;
+}
+
+.action-type-selector .option-label {
+	display: block;
+}
+
+.action-type-selector .option-description {
+	display: block;
+	margin-top: 4px;
+	color: #646970;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+/* ==========================================================================
+   Handoff Message 設定區塊
+   ========================================================================== */
+
+#handoff-message-div {
+	display: none;
+}
+
+#handoff-message-div.active {
+	display: block;
+}
+
+#handoff-message-div textarea {
+	width: 100%;
+	min-height: 80px;
+}
+
+/* ==========================================================================
+   AI 設定區塊
+   ========================================================================== */
+
+#ai-settings-div,
+#function-tools-div {
+	display: none;
+}
+
+#ai-settings-div.active,
+#function-tools-div.active {
+	display: block;
+}
+
+#ai-settings-div .inside {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Function Tools Toggle 列表
+   ========================================================================== */
+
+.function-tools-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 12px;
+}
+
+.function-tool-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+    margin-bottom: 5px;
+}
+
+.tool-label {
+	flex: 1;
+	font-size: 14px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 44px;
+	height: 24px;
+}
+
+.toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.toggle-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #8c8f94;
+	transition: 0.3s;
+	border-radius: 24px;
+}
+
+.toggle-slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: 0.3s;
+	border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+	background-color: #2271b1;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+	transform: translateX(20px);
+}
+
+/* ==========================================================================
+   Quick Replies Repeater
+   ========================================================================== */
+
+.quick-replies-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.quick-reply-item {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.quick-reply-item input[type="text"] {
+	flex: 1;
+	padding: 8px 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.quick-reply-item input:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+.quick-reply-item .remove-reply {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	line-height: 1;
+	padding: 0;
+	background: #f0f0f1;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #d63638;
+}
+
+.quick-reply-item .remove-reply:hover {
+	background: #d63638;
+	color: #fff;
+	border-color: #d63638;
+}
+
+.add-reply-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+/* ==========================================================================
+   側邊欄
+   ========================================================================== */
+
+#postbox-container-1 .postbox {
+	margin-top: 0;
+}
+
+#postbox-container-1 #submitdiv .inside {
+	padding: 0;
+}
+
+#submitpost {
+	padding: 12px;
+}
+
+#major-publishing-actions {
+	padding: 0;
+	clear: both;
+	border-top: none;
+	background: #fff;
+}
+
+#publishing-action {
+	text-align: right;
+	float: right;
+	line-height: 23px;
+}
+
+#publishing-action .spinner {
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+#publishing-action input[type="submit"] {
+	min-width: 100%;
+}
+
+/* 狀態與優先序 */
+#status-div select,
+#priority-div input {
+	width: 100%;
+}
+
+/* 統計資訊 */
+#statistics-div .stat-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 0;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+#statistics-div .stat-item:last-child {
+	border-bottom: none;
+}
+
+#statistics-div .stat-label {
+	color: #646970;
+	font-size: 13px;
+}
+
+#statistics-div .stat-value {
+	font-weight: 600;
+	color: #1d2327;
+}
+
+/* Select2 整合 */
+.post-type-selector-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+.condition-value-wrapper .select2-container {
+    width: 100% !important;
+}
+
+.condition-value-wrapper .select2-selection {
+    min-height: 32px;
+    border-color: #8c8f94;
+}
+
+.condition-value-wrapper .select2-selection--single .select2-selection__rendered {
+    line-height: 30px;
+    padding-left: 8px;
+}
+
+.condition-value-wrapper .select2-selection--multiple {
+    padding-bottom: 0;
+}
+
+.condition-value-wrapper .select2-selection--multiple .select2-selection__rendered {
+
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+    padding:0;
+}
+
+.select2-selection__choice {
+    height: 20px;
+    margin-bottom: 0;
+    padding-right: 5px!important;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    border: none!important;
+    outline: none!important;
+    box-shadow: none!important;
+    margin-top: -1px;
+}
+
+.select2-search.select2-search--inline {
+    margin-bottom: 0!important;
+}
+
+/* Select2 下拉選項樣式 */
+.select2-results__option {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.select2-results__option:hover,
+.select2-results__option--highlighted {
+    background-color: #f0f6fc !important;
+    color: #1d2327 !important;
+}
+
+.select2-results__option[aria-selected="true"] {
+    background-color: #2271b1 !important;
+    color: white !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    margin-right: 0;
+}
+
+/* ==========================================================================
+   回應式設計
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+	.orderchatz-bot-page #post-body.columns-2 {
+		margin-right: 0;
+	}
+
+	.orderchatz-bot-page #post-body.columns-2 #postbox-container-1 {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+
+	.action-type-selector {
+		flex-direction: column;
+	}
+
+	.action-type-selector label {
+		min-width: 100%;
+	}
+
+	#titlewrap input[type="text"] {
+		font-size: 1.4em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.tag-input-wrapper {
+		flex-direction: column;
+	}
+
+	.quick-reply-item {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.quick-reply-item .remove-reply {
+		width: 100%;
+	}
+}

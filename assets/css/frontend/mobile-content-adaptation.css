@@ -1,0 +1,714 @@
+/**
+ * Mobile Content Adaptation Styles
+ * OrderChatz Frontend Mobile Chat Interface
+ * 
+ * Adapts existing chat components for single-column mobile layout
+ * Hides/adjusts elements not suitable for mobile interface
+ * 
+ * @version 1.0.1
+ */
+
+/* === Chat Interface Adaptations === */
+
+/* Hide desktop-specific elements */
+.otz-frontend-chat .admin-bar,
+.otz-frontend-chat #wpadminbar,
+.otz-frontend-chat .wp-toolbar,
+.otz-frontend-chat .notice,
+.otz-frontend-chat .updated,
+.otz-frontend-chat .error {
+    display: none !important;
+}
+
+/* === Friend List Adaptations === */
+.otz-friends-panel .friends-list {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+}
+
+.otz-friends-panel .friend-item {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    min-height: 64px; /* Touch-friendly height */
+}
+
+.otz-friends-panel .friend-item:hover {
+    background-color: #f6f7f7;
+}
+
+.otz-friends-panel .friend-item:active {
+    background-color: #e0e0e0;
+}
+
+.otz-friends-panel .friend-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.otz-friends-panel .friend-info {
+    flex: 1;
+    min-width: 0; /* Allow text overflow */
+}
+
+.otz-friends-panel .friend-name {
+    font-weight: 500;
+    color: #1d2327;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.otz-friends-panel .friend-last-message {
+    color: #646970;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.otz-friends-panel .friend-unread-count {
+    background-color: #d63638;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 8px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* === Chat Area Adaptations === */
+.otz-chat-panel .chat-area {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.otz-chat-panel .messages-container {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+    background-color: #f9f9f9;
+}
+
+.otz-chat-panel .message {
+    margin-bottom: 16px;
+    max-width: 80%;
+}
+
+.otz-chat-panel .message.sent {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+
+.otz-chat-panel .message.received {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.otz-chat-panel .message-content {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 12px 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+.otz-chat-panel .message.sent .message-content {
+    background-color: #007cba;
+    color: #ffffff;
+}
+
+.otz-chat-panel .message-time {
+    font-size: 12px;
+    color: #646970;
+    margin-top: 4px;
+}
+
+/* === Message Input Adaptations === */
+.otz-chat-panel .message-input-area {
+    border-top: 1px solid #e0e0e0;
+    padding: 12px 16px;
+    background-color: #ffffff;
+}
+
+.otz-chat-panel .input-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.otz-chat-panel .message-input {
+    flex: 1;
+    border: 1px solid #dcdcde;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 16px; /* Prevent zoom on iOS */
+    line-height: 1.4;
+    resize: none;
+    max-height: 120px;
+    min-height: 40px;
+}
+
+.otz-chat-panel .message-input:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+}
+
+.otz-chat-panel .send-message-btn {
+    background-color: #007cba;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.otz-chat-panel .send-message-btn:hover:not(:disabled) {
+    background-color: #005a87;
+}
+
+.otz-chat-panel .send-message-btn:disabled {
+    background-color: #a7aaad;
+    cursor: not-allowed;
+}
+
+.otz-chat-panel .send-message-btn .dashicons {
+    font-size: 18px;
+}
+
+/* === Customer Info Adaptations === */
+.otz-customer-panel .customer-info {
+    padding: 16px;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.otz-customer-panel .customer-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    display: block;
+}
+
+.otz-customer-panel .customer-name {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 8px;
+}
+
+.otz-customer-panel .customer-status {
+    text-align: center;
+    color: #646970;
+    margin-bottom: 24px;
+}
+
+.otz-customer-panel .info-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.otz-customer-panel .info-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.otz-customer-panel .info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.otz-customer-panel .info-item:last-child {
+    border-bottom: none;
+}
+
+.otz-customer-panel .info-label {
+    color: #646970;
+    font-size: 14px;
+}
+
+.otz-customer-panel .info-value {
+    color: #1d2327;
+    font-weight: 500;
+    text-align: right;
+    max-width: 60%;
+    word-break: break-word;
+}
+
+/* === Tag and Notes Adaptations === */
+.otz-customer-panel .tags-section,
+.otz-customer-panel .notes-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.otz-customer-panel .tag {
+    display: inline-block;
+    background-color: #007cba;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.otz-customer-panel .note {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.otz-customer-panel .note:last-child {
+    margin-bottom: 0;
+}
+
+/* === Orders Section Adaptations === */
+.otz-customer-panel .orders-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.otz-customer-panel .order-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.otz-customer-panel .order-item:hover {
+    background-color: #f6f7f7;
+}
+
+.otz-customer-panel .order-item:last-child {
+    margin-bottom: 0;
+}
+
+.otz-customer-panel .order-number {
+    font-weight: 600;
+    color: #007cba;
+    margin-bottom: 4px;
+}
+
+.otz-customer-panel .order-status {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.otz-customer-panel .order-total {
+    font-weight: 500;
+    color: #1d2327;
+    float: right;
+}
+
+.otz-customer-panel .order-date {
+    color: #646970;
+    font-size: 12px;
+    clear: both;
+}
+
+/* === Form Elements Adaptations === */
+.otz-frontend-chat input,
+.otz-frontend-chat textarea,
+.otz-frontend-chat select {
+    font-size: 16px; /* Prevent zoom on iOS */
+    border-radius: 4px;
+    border: 1px solid #dcdcde;
+}
+
+.otz-frontend-chat input:focus,
+.otz-frontend-chat textarea:focus,
+.otz-frontend-chat select:focus {
+    outline: none;
+    border: 0;
+    box-shadow: none;
+}
+
+.otz-frontend-chat .button,
+.otz-frontend-chat button {
+    font-size: 14px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-height: 44px; /* Touch-friendly */
+}
+
+.otz-frontend-chat button.message-actions-trigger,
+.otz-frontend-chat button.reply-cancel-btn,
+.otz-frontend-chat button.action-button {
+    min-height: 32px;
+}
+
+.otz-frontend-chat .button-primary,
+.otz-frontend-chat button.primary {
+    background-color: #007cba;
+    color: #ffffff;
+}
+
+.otz-frontend-chat .button-primary:hover,
+.otz-frontend-chat button.primary:hover {
+    background-color: #005a87;
+}
+
+.otz-frontend-chat .button-secondary,
+.otz-frontend-chat button.secondary {
+    background-color: #f6f7f7;
+    color: #1d2327;
+    border: 1px solid #dcdcde;
+}
+
+.otz-frontend-chat .button-secondary:hover,
+.otz-frontend-chat button.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* === Content Panel Transitions === */
+.otz-content-panel.slide-in-right {
+    animation: slideInRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.otz-content-panel.slide-in-left {
+    animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.otz-content-panel.slide-out-right {
+    animation: slideOutRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.otz-content-panel.slide-out-left {
+    animation: slideOutLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* === Touch Feedback === */
+.otz-frontend-chat .friend-item:active,
+.otz-frontend-chat .order-item:active,
+.otz-frontend-chat .tab-btn:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* === Scrollbar Styling (WebKit) === */
+.otz-frontend-chat ::-webkit-scrollbar {
+    width: 4px;
+}
+
+.otz-frontend-chat ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.otz-frontend-chat ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.otz-frontend-chat ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* === Hide incompatible desktop elements === */
+.otz-frontend-chat .wp-admin,
+.otz-frontend-chat .admin-menu,
+.otz-frontend-chat .folded,
+.otz-frontend-chat #adminmenumain,
+.otz-frontend-chat #wpcontent,
+.otz-frontend-chat #wpfooter {
+    display: none !important;
+}
+
+/* === Ensure compatibility with existing components === */
+.otz-frontend-chat #friends-panel,
+.otz-frontend-chat #chat-panel,
+.otz-frontend-chat #customer-info-panel {
+    display: none !important;
+}
+
+/* Allow active panels to show */
+.otz-frontend-chat #customer-info-panel.active,
+.otz-frontend-chat .customer-info-panel.active {
+    display: flex !important;
+}
+
+/* Map existing IDs to new mobile structure */
+.otz-friends-panel #friends-list,
+.otz-chat-panel #chat-area,
+.otz-customer-panel #customer-info {
+    display: block;
+}
+
+/* === Safe area adjustments for devices with notches === */
+@supports (padding: max(0px)) {
+    .otz-content-container {
+        padding-bottom: max(60px, calc(60px + env(safe-area-inset-bottom)));
+    }
+}
+
+/* === Jump Mode Styles === */
+
+/* Jump mode indicator */
+.otz-jump-mode-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #007cba, #005a87);
+    color: #ffffff;
+    padding: 12px 16px;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0, 124, 186, 0.3);
+    animation: slideDownFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.otz-jump-mode-indicator .jump-mode-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.otz-jump-mode-indicator .jump-mode-icon {
+    font-size: 16px;
+    animation: pulse 2s infinite;
+}
+
+.otz-jump-mode-indicator .jump-mode-text {
+    position: relative;
+}
+
+/* Jump mode app state */
+#otz-mobile-chat-app.jump-mode {
+    transition: all 0.3s ease;
+}
+
+#otz-mobile-chat-app.jump-mode .otz-content-container {
+    padding-top: 60px; /* Space for indicator */
+}
+
+#otz-mobile-chat-app.jump-mode .otz-chat-panel {
+    background: rgba(0, 124, 186, 0.02);
+}
+
+/* Related message preview loading state */
+.related-message-preview.loading {
+    position: relative;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.related-message-preview.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #007cba;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Clickable message preview enhanced styles */
+.clickable-message-preview {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid #e0e0e0;
+    background: #f9f9f9;
+}
+
+.clickable-message-preview:hover {
+    background: #f0f8ff;
+    border-color: #007cba;
+    box-shadow: 0 2px 8px rgba(0, 124, 186, 0.1);
+    transform: translateY(-1px);
+}
+
+.clickable-message-preview:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 124, 186, 0.2);
+}
+
+.clickable-message-preview .related-message-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.clickable-message-preview .related-message-content {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Message jump highlighting effect */
+.message-item.jump-target {
+    animation: messageHighlight 3s ease-out;
+    border-radius: 8px;
+    padding: 4px;
+    margin: -4px;
+}
+
+@keyframes messageHighlight {
+    0% {
+        background-color: rgba(0, 124, 186, 0.3);
+        box-shadow: 0 0 0 4px rgba(0, 124, 186, 0.2);
+    }
+    50% {
+        background-color: rgba(0, 124, 186, 0.2);
+        box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.1);
+    }
+    100% {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+/* Jump mode animations */
+@keyframes slideDownFadeIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Notes section specific jump mode enhancements */
+.notes-section .note-card .related-message-preview.clickable-message-preview {
+    margin: 8px 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-left: 3px solid #007cba;
+}
+
+.notes-section .note-card .related-message-preview.clickable-message-preview:hover {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-left-color: #005a87;
+}
+
+/* Touch device optimizations for jump mode */
+@media (hover: none) and (pointer: coarse) {
+    .clickable-message-preview:hover {
+        background: #f9f9f9;
+        border-color: #e0e0e0;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .clickable-message-preview:active {
+        background: #f0f8ff;
+        border-color: #007cba;
+        box-shadow: 0 2px 8px rgba(0, 124, 186, 0.1);
+    }
+}

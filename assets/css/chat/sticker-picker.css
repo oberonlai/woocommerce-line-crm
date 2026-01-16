@@ -1,0 +1,259 @@
+/**
+ * OrderChatz 貼圖選擇器樣式
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+/* 貼圖選擇面板 */
+.sticker-picker-panel {
+    background: #ffffff;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 320px;
+    opacity: 0;
+    height: 0;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.sticker-picker-panel.show {
+    opacity: 1;
+    height: auto;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.sticker-picker-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 分類標籤 */
+.sticker-categories {
+    display: flex;
+    background: #f8f9fa;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.sticker-category-tab {
+    flex: 1;
+    padding: 12px 8px;
+    border: none;
+    background: transparent;
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 150px;
+}
+
+.sticker-category-tab:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.sticker-category-tab.active {
+    color: #007cba;
+    background: #ffffff;
+    font-weight: 600;
+}
+
+.sticker-category-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #007cba;
+}
+
+.sticker-category-tab:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.sticker-category-tab:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+/* 貼圖網格容器 */
+.sticker-grid-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    min-height: 200px;
+}
+
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    align-items: start;
+}
+
+/* 貼圖項目 */
+.sticker-item {
+    aspect-ratio: 1;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 4px;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sticker-item:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.sticker-item:active {
+    transform: scale(0.95);
+}
+
+.sticker-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* 載入狀態 */
+.sticker-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+}
+
+.sticker-loading p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 空狀態 */
+.sticker-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+}
+
+.sticker-empty p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .sticker-picker-panel {
+        max-height: 280px;
+    }
+
+    .sticker-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
+    }
+
+    .sticker-category-tab {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+
+    .sticker-grid-container {
+        padding: 10px;
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sticker-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+    }
+
+    .sticker-category-tab {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+
+    .sticker-grid-container {
+        padding: 8px;
+        min-height: 160px;
+    }
+
+    .sticker-picker-panel {
+        max-height: 240px;
+    }
+}
+
+/* 貼圖按鈕樣式 */
+.sticker-picker-btn {
+    position: relative;
+}
+
+.sticker-picker-btn.active {
+    background: #007cba;
+    color: #ffffff;
+}
+
+.sticker-picker-btn.active .dashicons {
+    color: #ffffff;
+}
+
+/* 滾動條樣式 */
+.sticker-grid-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sticker-grid-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.sticker-grid-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.sticker-grid-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 動畫效果 */
+@keyframes stickerFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sticker-item {
+    animation: stickerFadeIn 0.2s ease;
+}
+
+/* 聊天輸入區域相對定位確保貼圖面板正確定位 */
+.chat-input-area {
+    position: relative;
+}

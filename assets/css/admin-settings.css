@@ -1,0 +1,682 @@
+/**
+ * OrderChatz Admin Settings Stylesheet
+ * 
+ * Styles for the WordPress admin settings page interface
+ */
+
+/* Status indicators */
+.otz-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.otz-status-success {
+    background-color: #d1eddb;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.otz-status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.otz-status-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.otz-status-unknown {
+    background-color: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #d6d8db;
+}
+
+/* System status display */
+.otz-system-status {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.otz-status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.otz-status-item:last-child {
+    margin-bottom: 0;
+}
+
+.otz-status-label {
+    min-width: 150px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.otz-status-item .otz-status {
+    margin-left: 10px;
+    font-size: 11px;
+    padding: 3px 6px;
+}
+
+/* Form field enhancements */
+.form-table th {
+    font-weight: 600;
+    color: #23282d;
+}
+
+.form-table td input[type="password"],
+.form-table td input[type="text"] {
+    width: 400px;
+    max-width: 100%;
+}
+
+.form-table td .button {
+    margin-left: 10px;
+}
+
+.form-table td .description {
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+    font-size: 13px;
+}
+
+/* Webhook management section */
+#webhook-status-container {
+    margin-bottom: 15px;
+}
+
+#webhook-status-container .otz-status {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+#webhook-status-container .description {
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Button groups */
+.otz-button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.otz-button-group .button {
+    margin: 0;
+}
+
+/* Status messages */
+#otz-status-messages {
+    margin-top: 20px;
+}
+
+#otz-status-messages .notice {
+    margin: 10px 0;
+    position: relative;
+}
+
+#otz-status-messages .notice p {
+    margin: 0.5em 0;
+}
+
+/* Loading states */
+.button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Copy to clipboard button */
+.otz-copy-button {
+    background: #f0f0f1;
+    border: 1px solid #c3c4c7;
+    color: #2c3338;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 2.15384615;
+    margin: 0;
+    padding: 0 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.otz-copy-button:hover {
+    background: #e8e8e9;
+    border-color: #8c8f94;
+}
+
+/* Password visibility toggle */
+.otz-password-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.otz-password-toggle input {
+    flex: 1;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .form-table td input[type="password"],
+    .form-table td input[type="text"] {
+        width: 100%;
+    }
+    
+    .form-table td .button {
+        margin: 10px 0 0 0;
+        display: block;
+        width: auto;
+    }
+    
+    .otz-button-group {
+        flex-direction: column;
+    }
+    
+    .otz-status-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .otz-status-label {
+        min-width: auto;
+    }
+    
+    .otz-status-item .otz-status {
+        margin-left: 0;
+    }
+}
+
+/* Settings sections styling */
+.form-table th[scope="row"] {
+    padding-left: 10px;
+}
+
+h2.title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #1d2327;
+}
+
+h2.title:first-of-type {
+    margin-top: 0;
+}
+
+/* Success/Error highlights */
+.form-table tr.highlight-success td {
+    background-color: #d1eddb;
+    border-left: 4px solid #00a32a;
+    padding-left: 15px;
+}
+
+.form-table tr.highlight-error td {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3232;
+    padding-left: 15px;
+}
+
+/* Code blocks */
+code {
+    background: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+}
+
+/* Help text styling */
+.otz-help-text {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.otz-help-text h4 {
+    margin: 0 0 10px 0;
+    color: #1d2327;
+    font-size: 16px;
+}
+
+.otz-help-text p {
+    margin: 0 0 10px 0;
+}
+
+.otz-help-text p:last-child {
+    margin-bottom: 0;
+}
+
+.otz-help-text ul {
+    margin: 10px 0 10px 20px;
+    list-style: disc;
+}
+
+.otz-help-text li {
+    margin-bottom: 5px;
+}
+
+/* Loading spinner */
+.otz-loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: otz-spin 1s linear infinite;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@keyframes otz-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Admin notice enhancements */
+.notice.orderchatz-db-error {
+    border-left-color: #dc3232;
+}
+
+.notice.orderchatz-db-error h3 {
+    margin: 0 0 10px 0;
+    color: #dc3232;
+}
+
+.notice.orderchatz-db-error ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.notice.orderchatz-db-error li {
+    margin-bottom: 5px;
+}
+
+.notice.orderchatz-db-error details {
+    margin-top: 15px;
+}
+
+.notice.orderchatz-db-error summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #666;
+}
+
+.notice.orderchatz-db-error summary:hover {
+    color: #23282d;
+}
+
+/* ===== 訂單 Meta 設定頁面樣式 ===== */
+
+.otz-order-meta-settings {
+    max-width: 1200px;
+    margin: 0;
+}
+
+.settings-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.settings-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.settings-header .description {
+    margin: 0;
+    font-size: 14px;
+    color: #646970;
+    line-height: 1.5;
+}
+
+/* Meta 欄位容器 */
+.meta-fields-container {
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.meta-fields-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.meta-fields-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.add-meta-field {
+    background: #0073aa;
+    border-color: #0073aa;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.add-meta-field:hover {
+    background: #005177;
+    border-color: #005177;
+}
+
+/* 欄位列表 */
+.meta-fields-list {
+    padding: 0;
+}
+
+.no-fields-message {
+    padding: 40px 24px;
+    text-align: center;
+    color: #646970;
+    background: #fafafa;
+    border: 2px dashed #e1e5e9;
+    margin: 20px;
+    border-radius: 6px;
+}
+
+.no-fields-message p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 單個欄位行 */
+.meta-field-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e1e5e9;
+    gap: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.meta-field-row:hover {
+    background: #fafafa;
+}
+
+.meta-field-row:last-child {
+    border-bottom: none;
+}
+
+.field-inputs {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: 0;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+.input-group input::placeholder {
+    color: #a7aaad;
+}
+
+.field-actions {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 28px;
+}
+
+.remove-field {
+    background: #dc3232;
+    border-color: #dc3232;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+}
+
+.remove-field:hover {
+    background: #b32d2e;
+    border-color: #b32d2e;
+    transform: translateY(-1px);
+}
+
+.remove-field .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+/* 儲存區域 */
+.settings-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.save-settings {
+    background: #00a32a;
+    border-color: #00a32a;
+    color: #ffffff;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.save-settings:hover:not([disabled]) {
+    background: #008a00;
+    border-color: #008a00;
+    transform: translateY(-1px);
+}
+
+.save-settings:disabled {
+    background: #a7aaad;
+    border-color: #a7aaad;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.save-status {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.save-status.success {
+    background: #d1eddb;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.save-status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* 說明區塊 */
+.settings-help {
+    background: #f8f9fa;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.settings-help h4 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.help-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.example-item {
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.example-item strong {
+    color: #1d2327;
+}
+
+.example-item code {
+    background: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 13px;
+    color: #0073aa;
+    border: 1px solid #e1e5e9;
+}
+
+.help-note {
+    margin: 0;
+    font-size: 13px;
+    color: #646970;
+    font-style: italic;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 6px;
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+    .field-inputs {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .help-examples {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .meta-field-row {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .field-actions {
+        padding-top: 0;
+        justify-content: flex-end;
+    }
+    
+    .meta-fields-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    
+    .settings-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .otz-order-meta-settings {
+        padding: 0 10px;
+    }
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.meta-field-row {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* 聚焦狀態 */
+.meta-field-row:focus-within {
+    background: #f0f6fc;
+    border-color: #0073aa;
+}
+
+/* 隱藏類別 */
+.hidden {
+    display: none !important;
+}

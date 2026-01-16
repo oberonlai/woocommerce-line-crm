@@ -1,0 +1,652 @@
+/**
+ * OrderChatz 推播編輯介面 - 受眾篩選器
+ *
+ * 受眾類型選擇、動態篩選條件建構器樣式
+ *
+ * @package OrderChatz
+ * @since 1.1.3
+ */
+
+/* ==========================================================================
+   受眾類型選擇器
+   ========================================================================== */
+
+.audience-type-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.audience-type-option {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    background: #f9f9f9;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.audience-type-option label {
+    cursor: pointer;
+}
+
+.audience-type-option:hover {
+    border-color: #2271b1;
+}
+
+.audience-type-option.active {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+/* ==========================================================================
+   動態篩選區塊
+   ========================================================================== */
+
+.dynamic-filter-section {
+    display: none;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #dcdcde;
+}
+
+.dynamic-filter-section.active {
+    display: block;
+}
+
+.filter-groups-container {
+    margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   篩選群組
+   ========================================================================== */
+
+.filter-group {
+    padding: 0;
+    float: none;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: #2271b1;
+    border-radius: 6px 6px 0 0;
+}
+
+.group-label {
+    font-weight: 600;
+    color: white;
+    font-size: 13px;
+}
+
+.delete-group {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 6px;
+    line-height: 1;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.delete-group:hover {
+    background: #d63638;
+    color: white;
+}
+
+/* OR 邏輯標籤（群組之間） */
+.filter-group + .filter-group::before {
+    content: "或";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    padding: 6px 9px;
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    font-size: 14px;
+    width: fit-content;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.filter-group + .filter-group::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   篩選條件
+   ========================================================================== */
+
+.filter-conditions {
+    padding: 12px;
+}
+
+/* 條件行主容器 */
+.condition-row {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 50px;
+    background: #fafafa;
+}
+
+.condition-row:hover {
+    border-color: #2271b1;
+}
+
+.condition-row:last-child {
+    margin-bottom: 0;
+}
+
+/* 條件類型選擇器 */
+.condition-type {
+    min-width: 140px;
+    flex: 1 1 140px;
+}
+
+.condition-type-select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* 操作符選擇器 */
+.condition-operator {
+    min-width: 120px;
+    flex: 1 1 120px;
+}
+
+.condition-operator-select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* 值輸入區 */
+.condition-value-wrapper {
+    min-width: 180px;
+    flex: 2 1 180px;
+}
+
+.condition-value-wrapper input[type="text"],
+.condition-value-wrapper select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Select2 整合 */
+.condition-value-wrapper .select2-container {
+    width: 100% !important;
+}
+
+.condition-value-wrapper .select2-selection {
+    min-height: 32px;
+    border-color: #8c8f94;
+}
+
+.condition-value-wrapper .select2-selection--single .select2-selection__rendered {
+    line-height: 30px;
+    padding-left: 8px;
+}
+
+.condition-value-wrapper .select2-selection--multiple {
+    padding-bottom: 0;
+}
+
+.condition-value-wrapper .select2-selection--multiple .select2-selection__rendered {
+
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+    padding:0;
+}
+
+.select2-selection__choice {
+    height: 20px;
+    margin-bottom: 0;
+    padding-right: 5px!important;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    border: none!important;
+    outline: none!important;
+    box-shadow: none!important;
+    margin-top: -1px;
+}
+
+.select2-search.select2-search--inline {
+    margin-bottom: 0!important;
+}
+
+/* Select2 下拉選項樣式 */
+.select2-results__option {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.select2-results__option:hover,
+.select2-results__option--highlighted {
+    background-color: #f0f6fc !important;
+    color: #1d2327 !important;
+}
+
+.select2-results__option[aria-selected="true"] {
+    background-color: #2271b1 !important;
+    color: white !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    margin-right: 0;
+}
+
+/* 條件動作按鈕 */
+.condition-actions {
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-condition {
+    background: none;
+    border: none;
+    color: #d63638;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.delete-condition:hover {
+    background: #d63638;
+    color: white;
+}
+
+/* AND 邏輯標籤（群組內的條件之間） */
+.condition-row + .condition-row::before {
+    content: "且";
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    padding: 3px 6px;
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    font-size: 13px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.condition-row + .condition-row::after {
+    content: "";
+    position: absolute;
+    top: -27px;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   群組動作
+   ========================================================================== */
+
+.group-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 12px 12px 12px;
+}
+
+.add-condition {
+    font-size: 12px!important;
+}
+
+.group-or-label {
+    text-align: center;
+    margin: 12px 0;
+    padding: 6px 14px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ==========================================================================
+   篩選控制
+   ========================================================================== */
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: -20px;
+}
+
+.filter-controls .dashicons {
+    position: relative;
+    top: 4px;
+}
+
+.add-group {
+    font-size: 12px!important;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   受眾計數
+   ========================================================================== */
+
+.audience-count {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #f0f6fc;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count-display {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.count-label {
+    color: #646970;
+}
+
+.count-number {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2271b1;
+}
+
+.count-unit {
+    color: #646970;
+}
+
+/* 剩餘推播量顯示 */
+.quota-separator {
+    margin: 0 12px;
+    color: #ddd;
+}
+
+.quota-label {
+    font-size: 13px;
+    color: #666;
+    margin-right: 8px;
+}
+
+.quota-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2271B1;
+}
+
+.quota-number.quota-low {
+    x-color: #ff6900;
+}
+
+.quota-number.quota-critical {
+    x-color: #dc3232;
+}
+
+.quota-unit {
+    font-size: 14px;
+    color: #666;
+    margin-left: 4px;
+}
+
+/* ==========================================================================
+   受眾預覽燈箱
+   ========================================================================== */
+
+.audience-preview-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+    align-items: center;
+    justify-content: center;
+}
+
+.audience-preview-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d2327;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #646970;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #f0f0f1;
+    color: #1d2327;
+}
+
+.modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.audience-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.audience-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f1;
+    transition: background 0.2s ease;
+}
+
+.audience-item:hover {
+    background: #f9f9f9;
+}
+
+.audience-item:last-child {
+    border-bottom: none;
+}
+
+.audience-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.audience-info {
+    flex: 1;
+}
+
+.audience-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d2327;
+    margin: 0 0 4px 0;
+}
+
+.audience-id {
+    font-size: 12px;
+    color: #646970;
+    font-family: monospace;
+    margin: 0;
+}
+
+.modal-footer {
+    padding: 16px 20px;
+    border-top: 1px solid #dcdcde;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audience-stats {
+    font-size: 13px;
+    color: #646970;
+}
+
+.audience-stats strong {
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 20px;
+    color: #646970;
+}
+
+.loading-indicator .dashicons {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.no-more-data {
+    text-align: center;
+    padding: 16px;
+    color: #646970;
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   響應式設計
+   ========================================================================== */
+
+@media (max-width: 782px) {
+    .condition-config {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .condition-field,
+    .condition-operator,
+    .condition-value-container {
+        min-width: 0;
+        flex: none;
+        width: 100%;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .audience-count {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+}

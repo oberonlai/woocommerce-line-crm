@@ -1,0 +1,4801 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OrderChatz 1.0.86\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/order-chatz\n"
+"POT-Creation-Date: 2025-11-05T04:46:09+00:00\n"
+"PO-Revision-Date: 2025-11-04 18:35+0800\n"
+"Last-Translator: Oberon Lai <m615926@gmail.com>\n"
+"Language-Team: Traditional Chinese\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: otz\n"
+
+#. Plugin Name of the plugin
+#: order-chatz.php build/order-chatz/src/Admin/Menu/MenuRegistrar.php:99
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:102
+#: src/Admin/Menu/MenuRegistrar.php:99 src/Admin/Menu/MenuRegistrar.php:102
+msgid "OrderChatz"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: order-chatz.php
+msgid "https://oberonlai.blog/order-chatz"
+msgstr ""
+
+#. Description of the plugin
+#: order-chatz.php
+msgid ""
+"OrderChatz 是一款專為 WooCommerce 打造的客服管理工具，可以直接在後台或網頁 "
+"App 與 LINE 好友即時進行聊天互動，並整合訂單資訊以及推播功能的實用外掛。"
+msgstr ""
+
+#. Author of the plugin
+#: order-chatz.php
+msgid "DailyWP"
+msgstr ""
+
+#. Author URI of the plugin
+#: order-chatz.php
+msgid "https://oberonlai.blog"
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:632
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:354
+#: build/order-chatz/views/admin/chat-interface.php:30
+#: src/Admin/FrontendChatAssetManager.php:632 src/Admin/Menu/Pages/Chat.php:354
+#: views/admin/chat-interface.php:30
+msgid "搜尋好友..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:633
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:355
+#: src/Admin/FrontendChatAssetManager.php:633 src/Admin/Menu/Pages/Chat.php:355
+msgid "發送"
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:634
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:356
+#: build/order-chatz/views/admin/chat-interface.php:140
+#: src/Admin/FrontendChatAssetManager.php:634 src/Admin/Menu/Pages/Chat.php:356
+#: views/admin/chat-interface.php:140
+msgid "輸入訊息..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:635
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:357
+#: src/Admin/FrontendChatAssetManager.php:635 src/Admin/Menu/Pages/Chat.php:357
+msgid "尚無對話記錄"
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:636
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:358
+#: build/order-chatz/views/admin/chat-interface.php:80
+#: src/Admin/FrontendChatAssetManager.php:636 src/Admin/Menu/Pages/Chat.php:358
+#: views/admin/chat-interface.php:80
+msgid "請選擇一位好友開始聊天"
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:637
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:359
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:110
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:86
+#: build/order-chatz/views/frontend/chat.php:40
+#: src/Admin/FrontendChatAssetManager.php:637 src/Admin/Menu/Pages/Chat.php:359
+#: src/Admin/Menu/Pages/Export.php:110 src/Admin/Menu/Pages/Statistics.php:86
+#: views/frontend/chat.php:40
+msgid "載入中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:638
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:360
+#: src/Admin/FrontendChatAssetManager.php:638 src/Admin/Menu/Pages/Chat.php:360
+msgid "載入失敗，請重新整理頁面"
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:639
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:361
+#: src/Admin/FrontendChatAssetManager.php:639 src/Admin/Menu/Pages/Chat.php:361
+msgid "訊息內容過長，請縮短後再試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/FrontendChatAssetManager.php:640
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:362
+#: src/Admin/FrontendChatAssetManager.php:640 src/Admin/Menu/Pages/Chat.php:362
+msgid "網路連線發生問題，請稍後再試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:42
+msgid "推播活動"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:57
+msgid "活動名稱"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:58
+msgid "受眾類型"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:59
+#: build/order-chatz/views/admin/chat-interface.php:604
+#: views/admin/chat-interface.php:604
+msgid "訊息類型"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:60
+msgid "訊息內文"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:61
+#: build/order-chatz/views/admin/chat-interface.php:580
+#: views/admin/chat-interface.php:580
+msgid "預計發送時間"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:62
+msgid "更新時間"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:86
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:250
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:417
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:508
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:91
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:320
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:341
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:67
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:188
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:303
+#: build/order-chatz/views/admin/notes/view.php:137
+#: src/Admin/Lists/NotesListTable.php:417
+#: src/Admin/Lists/NotesListTable.php:508 src/Admin/Lists/TagsListTable.php:91
+#: src/Admin/Lists/TagsListTable.php:319 src/Admin/Menu/Pages/Broadcast.php:341
+#: src/Admin/Menu/Pages/Friends.php:67 src/Admin/Menu/Pages/Friends.php:188
+#: src/Admin/Menu/Pages/Friends.php:303 views/admin/notes/view.php:137
+msgid "刪除"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:128
+msgid "成功刪除 %d 個推播活動"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:244
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:411
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:502
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:315
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:176
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:297
+#: build/order-chatz/views/admin/notes/view.php:133
+#: src/Admin/Lists/NotesListTable.php:411
+#: src/Admin/Lists/NotesListTable.php:502 src/Admin/Lists/TagsListTable.php:313
+#: src/Admin/Menu/Pages/Friends.php:176 src/Admin/Menu/Pages/Friends.php:297
+#: views/admin/notes/view.php:133
+msgid "編輯"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:245
+msgid "複製"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:249
+msgid "確定要刪除這個推播活動嗎？"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:270
+msgid "所有好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:271
+msgid "已匯入好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:272
+msgid "篩選好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:286
+#: build/order-chatz/views/admin/chat-interface.php:609
+#: views/admin/chat-interface.php:609
+msgid "文字"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:287
+#: build/order-chatz/views/admin/chat-interface.php:614
+#: views/admin/chat-interface.php:614
+msgid "圖片"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:288
+#: build/order-chatz/views/admin/chat-interface.php:619
+#: views/admin/chat-interface.php:619
+msgid "影片"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:289
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1169
+#: src/Admin/Menu/Pages/Broadcast.php:1169
+msgid "Flex 訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:366
+msgid "手動推播"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:373
+msgid "目前沒有任何推播活動"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/BroadcastListTable.php:391
+msgid "搜尋活動名稱..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:56
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:57
+#: build/order-chatz/views/admin/notes/view.php:82
+#: src/Admin/Lists/NotesListTable.php:56 src/Admin/Lists/NotesListTable.php:57
+#: views/admin/notes/view.php:82
+msgid "備註記錄"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:70
+#: build/order-chatz/views/admin/notes/edit.php:29
+#: build/order-chatz/views/admin/notes/view.php:93
+#: build/order-chatz/views/admin/notes/view.php:161
+#: src/Admin/Lists/NotesListTable.php:70 views/admin/notes/edit.php:29
+#: views/admin/notes/view.php:93 views/admin/notes/view.php:161
+msgid "備註內容"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:71
+#: src/Admin/Lists/NotesListTable.php:71
+msgid "原始貼文"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:72
+#: src/Admin/Lists/NotesListTable.php:72
+msgid "分類"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:73
+#: src/Admin/Lists/NotesListTable.php:73
+msgid "關聯商品"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:74
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:308
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:336
+#: build/order-chatz/views/admin/chat-interface.php:275
+#: build/order-chatz/views/frontend/chat.php:56
+#: src/Admin/Lists/NotesListTable.php:74 src/Admin/Menu/MenuRegistrar.php:314
+#: src/Admin/Menu/Pages/Friends.php:336 views/admin/chat-interface.php:275
+#: views/frontend/chat.php:56
+msgid "好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:75
+#: build/order-chatz/views/admin/notes/view.php:94
+#: src/Admin/Lists/NotesListTable.php:75 views/admin/notes/view.php:94
+msgid "建立者"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:76
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:67
+#: build/order-chatz/views/admin/notes/edit.php:84
+#: build/order-chatz/views/admin/notes/view.php:95
+#: src/Admin/Lists/NotesListTable.php:76 src/Admin/Lists/TagsListTable.php:67
+#: views/admin/notes/edit.php:84 views/admin/notes/view.php:95
+msgid "建立時間"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:77
+#: src/Admin/Lists/NotesListTable.php:77
+msgid "LINE 使用者 ID"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:270
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:440
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:323
+#: build/order-chatz/views/admin/notes/view.php:21
+#: src/Admin/Lists/NotesListTable.php:270
+#: src/Admin/Lists/NotesListTable.php:440 src/Ajax/Customer/Tag.php:404
+#: views/admin/notes/view.php:21
+msgid "無名稱"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:282
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:353
+#: build/order-chatz/views/admin/notes/view.php:71
+#: src/Admin/Lists/NotesListTable.php:282 views/admin/notes/view.php:71
+msgid "無記錄"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:298
+#: build/order-chatz/views/admin/notes/view.php:123
+#: src/Admin/Lists/NotesListTable.php:298 views/admin/notes/view.php:123
+msgid "系統"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:303
+#: src/Admin/Lists/NotesListTable.php:303
+msgid "未知用戶"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:321
+#: src/Admin/Lists/NotesListTable.php:321
+msgid "無備註"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:340
+#: src/Admin/Lists/NotesListTable.php:340
+msgid "無原始貼文"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:345
+#: src/Admin/Lists/NotesListTable.php:345
+msgid "無效資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:371
+#: src/Admin/Lists/NotesListTable.php:371
+msgid "原始貼文圖片"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:389
+#: src/Admin/Lists/NotesListTable.php:389
+msgid "未知類型"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:412
+#: src/Admin/Lists/NotesListTable.php:412
+msgid "查看用戶"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:416
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:509
+#: build/order-chatz/views/admin/notes/edit.php:109
+#: build/order-chatz/views/admin/notes/view.php:137
+#: src/Admin/Lists/NotesListTable.php:416
+#: src/Admin/Lists/NotesListTable.php:509 views/admin/notes/edit.php:109
+#: views/admin/notes/view.php:137
+msgid "確定要刪除這個備註嗎？"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:464
+#: src/Admin/Lists/NotesListTable.php:464
+msgid "商品不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:481
+#: src/Admin/Lists/NotesListTable.php:481
+msgid "目前沒有任何備註記錄"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:539
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:548
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:654
+#: build/order-chatz/views/admin/notes/list.php:32
+#: build/order-chatz/views/admin/notes/list.php:693
+#: build/order-chatz/views/admin/notes/list.php:711
+#: build/order-chatz/views/admin/notes/list.php:737
+#: src/Admin/Lists/NotesListTable.php:539
+#: src/Admin/Lists/NotesListTable.php:548
+#: src/Admin/Lists/NotesListTable.php:654 views/admin/notes/list.php:32
+#: views/admin/notes/list.php:693 views/admin/notes/list.php:711
+#: views/admin/notes/list.php:737
+msgid "無分類"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:543
+#: src/Admin/Lists/NotesListTable.php:543
+msgid "編輯分類"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:556
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:259
+#: build/order-chatz/views/admin/notes/edit.php:62
+#: build/order-chatz/views/admin/notes/view.php:116
+#: src/Admin/Lists/NotesListTable.php:556 src/Admin/Menu/Pages/Friends.php:259
+#: views/admin/notes/edit.php:62 views/admin/notes/view.php:116
+msgid "儲存"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:557
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:260
+#: build/order-chatz/views/admin/chat-interface.php:354
+#: build/order-chatz/views/admin/chat-interface.php:535
+#: build/order-chatz/views/admin/chat-interface.php:748
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:107
+#: build/order-chatz/views/admin/friends/message-import-modal.php:166
+#: build/order-chatz/views/admin/friends/sync-modal.php:98
+#: build/order-chatz/views/admin/notes/view.php:117
+#: src/Admin/Lists/NotesListTable.php:557 src/Admin/Menu/Pages/Friends.php:260
+#: src/Admin/Menu/Pages/Tags.php:285 views/admin/chat-interface.php:354
+#: views/admin/chat-interface.php:535 views/admin/chat-interface.php:748
+#: views/admin/friends/line-sync-modal.php:107
+#: views/admin/friends/message-import-modal.php:166
+#: views/admin/friends/sync-modal.php:98 views/admin/notes/view.php:117
+msgid "取消"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/NotesListTable.php:674
+#: src/Admin/Lists/NotesListTable.php:674
+msgid "請輸入關鍵字"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:50
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:51
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:314
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:36
+#: build/order-chatz/views/admin/chat-interface.php:486
+#: src/Admin/Lists/TagsListTable.php:50 src/Admin/Lists/TagsListTable.php:51
+#: src/Admin/Menu/MenuRegistrar.php:320 src/Admin/Menu/Pages/Tags.php:36
+#: views/admin/chat-interface.php:486
+msgid "標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:65
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:223
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:286
+#: src/Admin/Lists/TagsListTable.php:65 src/Admin/Menu/Pages/Tags.php:274
+msgid "標籤名稱"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:66
+#: src/Admin/Lists/TagsListTable.php:66
+msgid "好友人數"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:255
+#: src/Admin/Lists/TagsListTable.php:255
+msgid "成功刪除 %d 個標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:266
+#: src/Admin/Lists/TagsListTable.php:266
+msgid "刪除 %d 個標籤失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:319
+#: src/Admin/Lists/TagsListTable.php:318
+msgid "確定要刪除這個標籤嗎？"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:335
+#: src/Admin/Lists/TagsListTable.php:353
+msgid "找不到標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Lists/TagsListTable.php:353
+#: src/Admin/Lists/TagsListTable.php:371
+msgid "搜尋標籤..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:154
+#: src/Admin/Menu/AdminMenuManager.php:155
+msgid "無效的頁面參數。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:179
+#: src/Admin/Menu/AdminMenuManager.php:180
+msgid "頁面載入時發生錯誤。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:346
+#: build/order-chatz/src/Admin/Menu/PageRenderer.php:218
+#: src/Admin/Menu/AdminMenuManager.php:350 src/Admin/Menu/PageRenderer.php:218
+msgid "這是 %s 頁面的內容區域，準備未來功能實作。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:375
+#: src/Admin/Menu/AdminMenuManager.php:379
+msgid "安全驗證失敗，請重新整理頁面後再試。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:376
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:388
+#: src/Admin/Menu/AdminMenuManager.php:380
+#: src/Admin/Menu/AdminMenuManager.php:392
+msgid "安全錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:381
+#: src/Admin/Menu/AdminMenuManager.php:385
+msgid "您的 IP 地址不在允許的範圍內。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:382
+#: src/Admin/Menu/AdminMenuManager.php:386
+msgid "存取拒絕"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/AdminMenuManager.php:387
+#: src/Admin/Menu/AdminMenuManager.php:391
+msgid "安全驗證失敗，無法存取此頁面。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:222
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:254
+#: src/Admin/Menu/MenuRegistrar.php:222 src/Admin/Menu/MenuRegistrar.php:254
+msgid "系統初始化錯誤。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:296
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:27
+#: build/order-chatz/views/frontend/chat.php:60
+#: src/Admin/Menu/MenuRegistrar.php:296 src/Admin/Menu/Pages/Chat.php:27
+#: views/frontend/chat.php:60
+msgid "聊天"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:302
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:40
+#: src/Admin/Menu/MenuRegistrar.php:302 src/Admin/Menu/Pages/Broadcast.php:40
+msgid "推播"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:320
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:35
+#: build/order-chatz/views/admin/chat-interface.php:473
+#: src/Admin/Menu/MenuRegistrar.php:326 src/Admin/Menu/Pages/Notes.php:35
+#: views/admin/chat-interface.php:473
+msgid "備註"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:326
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:50
+#: src/Admin/Menu/MenuRegistrar.php:332 src/Admin/Menu/Pages/Webhook.php:50
+#: src/Admin/Menu/TabNavigationRenderer.php:76
+msgid "Webhook"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:332
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:35
+#: src/Admin/Menu/MenuRegistrar.php:338 src/Admin/Menu/Pages/Export.php:35
+msgid "匯出"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:338
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:26
+#: src/Admin/Menu/MenuRegistrar.php:344 src/Admin/Menu/Pages/Statistics.php:26
+msgid "統計"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/MenuRegistrar.php:344
+#: build/order-chatz/src/Admin/Menu/Pages/Subscribers.php:65
+#: src/Admin/Menu/MenuRegistrar.php:350 src/Admin/Menu/Pages/Subscribers.php:65
+msgid "訂閱管理"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/PageRenderer.php:154
+#: src/Admin/Menu/PageRenderer.php:154
+msgid "OrderChatz %1$s - 由 %2$s 提供技術支援"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/PageRenderer.php:174
+#: src/Admin/Menu/PageRenderer.php:174
+msgid "頁面載入錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/PageRenderer.php:175
+#: src/Admin/Menu/PageRenderer.php:175
+msgid "很抱歉，載入此頁面時發生錯誤。請稍後再試，或聯繫系統管理員。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Authorization.php:26
+#: src/Admin/Menu/Pages/Authorization.php:26
+msgid "授權"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Authorization.php:41
+#: src/Admin/Menu/Pages/Authorization.php:41
+msgid ""
+"外掛授權功能正在開發中，將提供授權碼驗證、授權狀態查詢、續約提醒等功能。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:107
+#: src/Admin/Menu/Pages/Broadcast.php:107
+msgid "列表模板檔案不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:340
+#: src/Admin/Menu/Pages/Broadcast.php:340
+msgid "新增規則"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:342
+#: src/Admin/Menu/Pages/Broadcast.php:342
+msgid "選擇條件類型"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:343
+#: src/Admin/Menu/Pages/Broadcast.php:343
+msgid "新增群組"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:344
+#: src/Admin/Menu/Pages/Broadcast.php:344
+msgid "刪除群組"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:357
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:381
+#: src/Admin/Menu/Pages/Broadcast.php:357
+#: src/Admin/Menu/Pages/Broadcast.php:381
+msgid "選擇圖片"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:358
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:382
+#: src/Admin/Menu/Pages/Broadcast.php:358
+#: src/Admin/Menu/Pages/Broadcast.php:382
+msgid "使用此圖片"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:359
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:383
+#: src/Admin/Menu/Pages/Broadcast.php:359
+#: src/Admin/Menu/Pages/Broadcast.php:383
+msgid "選擇影片"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:360
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:384
+#: src/Admin/Menu/Pages/Broadcast.php:360
+#: src/Admin/Menu/Pages/Broadcast.php:384
+msgid "使用此影片"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:361
+#: src/Admin/Menu/Pages/Broadcast.php:361
+msgid "確定要立即發送推播嗎？此操作無法復原。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:374
+#: build/order-chatz/src/Ajax/BroadcastAjaxHandler.php:281
+#: src/Admin/Menu/Pages/Broadcast.php:374 src/Ajax/BroadcastAjaxHandler.php:281
+msgid "請輸入測試用 LINE User ID"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:375
+#: src/Admin/Menu/Pages/Broadcast.php:375
+msgid "請先填寫訊息內容"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:376
+#: src/Admin/Menu/Pages/Broadcast.php:376
+msgid "發送中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:377
+#: build/order-chatz/src/Ajax/BroadcastAjaxHandler.php:322
+#: src/Admin/Menu/Pages/Broadcast.php:377 src/Ajax/BroadcastAjaxHandler.php:322
+msgid "測試訊息已發送"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:378
+#: src/Admin/Menu/Pages/Broadcast.php:378
+msgid "測試訊息發送失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:379
+#: src/Admin/Menu/Pages/Broadcast.php:379
+msgid "AJAX 請求失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:380
+#: src/Admin/Menu/Pages/Broadcast.php:380
+msgid "發送測試訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:404
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1157
+#: build/order-chatz/src/Services/Broadcast/SavePushHandler.php:117
+#: src/Admin/Menu/Pages/Broadcast.php:404
+#: src/Admin/Menu/Pages/Broadcast.php:1157
+#: src/Services/Broadcast/SavePushHandler.php:117
+msgid "找不到推播活動"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:445
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:942
+#: src/Admin/Menu/Pages/Broadcast.php:445 src/Admin/Menu/Pages/Friends.php:942
+msgid "編輯表單模板檔案不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:459
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:483
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:292
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:348
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:373
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:408
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:387
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:601
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:666
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:736
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:299
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:164
+#: src/Admin/Menu/Pages/Broadcast.php:459
+#: src/Admin/Menu/Pages/Broadcast.php:483 src/Admin/Menu/Pages/Export.php:292
+#: src/Admin/Menu/Pages/Export.php:348 src/Admin/Menu/Pages/Export.php:373
+#: src/Admin/Menu/Pages/Export.php:408 src/Admin/Menu/Pages/Friends.php:387
+#: src/Admin/Menu/Pages/Friends.php:601 src/Admin/Menu/Pages/Friends.php:666
+#: src/Admin/Menu/Pages/Friends.php:736 src/Admin/Menu/Pages/Notes.php:299
+#: src/Admin/Menu/Pages/Tags.php:180
+msgid "安全驗證失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:495
+#: src/Admin/Menu/Pages/Broadcast.php:495
+msgid "副本"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1108
+#: src/Admin/Menu/Pages/Broadcast.php:1108
+msgid "推播活動已刪除"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1111
+#: src/Admin/Menu/Pages/Broadcast.php:1111
+msgid "推播活動已複製"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1114
+#: src/Admin/Menu/Pages/Broadcast.php:1114
+msgid "推播活動已儲存"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1117
+#: src/Admin/Menu/Pages/Broadcast.php:1117
+msgid "推播活動已儲存並加入推播排程，系統將在背景執行推播作業"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1120
+#: src/Admin/Menu/Pages/Broadcast.php:1120
+msgid "推播活動已儲存，但排程失敗，請稍後再試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1124
+#: src/Admin/Menu/Pages/Broadcast.php:1124
+msgid "推播活動已儲存並成功發送給 %d 位好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1128
+#: src/Admin/Menu/Pages/Broadcast.php:1128
+msgid "推播活動已儲存，但發送失敗：%s"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1131
+#: src/Admin/Menu/Pages/Broadcast.php:1131
+msgid "推播活動已儲存並設定排程，系統將在指定時間自動發送"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1134
+#: src/Admin/Menu/Pages/Broadcast.php:1134
+msgid "推播活動已儲存，但排程設定失敗，請重新設定排程時間"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1151
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:892
+#: src/Admin/Menu/Pages/Broadcast.php:1151 src/Admin/Menu/Pages/Friends.php:892
+msgid "刪除失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1154
+#: src/Admin/Menu/Pages/Broadcast.php:1154
+msgid "複製失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1166
+#: src/Admin/Menu/Pages/Broadcast.php:1166
+msgid "文字訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1167
+#: src/Admin/Menu/Pages/Broadcast.php:1167
+msgid "圖片訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1168
+#: src/Admin/Menu/Pages/Broadcast.php:1168
+msgid "影片訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1172
+#: src/Admin/Menu/Pages/Broadcast.php:1172
+msgid "缺少必填欄位：%1$s（%2$s 內容不可為空）"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1174
+#: src/Admin/Menu/Pages/Broadcast.php:1174
+msgid "缺少必填欄位：%s"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Broadcast.php:1178
+#: src/Admin/Menu/Pages/Broadcast.php:1178
+msgid "儲存失敗，請稍後再試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:444
+#: src/Admin/Menu/Pages/Chat.php:446
+msgid "聊天介面模板檔案不存在，請檢查外掛安裝是否完整。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:461
+#: src/Admin/Menu/Pages/Chat.php:463
+msgid "聊天介面正在建置中，模板檔案將會在下個步驟中建立。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:468
+#: build/order-chatz/views/admin/chat-interface.php:42
+#: src/Admin/Menu/Pages/Chat.php:470 views/admin/chat-interface.php:42
+msgid "好友列表"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:472
+#: src/Admin/Menu/Pages/Chat.php:474
+msgid "聊天區域"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Chat.php:476
+#: build/order-chatz/views/admin/chat-interface.php:279
+#: build/order-chatz/views/admin/notes/view.php:16
+#: src/Admin/Menu/Pages/Chat.php:478 views/admin/chat-interface.php:279
+#: views/admin/notes/view.php:16
+msgid "客戶資訊"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:109
+#: src/Admin/Menu/Pages/Export.php:109
+msgid "匯出中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:111
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:461
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:437
+#: src/Admin/Menu/Pages/Export.php:111 src/Admin/Menu/Pages/Notes.php:461
+#: src/Admin/Menu/Pages/Tags.php:348
+msgid "操作失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:112
+#: src/Admin/Menu/Pages/Export.php:112
+msgid "操作成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:113
+#: src/Admin/Menu/Pages/Export.php:113
+msgid "確定要清除所有上傳檔案嗎？此操作無法復原！"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:146
+#: build/order-chatz/views/admin/export.php:19
+#: src/Admin/Menu/Pages/Export.php:146 views/admin/export.php:19
+msgid "訊息資料匯出"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:150
+#: build/order-chatz/views/admin/export.php:23
+#: src/Admin/Menu/Pages/Export.php:150 views/admin/export.php:23
+msgid "選擇日期範圍"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:152
+#: src/Admin/Menu/Pages/Export.php:152
+msgid "開始日期"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:154
+#: src/Admin/Menu/Pages/Export.php:154
+msgid "結束日期"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:156
+#: src/Admin/Menu/Pages/Export.php:156
+msgid "點擊日期欄位選擇要匯出的訊息日期範圍"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:160
+#: build/order-chatz/views/admin/export.php:33
+#: src/Admin/Menu/Pages/Export.php:160 views/admin/export.php:33
+msgid "匯出格式"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:169
+#: build/order-chatz/views/admin/export.php:42
+#: src/Admin/Menu/Pages/Export.php:169 views/admin/export.php:42
+msgid "匯出訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:185
+#: build/order-chatz/views/admin/export.php:52
+#: src/Admin/Menu/Pages/Export.php:185 views/admin/export.php:52
+msgid "存儲分析"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:189
+#: build/order-chatz/views/admin/export.php:56
+#: src/Admin/Menu/Pages/Export.php:189 views/admin/export.php:56
+msgid "載入存儲資訊中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:194
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:90
+#: build/order-chatz/views/admin/export.php:61
+#: build/order-chatz/views/admin/statistics-interface.php:78
+#: src/Admin/Menu/Pages/Export.php:194 src/Admin/Menu/Pages/Statistics.php:90
+#: views/admin/export.php:61 views/admin/statistics-interface.php:78
+msgid "重新整理"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:209
+#: build/order-chatz/views/admin/export.php:70
+#: src/Admin/Menu/Pages/Export.php:209 views/admin/export.php:70
+msgid "檔案管理"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:213
+#: build/order-chatz/views/admin/export.php:74
+#: src/Admin/Menu/Pages/Export.php:213 views/admin/export.php:74
+msgid "載入檔案資訊中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:218
+#: build/order-chatz/views/admin/export.php:79
+#: src/Admin/Menu/Pages/Export.php:218 views/admin/export.php:79
+msgid "打包下載"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:221
+#: build/order-chatz/views/admin/export.php:82
+#: src/Admin/Menu/Pages/Export.php:221 views/admin/export.php:82
+msgid "清除檔案"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:297
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:378
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:413
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:607
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:672
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:742
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:509
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:526
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:536
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:546
+#: build/order-chatz/src/Admin/Menu/PermissionValidator.php:109
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:31
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:62
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:101
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:30
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:59
+#: build/order-chatz/src/Core/FrontendChatRouter.php:196
+#: src/Admin/Menu/Pages/Export.php:297 src/Admin/Menu/Pages/Export.php:378
+#: src/Admin/Menu/Pages/Export.php:413 src/Admin/Menu/Pages/Friends.php:607
+#: src/Admin/Menu/Pages/Friends.php:672 src/Admin/Menu/Pages/Friends.php:742
+#: src/Admin/Menu/Pages/Webhook.php:509 src/Admin/Menu/Pages/Webhook.php:526
+#: src/Admin/Menu/Pages/Webhook.php:536 src/Admin/Menu/Pages/Webhook.php:546
+#: src/Admin/Menu/PermissionValidator.php:109
+#: src/Ajax/LineFriendsSyncHandler.php:31
+#: src/Ajax/LineFriendsSyncHandler.php:62
+#: src/Ajax/LineFriendsSyncHandler.php:101 src/Ajax/MemberSyncHandler.php:30
+#: src/Ajax/MemberSyncHandler.php:59 src/Core/FrontendChatRouter.php:197
+msgid "權限不足"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:305
+#: src/Admin/Menu/Pages/Export.php:305
+msgid "請選擇日期範圍"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:310
+#: src/Admin/Menu/Pages/Export.php:310
+msgid "日期格式無效"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:315
+#: src/Admin/Menu/Pages/Export.php:315
+msgid "日期範圍不能超過 31 天"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:323
+#: src/Admin/Menu/Pages/Export.php:323
+msgid "匯出成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:336
+#: src/Admin/Menu/Pages/Export.php:336
+msgid "匯出失敗："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:361
+#: src/Admin/Menu/Pages/Export.php:361
+msgid "取得存儲資訊失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:386
+#: src/Admin/Menu/Pages/Export.php:386
+msgid "打包完成"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:396
+#: src/Admin/Menu/Pages/Export.php:396
+msgid "打包失敗："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:420
+#: src/Admin/Menu/Pages/Export.php:420
+msgid "已清除 %d 個檔案"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:431
+#: src/Admin/Menu/Pages/Export.php:431
+msgid "清除失敗："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:451
+#: src/Admin/Menu/Pages/Export.php:451
+msgid "指定月份的資料表不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:458
+#: src/Admin/Menu/Pages/Export.php:458
+msgid "該月份沒有訊息資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:494
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:524
+#: src/Admin/Menu/Pages/Export.php:494 src/Admin/Menu/Pages/Export.php:524
+msgid "無法建立匯出檔案"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:599
+#: src/Admin/Menu/Pages/Export.php:599
+msgid "上傳目錄不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:610
+#: src/Admin/Menu/Pages/Export.php:610
+msgid "無法建立 ZIP 檔案"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:730
+#: src/Admin/Menu/Pages/Export.php:730
+msgid "指定日期範圍內沒有找到對應的資料表"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Export.php:766
+#: src/Admin/Menu/Pages/Export.php:766
+msgid "指定日期範圍內沒有訊息資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:43
+#: build/order-chatz/views/admin/friends/edit-form.php:37
+#: src/Admin/Menu/Pages/Friends.php:43 views/admin/friends/edit-form.php:37
+#: views/admin/tags/users-modal.php:31
+msgid "LINE 顯示名稱"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:44
+#: build/order-chatz/views/admin/friends/edit-form.php:43
+#: src/Admin/Menu/Pages/Friends.php:44 views/admin/friends/edit-form.php:43
+msgid "LINE ID"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:45
+#: build/order-chatz/views/admin/friends/edit-form.php:112
+#: src/Admin/Menu/Pages/Friends.php:45 views/admin/friends/edit-form.php:112
+msgid "網站會員"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:46
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:351
+#: build/order-chatz/views/admin/friends/edit-form.php:73
+#: build/order-chatz/views/admin/notes/view.php:69
+#: src/Admin/Menu/Pages/Friends.php:46 views/admin/friends/edit-form.php:73
+#: views/admin/notes/view.php:69
+msgid "加入時間"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:47
+#: build/order-chatz/views/admin/chat-interface.php:314
+#: build/order-chatz/views/admin/chat-interface.php:583
+#: build/order-chatz/views/admin/notes/view.php:96
+#: src/Admin/Menu/Pages/Friends.php:47 views/admin/chat-interface.php:314
+#: views/admin/chat-interface.php:583 views/admin/notes/view.php:96
+msgid "操作"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:66
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:300
+#: src/Admin/Menu/Pages/Friends.php:66 src/Admin/Menu/Pages/Friends.php:300
+msgid "重新取得資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:182
+#: src/Admin/Menu/Pages/Friends.php:182
+msgid "匯入訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:187
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:302
+#: src/Admin/Menu/Pages/Friends.php:187 src/Admin/Menu/Pages/Friends.php:302
+msgid "確定要刪除這位好友嗎？"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:211
+#: src/Admin/Menu/Pages/Friends.php:211
+msgid "尚未加入好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:233
+#: src/Admin/Menu/Pages/Friends.php:233
+msgid "會員不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:236
+#: src/Admin/Menu/Pages/Friends.php:236
+msgid "尚未綁定"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:248
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1195
+#: src/Admin/Menu/Pages/Friends.php:248 src/Admin/Menu/Pages/Friends.php:1195
+msgid "編輯會員綁定"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:254
+#: src/Admin/Menu/Pages/Friends.php:254
+msgid "選擇會員..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:615
+#: src/Admin/Menu/Pages/Friends.php:615
+msgid "好友 ID 不能為空"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:647
+#: src/Admin/Menu/Pages/Friends.php:647
+msgid "會員綁定已更新"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:652
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:722
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1210
+#: src/Admin/Menu/Pages/Friends.php:652 src/Admin/Menu/Pages/Friends.php:722
+#: src/Admin/Menu/Pages/Friends.php:1210
+msgid "更新失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:655
+#: src/Admin/Menu/Pages/Friends.php:655
+msgid "更新時發生錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:688
+#: src/Admin/Menu/Pages/Friends.php:688
+msgid "LINE ACCESS TOKEN 未設定"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:697
+#: src/Admin/Menu/Pages/Friends.php:697
+msgid "無法從 LINE API 取得用戶資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:716
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:872
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1209
+#: src/Admin/Menu/Pages/Friends.php:716 src/Admin/Menu/Pages/Friends.php:872
+#: src/Admin/Menu/Pages/Friends.php:1209
+msgid "好友資料已更新"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:725
+#: src/Admin/Menu/Pages/Friends.php:725
+msgid "更新時發生錯誤："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:750
+#: src/Admin/Menu/Pages/Friends.php:750
+msgid "請輸入搜尋關鍵字"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:816
+#: src/Admin/Menu/Pages/Friends.php:816
+msgid "搜尋時發生錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:842
+#: src/Admin/Menu/Pages/Friends.php:842
+msgid "好友列表模板檔案不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:866
+#: src/Admin/Menu/Pages/Friends.php:866
+msgid "好友已刪除"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:869
+#: src/Admin/Menu/Pages/Friends.php:869
+msgid "已刪除選中的好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:875
+#: src/Admin/Menu/Pages/Friends.php:875
+msgid "已成功重新取得所有選中好友的資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:880
+#: src/Admin/Menu/Pages/Friends.php:880
+msgid "批次更新完成：成功 %1$d 個，失敗 %2$d 個"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:895
+#: src/Admin/Menu/Pages/Friends.php:895
+msgid "請選擇要操作的好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:898
+#: src/Admin/Menu/Pages/Friends.php:898
+msgid "沒有有效的項目可操作"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:901
+#: src/Admin/Menu/Pages/Friends.php:901
+msgid "LINE ACCESS TOKEN 未設定，無法取得好友資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:904
+#: src/Admin/Menu/Pages/Friends.php:904
+msgid "批次刪除失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:907
+#: src/Admin/Menu/Pages/Friends.php:907
+msgid "批次刪除時發生錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:910
+#: src/Admin/Menu/Pages/Friends.php:910
+msgid "批次重新取得資料失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:913
+#: src/Admin/Menu/Pages/Friends.php:913
+msgid "批次重新取得資料時發生錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:933
+#: src/Admin/Menu/Pages/Friends.php:933
+msgid "找不到好友資料"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:971
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1189
+#: src/Admin/Menu/Pages/Friends.php:971 src/Admin/Menu/Pages/Friends.php:1189
+msgid "搜尋會員..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:975
+#: src/Admin/Menu/Pages/Friends.php:975
+msgid "找不到符合的用戶"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:976
+#: src/Admin/Menu/Pages/Friends.php:976
+msgid "搜尋發生錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:977
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1192
+#: src/Admin/Menu/Pages/Friends.php:977 src/Admin/Menu/Pages/Friends.php:1192
+msgid "搜尋中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1110
+#: src/Admin/Menu/Pages/Friends.php:1110
+msgid "同步正在進行中，確定要取消嗎？"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1111
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1165
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:81
+#: build/order-chatz/views/admin/friends/message-import-modal.php:144
+#: build/order-chatz/views/admin/friends/sync-modal.php:80
+#: src/Admin/Menu/Pages/Friends.php:1111 src/Admin/Menu/Pages/Friends.php:1165
+#: views/admin/friends/line-sync-modal.php:81
+#: views/admin/friends/message-import-modal.php:144
+#: views/admin/friends/sync-modal.php:80
+msgid "準備中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1112
+#: src/Admin/Menu/Pages/Friends.php:1112
+msgid "掃描網站會員..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1113
+#: src/Admin/Menu/Pages/Friends.php:1113
+msgid "匯入會員資料..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1114
+#: src/Admin/Menu/Pages/Friends.php:1114
+msgid "配對 LINE 帳號..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1115
+#: src/Admin/Menu/Pages/Friends.php:1115
+msgid "更新好友資料..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1116
+#: build/order-chatz/views/admin/friends/sync-modal.php:88
+#: src/Admin/Menu/Pages/Friends.php:1116 views/admin/friends/sync-modal.php:88
+msgid "同步完成！"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1117
+#: src/Admin/Menu/Pages/Friends.php:1117
+msgid "總會員數"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1118
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1174
+#: src/Admin/Menu/Pages/Friends.php:1118 src/Admin/Menu/Pages/Friends.php:1174
+msgid "已匯入"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1119
+#: src/Admin/Menu/Pages/Friends.php:1119
+msgid "已配對"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1120
+#: src/Admin/Menu/Pages/Friends.php:1120
+msgid "已更新"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1121
+#: src/Admin/Menu/Pages/Friends.php:1121
+msgid "同步時發生錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1122
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:45
+#: src/Admin/Menu/Pages/Friends.php:1122
+#: views/admin/friends/line-sync-modal.php:45
+msgid "連線到 LINE API..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1123
+#: src/Admin/Menu/Pages/Friends.php:1123
+msgid "取得好友清單..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1124
+#: src/Admin/Menu/Pages/Friends.php:1124
+msgid "處理好友資料..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1125
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:89
+#: src/Admin/Menu/Pages/Friends.php:1125
+#: views/admin/friends/line-sync-modal.php:89
+msgid "LINE 好友匯入完成！"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1126
+#: src/Admin/Menu/Pages/Friends.php:1126
+msgid "LINE 好友匯入失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1127
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1175
+#: src/Admin/Menu/Pages/Friends.php:1127 src/Admin/Menu/Pages/Friends.php:1175
+msgid "重複匯入"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1159
+#: src/Admin/Menu/Pages/Friends.php:1159
+msgid "請選擇 CSV 檔案"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1160
+#: src/Admin/Menu/Pages/Friends.php:1160
+msgid "檔案大小不能超過 10MB"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1161
+#: src/Admin/Menu/Pages/Friends.php:1161
+msgid "預覽失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1162
+#: src/Admin/Menu/Pages/Friends.php:1162
+msgid "匯入失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1163
+#: src/Admin/Menu/Pages/Friends.php:1163
+msgid "請至少選擇一則訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1164
+#: src/Admin/Menu/Pages/Friends.php:1164
+msgid "匯入正在進行中，確定要取消嗎？"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1166
+#: build/order-chatz/views/admin/friends/message-import-modal.php:140
+#: src/Admin/Menu/Pages/Friends.php:1166
+#: views/admin/friends/message-import-modal.php:140
+msgid "正在匯入訊息..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1167
+#: src/Admin/Menu/Pages/Friends.php:1167
+msgid "匯入完成！"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1168
+#: src/Admin/Menu/Pages/Friends.php:1168
+msgid "總訊息數"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1169
+#: build/order-chatz/views/admin/friends/message-import-modal.php:99
+#: src/Admin/Menu/Pages/Friends.php:1169
+#: views/admin/friends/message-import-modal.php:99
+msgid "好友訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1170
+#: build/order-chatz/views/admin/friends/message-import-modal.php:102
+#: src/Admin/Menu/Pages/Friends.php:1170
+#: views/admin/friends/message-import-modal.php:102
+msgid "官方帳號訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1171
+#: src/Admin/Menu/Pages/Friends.php:1171
+msgid "重複"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1172
+#: src/Admin/Menu/Pages/Friends.php:1172
+msgid "新訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1173
+#: src/Admin/Menu/Pages/Friends.php:1173
+msgid "總處理數"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1176
+#: src/Admin/Menu/Pages/Friends.php:1176
+msgid "錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1191
+#: src/Admin/Menu/Pages/Friends.php:1191
+msgid "請輸入至少 1 個字元"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1193
+#: src/Admin/Menu/Pages/Friends.php:1193
+msgid "找不到符合的會員"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1194
+#: src/Admin/Menu/Pages/Friends.php:1194
+msgid "載入時發生錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1207
+#: src/Admin/Menu/Pages/Friends.php:1207
+msgid "確定要重新取得好友資料嗎？"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Friends.php:1208
+#: src/Admin/Menu/Pages/Friends.php:1208
+msgid "正在更新資料..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:120
+#: src/Admin/Menu/Pages/Notes.php:120
+msgid "LINE User ID 不能為空"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:132
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:195
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:257
+#: src/Admin/Menu/Pages/Notes.php:132 src/Admin/Menu/Pages/Notes.php:195
+#: src/Admin/Menu/Pages/Notes.php:257
+msgid "備註內容不能為空"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:161
+#: src/Admin/Menu/Pages/Notes.php:161
+msgid "新增備註失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:183
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:245
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:307
+#: src/Admin/Menu/Pages/Notes.php:183 src/Admin/Menu/Pages/Notes.php:245
+#: src/Admin/Menu/Pages/Notes.php:307
+msgid "參數錯誤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:224
+#: src/Admin/Menu/Pages/Notes.php:224
+msgid "編輯備註失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:283
+#: src/Admin/Menu/Pages/Notes.php:283
+msgid "更新備註失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:334
+#: src/Admin/Menu/Pages/Notes.php:334
+msgid "刪除備註失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:443
+#: src/Admin/Menu/Pages/Notes.php:443
+msgid "備註新增成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:446
+#: src/Admin/Menu/Pages/Notes.php:446
+msgid "備註更新成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:449
+#: src/Admin/Menu/Pages/Notes.php:449
+msgid "備註刪除成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:453
+#: src/Admin/Menu/Pages/Notes.php:453
+msgid "找不到指定的使用者"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Notes.php:457
+#: src/Admin/Menu/Pages/Notes.php:457
+msgid "找不到指定的備註"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:87
+#: src/Admin/Menu/Pages/Statistics.php:87
+msgid "載入失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:88
+#: src/Admin/Menu/Pages/Statistics.php:88
+msgid "暫無數據"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:89
+#: build/order-chatz/views/admin/statistics-interface.php:190
+#: src/Admin/Menu/Pages/Statistics.php:89
+#: views/admin/statistics-interface.php:190
+msgid "重試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:91
+#: src/Admin/Menu/Pages/Statistics.php:91
+msgid "配額已超過"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:92
+#: build/order-chatz/views/admin/statistics-interface.php:53
+#: src/Admin/Menu/Pages/Statistics.php:92
+#: views/admin/statistics-interface.php:53
+msgid "剩餘配額"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:93
+#: src/Admin/Menu/Pages/Statistics.php:93
+msgid "已發送訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:94
+#: src/Admin/Menu/Pages/Statistics.php:94
+msgid "每日使用量"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:95
+#: src/Admin/Menu/Pages/Statistics.php:95
+msgid "每月使用量"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:113
+#: src/Admin/Menu/Pages/Statistics.php:113
+msgid "統計介面模板檔案不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:123
+#: src/Admin/Menu/Pages/Statistics.php:123
+msgid "LINE Messaging API 統計"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Statistics.php:132
+#: src/Admin/Menu/Pages/Statistics.php:132
+msgid ""
+"查看 LINE Messaging API 的使用統計，包含訊息配額、發送數量、好友統計等資訊"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Subscribers.php:139
+#: src/Admin/Menu/Pages/Subscribers.php:139
+msgid "安全檢查失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:124
+#: src/Admin/Menu/Pages/Tags.php:352
+msgid "標籤名稱不能為空"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:149
+msgid "更新標籤失敗"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:188
+msgid "標籤管理"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:190
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:213
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:233
+#: src/Admin/Menu/Pages/Tags.php:225 src/Admin/Menu/Pages/Tags.php:267
+#: src/Admin/Menu/Pages/Tags.php:282
+msgid "新增標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:199
+#: src/Admin/Menu/Pages/Tags.php:301
+msgid "搜尋標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:227
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:291
+#: src/Admin/Menu/Pages/Tags.php:276
+msgid "請輸入標籤名稱"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:237
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:370
+msgid "返回標籤列表"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:275
+#: src/Admin/Menu/Pages/Tags.php:226
+msgid "編輯標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:297
+#: src/Admin/Menu/Pages/Tags.php:227
+msgid "更新標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:302
+msgid "帶有「%s」標籤的好友"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:306
+#: views/admin/tags/users-modal.php:62
+msgid "目前沒有好友使用此標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:313
+#: build/order-chatz/views/admin/notes/view.php:20
+#: views/admin/notes/view.php:20
+msgid "顯示名稱"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:314
+#: build/order-chatz/views/admin/notes/view.php:28
+#: views/admin/notes/view.php:28 views/admin/tags/users-modal.php:32
+msgid "WordPress 使用者"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:315
+#: build/order-chatz/views/admin/friends/edit-form.php:102
+#: views/admin/friends/edit-form.php:102 views/admin/tags/users-modal.php:33
+msgid "最後活動時間"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:339
+#: build/order-chatz/views/admin/notes/view.php:41
+#: views/admin/notes/view.php:41
+msgid "使用者不存在"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:342
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserBinding.php:141
+#: build/order-chatz/views/admin/notes/view.php:44
+#: src/Services/Broadcast/Conditions/UserBinding.php:141
+#: views/admin/notes/view.php:44
+msgid "未綁定"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:363
+msgid "共有 %d 位好友使用此標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:423
+#: src/Admin/Menu/Pages/Tags.php:334
+msgid "標籤新增成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:426
+#: src/Admin/Menu/Pages/Tags.php:337
+msgid "標籤更新成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:429
+#: src/Admin/Menu/Pages/Tags.php:340
+msgid "標籤刪除成功"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:433
+#: src/Admin/Menu/Pages/Tags.php:344
+msgid "找不到指定的標籤"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:441
+msgid "標籤現在會在使用時自動創建，不需要手動新增"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Tags.php:445
+#: src/Admin/Menu/Pages/Tags.php:360
+msgid "標籤名稱沒有變更"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:129
+#: src/Admin/Menu/Pages/Webhook.php:129
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:156
+#: src/Admin/Menu/Pages/Webhook.php:156
+msgid "LINE Webhook 設定"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:167
+#: src/Admin/Menu/Pages/Webhook.php:167
+msgid "Channel Secret"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:175
+#: src/Admin/Menu/Pages/Webhook.php:175
+msgid "請輸入您的 Channel Secret"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:177
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:196
+#: src/Admin/Menu/Pages/Webhook.php:177 src/Admin/Menu/Pages/Webhook.php:196
+msgid "顯示/隱藏"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:180
+#: src/Admin/Menu/Pages/Webhook.php:180
+msgid "從 LINE Developers Console Basic settings 頁籤取得 Channel Secret"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:186
+#: src/Admin/Menu/Pages/Webhook.php:186
+msgid "Channel Access Token"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:194
+#: src/Admin/Menu/Pages/Webhook.php:194
+msgid "請輸入您的 Channel Access Token"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:199
+#: src/Admin/Menu/Pages/Webhook.php:199
+msgid "從 LINE Developers Console Messaging API 頁籤取得 Channel Access Token"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:208
+#: src/Admin/Menu/Pages/Webhook.php:208
+msgid "儲存設定"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:225
+#: src/Admin/Menu/Pages/Webhook.php:225
+msgid "📋 Webhook 手動設定步驟"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:226
+#: src/Admin/Menu/Pages/Webhook.php:226
+msgid "完成上方 LINE API 設定後，請按照以下步驟設定 Webhook："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:229
+#: src/Admin/Menu/Pages/Webhook.php:229
+msgid "步驟 1：註冊 Webhook URL"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:230
+#: src/Admin/Menu/Pages/Webhook.php:230
+msgid "複製下方 Webhook URL 到 Messaging API 設定："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:235
+#: src/Admin/Menu/Pages/Webhook.php:235
+msgid "複製 URL"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:244
+#: src/Admin/Menu/Pages/Webhook.php:244
+msgid "步驟 2：在 LINE Console 啟用 Webhook"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:246
+#: src/Admin/Menu/Pages/Webhook.php:246
+msgid "前往"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:247
+#: src/Admin/Menu/Pages/Webhook.php:247
+msgid "選擇您的 Provider → 選擇對應的 Messaging API Channel"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:248
+#: src/Admin/Menu/Pages/Webhook.php:248
+msgid "點擊「Messaging API」分頁"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:249
+#: src/Admin/Menu/Pages/Webhook.php:249
+msgid "在「Webhook settings」區塊中："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:251
+#: src/Admin/Menu/Pages/Webhook.php:251
+msgid "貼上 Webhook URL"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:252
+#: src/Admin/Menu/Pages/Webhook.php:252
+msgid "手動勾選「Use webhook」選項"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:253
+#: src/Admin/Menu/Pages/Webhook.php:253
+msgid ""
+"手動勾選「Webhook redelivery」，確保當網站斷線恢復連線後能夠接收到先前遺漏的"
+"訊息"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:254
+#: src/Admin/Menu/Pages/Webhook.php:254
+msgid ""
+"手動勾選「Error statistics aggregation」，就能在 Statistics 頁籤看到 Webhook "
+"錯誤資訊以利除錯"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:262
+#: src/Admin/Menu/Pages/Webhook.php:262
+msgid "步驟 3：驗證設定"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:263
+#: src/Admin/Menu/Pages/Webhook.php:263
+msgid "完成上述步驟後，使用下方按鈕驗證設定："
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:265
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:441
+#: src/Admin/Menu/Pages/Webhook.php:265 src/Admin/Menu/Pages/Webhook.php:441
+msgid "驗證 Webhook 狀態"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:268
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:470
+#: src/Admin/Menu/Pages/Webhook.php:268 src/Admin/Menu/Pages/Webhook.php:470
+msgid "測試 API 連線"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:286
+#: src/Admin/Menu/Pages/Webhook.php:286
+msgid "Channel Access Token 不能為空"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:288
+#: src/Admin/Menu/Pages/Webhook.php:288
+msgid "Channel Access Token 格式可能不正確"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:292
+#: src/Admin/Menu/Pages/Webhook.php:292
+msgid "Channel Secret 不能為空"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:294
+#: src/Admin/Menu/Pages/Webhook.php:294
+msgid "Channel Secret 格式可能不正確"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:304
+#: src/Admin/Menu/Pages/Webhook.php:304
+msgid "設定已成功儲存！"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:348
+#: src/Admin/Menu/Pages/Webhook.php:348
+msgid "Webhook URL 已複製到剪貼簿"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:358
+#: src/Admin/Menu/Pages/Webhook.php:358
+msgid "儲存中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:379
+#: src/Admin/Menu/Pages/Webhook.php:379
+msgid "儲存失敗，請重試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:391
+#: src/Admin/Menu/Pages/Webhook.php:391
+msgid "註冊中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:409
+#: src/Admin/Menu/Pages/Webhook.php:409
+msgid "請求失敗，請檢查網路連線"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:412
+#: src/Admin/Menu/Pages/Webhook.php:412
+msgid "註冊 Webhook URL"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:421
+#: src/Admin/Menu/Pages/Webhook.php:421
+msgid "驗證中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:438
+#: src/Admin/Menu/Pages/Webhook.php:438
+msgid "驗證失敗，請重試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:450
+#: src/Admin/Menu/Pages/Webhook.php:450
+msgid "測試中..."
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:467
+#: src/Admin/Menu/Pages/Webhook.php:467
+msgid "連線測試失敗，請重試"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:518
+#: src/Admin/Menu/Pages/Webhook.php:518
+msgid "設定已儲存"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:529
+#: src/Admin/Menu/Pages/Webhook.php:529
+msgid "AJAX 連接測試成功！"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:539
+#: src/Admin/Menu/Pages/Webhook.php:539
+msgid "Webhook 驗證完成"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/Pages/Webhook.php:549
+#: src/Admin/Menu/Pages/Webhook.php:549
+msgid "API 連線測試完成"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Menu/PermissionValidator.php:108
+#: src/Admin/Menu/PermissionValidator.php:108
+msgid "您沒有足夠的權限存取此頁面。"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Notice/QuotaWarningNotice.php:209
+#: src/Admin/Notice/QuotaWarningNotice.php:209
+msgid "LINE API 配額警告"
+msgstr ""
+
+#. translators: 1: usage percentage, 2: remaining quota, 3: total quota
+#: build/order-chatz/src/Admin/Notice/QuotaWarningNotice.php:215
+#: src/Admin/Notice/QuotaWarningNotice.php:215
+msgid "您的 LINE Messaging API 使用率已達 %1$.1f%%，剩餘配額：%2$s / %3$s"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Notice/QuotaWarningNotice.php:228
+#: src/Admin/Notice/QuotaWarningNotice.php:228
+msgid "⚠️ 配額即將用完，請注意訊息發送量！"
+msgstr ""
+
+#: build/order-chatz/src/Admin/Notice/QuotaWarningNotice.php:235
+#: src/Admin/Notice/QuotaWarningNotice.php:235
+msgid "查看統計"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/BroadcastAjaxHandler.php:311
+#: src/Ajax/BroadcastAjaxHandler.php:311
+msgid "訊息內容無效"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/Customer/Tag.php:358
+#: src/Ajax/Customer/Tag.php:437
+msgid "User Tags"
+msgstr "好友標籤"
+
+#: build/order-chatz/src/Ajax/Customer/Tag.php:359
+#: src/Ajax/Customer/Tag.php:438
+msgid "Apply tags to user when the rule was triggered. "
+msgstr "發送通知後自動幫使用者加上標籤。 "
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:38
+#: src/Ajax/LineFriendsSyncHandler.php:38
+msgid "成功取得好友 ID 清單"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:71
+#: src/Ajax/LineFriendsSyncHandler.php:71
+msgid "好友 ID 清單為空"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:78
+#: src/Ajax/LineFriendsSyncHandler.php:78
+msgid "成功取得好友資料"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:107
+#: src/Ajax/LineFriendsSyncHandler.php:107
+msgid "請選擇要匯入的好友"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:114
+#: src/Ajax/LineFriendsSyncHandler.php:114
+msgid "LINE 好友同步完成"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:145
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:200
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:261
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:420
+#: src/Ajax/LineFriendsSyncHandler.php:145
+#: src/Ajax/LineFriendsSyncHandler.php:200
+#: src/Ajax/LineFriendsSyncHandler.php:261
+#: src/Ajax/LineFriendsSyncHandler.php:420
+msgid "LINE ACCESS TOKEN 未設定，請先到設定頁面配置"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:349
+#: src/Ajax/LineFriendsSyncHandler.php:349
+msgid "跳過好友：%s (已存在)"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:383
+#: src/Ajax/LineFriendsSyncHandler.php:383
+msgid "匯入好友：%s"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:388
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:508
+#: src/Ajax/LineFriendsSyncHandler.php:388
+#: src/Ajax/LineFriendsSyncHandler.php:508
+msgid "匯入失敗：%1$s - 錯誤：%2$s"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:440
+#: src/Ajax/LineFriendsSyncHandler.php:440
+msgid "未找到任何 LINE 好友"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:444
+#: src/Ajax/LineFriendsSyncHandler.php:444
+msgid "從 LINE API 取得 %d 個好友 ID"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:461
+#: src/Ajax/LineFriendsSyncHandler.php:461
+msgid "資料庫中已存在 %d 個好友"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:502
+#: src/Ajax/LineFriendsSyncHandler.php:502
+msgid "匯入好友：%1$s (LINE ID: %2$s)"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:514
+#: src/Ajax/LineFriendsSyncHandler.php:514
+msgid "無法取得好友資料：%s"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:556
+#: src/Ajax/LineFriendsSyncHandler.php:556
+msgid "LINE API 請求失敗："
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:564
+#: src/Ajax/LineFriendsSyncHandler.php:564
+msgid "LINE 官方帳號未驗證，無法存取好友列表。請確認您的帳號已通過驗證。"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:568
+#: src/Ajax/LineFriendsSyncHandler.php:568
+msgid "API 請求參數錯誤："
+msgstr ""
+
+#: build/order-chatz/src/Ajax/LineFriendsSyncHandler.php:574
+#: src/Ajax/LineFriendsSyncHandler.php:574
+msgid "LINE API 回應錯誤 (狀態碼: %1$d)：%2$s"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:65
+#: src/Ajax/MemberSyncHandler.php:65
+msgid "請選擇要匯入的會員"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:72
+#: src/Ajax/MemberSyncHandler.php:72
+msgid "會員同步完成"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:191
+#: src/Ajax/MemberSyncHandler.php:191
+msgid "更新會員：%1$s (ID: %2$d) - LINE ID: %3$s"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:200
+#: src/Ajax/MemberSyncHandler.php:200
+msgid "跳過會員：%1$s (ID: %2$d) - 已存在相同資料"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:222
+#: src/Ajax/MemberSyncHandler.php:222
+msgid "LINE ID 衝突，已設為空值：%1$s (會員ID: %2$d)"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:256
+#: src/Ajax/MemberSyncHandler.php:256
+msgid "匯入會員：%1$s (ID: %2$d) - LINE ID: %3$s"
+msgstr ""
+
+#: build/order-chatz/src/Ajax/MemberSyncHandler.php:263
+#: src/Ajax/MemberSyncHandler.php:263
+msgid "匯入失敗：%1$s (ID: %2$d) - 錯誤：%3$s"
+msgstr ""
+
+#: build/order-chatz/src/Core/FrontendChatRouter.php:195
+#: src/Core/FrontendChatRouter.php:196
+msgid "您沒有足夠的權限訪問此頁面。"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:62
+#: src/Services/Broadcast/BroadcastSender.php:62
+msgid "文字訊息內容不可為空"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:72
+#: src/Services/Broadcast/BroadcastSender.php:72
+msgid "圖片 URL 不可為空"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:84
+#: src/Services/Broadcast/BroadcastSender.php:84
+msgid "影片 URL 和封面圖 URL 不可為空"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:104
+#: src/Services/Broadcast/BroadcastSender.php:104
+msgid "不支援的訊息類型：%s"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:123
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:197
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:332
+#: src/Services/Broadcast/BroadcastSender.php:123
+#: src/Services/Broadcast/BroadcastSender.php:197
+#: src/Services/Broadcast/BroadcastSender.php:332
+msgid "LINE Channel Access Token 未設定"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:191
+#: build/order-chatz/src/Services/Broadcast/SavePushHandler.php:161
+#: src/Services/Broadcast/BroadcastSender.php:191
+#: src/Services/Broadcast/SavePushHandler.php:161
+msgid "沒有找到符合條件的好友"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:308
+#: src/Services/Broadcast/BroadcastSender.php:308
+msgid "所有推播批次都發送失敗"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:626
+#: src/Services/Broadcast/BroadcastSender.php:626
+msgid "沒有有效的訊息內容"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/BroadcastSender.php:747
+#: src/Services/Broadcast/BroadcastSender.php:747
+msgid "所有個人化訊息都發送失敗"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/BillingAddress.php:177
+#: src/Services/Broadcast/Conditions/BillingAddress.php:177
+msgid "帳單地址"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/BillingAddress.php:181
+#: build/order-chatz/src/Services/Broadcast/Conditions/ShippingAddress.php:181
+#: src/Services/Broadcast/Conditions/BillingAddress.php:181
+#: src/Services/Broadcast/Conditions/ShippingAddress.php:181
+msgid "包含"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/BillingAddress.php:182
+#: src/Services/Broadcast/Conditions/BillingAddress.php:182
+msgid "帳單地址包含指定關鍵字(搜尋國家、州/省/縣市、城市、地址)"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/BillingAddress.php:185
+#: build/order-chatz/src/Services/Broadcast/Conditions/ShippingAddress.php:185
+#: src/Services/Broadcast/Conditions/BillingAddress.php:185
+#: src/Services/Broadcast/Conditions/ShippingAddress.php:185
+msgid "不包含"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/BillingAddress.php:186
+#: src/Services/Broadcast/Conditions/BillingAddress.php:186
+msgid "帳單地址不包含指定關鍵字"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/BillingAddress.php:192
+#: build/order-chatz/src/Services/Broadcast/Conditions/ShippingAddress.php:192
+#: src/Services/Broadcast/Conditions/BillingAddress.php:192
+#: src/Services/Broadcast/Conditions/ShippingAddress.php:192
+msgid "輸入任一地址關鍵字，譬如新北市、中山路"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:354
+#: src/Services/Broadcast/Conditions/OrderProduct.php:354
+msgid "購買商品條件"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:358
+#: src/Services/Broadcast/Conditions/OrderProduct.php:358
+msgid "買過任一商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:359
+#: src/Services/Broadcast/Conditions/OrderProduct.php:359
+msgid "客戶買過任一指定商品（可跨訂單）"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:362
+#: src/Services/Broadcast/Conditions/OrderProduct.php:362
+msgid "買齊所有商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:363
+#: src/Services/Broadcast/Conditions/OrderProduct.php:363
+msgid "客戶在同一訂單內買過所有指定商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:366
+#: src/Services/Broadcast/Conditions/OrderProduct.php:366
+msgid "未買過任一商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:367
+#: src/Services/Broadcast/Conditions/OrderProduct.php:367
+msgid "客戶從未買過任一指定商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:370
+#: src/Services/Broadcast/Conditions/OrderProduct.php:370
+msgid "未買齊所有商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:371
+#: src/Services/Broadcast/Conditions/OrderProduct.php:371
+msgid "客戶沒有在同一訂單內買齊所有指定商品（可能買過部分或完全沒買）"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProduct.php:379
+#: src/Services/Broadcast/Conditions/OrderProduct.php:379
+msgid "搜尋商品..."
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:374
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:374
+msgid "購買商品分類條件"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:378
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:378
+msgid "買過任一分類"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:379
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:379
+msgid "客戶買過任一指定分類下的商品（可跨訂單）"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:382
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:382
+msgid "買齊所有分類"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:383
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:383
+msgid "客戶在同一訂單內買過所有指定分類下的商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:386
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:386
+msgid "未買過任一分類"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:387
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:387
+msgid "客戶從未買過任一指定分類下的商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:390
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:390
+msgid "未買齊所有分類"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:391
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:391
+msgid "客戶沒有在同一訂單內買齊所有指定分類下的商品（可能買過部分或完全沒買）"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductCategory.php:399
+#: src/Services/Broadcast/Conditions/OrderProductCategory.php:399
+msgid "搜尋商品分類..."
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:374
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:374
+msgid "購買商品標籤條件"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:378
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:378
+msgid "買過任一標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:379
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:379
+msgid "客戶買過任一指定標籤的商品（可跨訂單）"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:382
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:382
+msgid "買齊所有標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:383
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:383
+msgid "客戶在同一訂單內買過所有指定標籤的商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:386
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:386
+msgid "未買過任一標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:387
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:387
+msgid "客戶從未買過任一指定標籤的商品"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:390
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:390
+msgid "未買齊所有標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:391
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:391
+msgid "客戶沒有在同一訂單內買齊所有指定標籤的商品（可能買過部分或完全沒買）"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/OrderProductTag.php:399
+#: src/Services/Broadcast/Conditions/OrderProductTag.php:399
+msgid "搜尋商品標籤..."
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/ShippingAddress.php:177
+#: src/Services/Broadcast/Conditions/ShippingAddress.php:177
+msgid "運送地址"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/ShippingAddress.php:182
+#: src/Services/Broadcast/Conditions/ShippingAddress.php:182
+msgid "運送地址包含指定關鍵字(搜尋國家、州/省/縣市、城市、地址)"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/ShippingAddress.php:186
+#: src/Services/Broadcast/Conditions/ShippingAddress.php:186
+msgid "運送地址不包含指定關鍵字"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserBinding.php:124
+#: src/Services/Broadcast/Conditions/UserBinding.php:124
+msgid "會員綁定狀態"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserBinding.php:128
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:159
+#: src/Services/Broadcast/Conditions/UserBinding.php:128
+#: src/Services/Broadcast/Conditions/UserTagCount.php:159
+msgid "等於"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserBinding.php:129
+#: src/Services/Broadcast/Conditions/UserBinding.php:129
+msgid "好友的會員綁定狀態等於指定值"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserBinding.php:137
+#: src/Services/Broadcast/Conditions/UserBinding.php:137
+msgid "已綁定"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:243
+#: src/Services/Broadcast/Conditions/UserTag.php:243
+msgid "好友標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:247
+#: src/Services/Broadcast/Conditions/UserTag.php:247
+msgid "擁有任一標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:248
+#: src/Services/Broadcast/Conditions/UserTag.php:248
+msgid "客戶擁有任一指定標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:251
+#: src/Services/Broadcast/Conditions/UserTag.php:251
+msgid "擁有所有標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:252
+#: src/Services/Broadcast/Conditions/UserTag.php:252
+msgid "客戶同時擁有所有指定標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:255
+#: src/Services/Broadcast/Conditions/UserTag.php:255
+msgid "沒有任一標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:256
+#: src/Services/Broadcast/Conditions/UserTag.php:256
+msgid "客戶完全沒有任一指定標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:259
+#: src/Services/Broadcast/Conditions/UserTag.php:259
+msgid "沒有所有標籤"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:260
+#: src/Services/Broadcast/Conditions/UserTag.php:260
+msgid "客戶沒有同時擁有所有指定標籤（可能有部分或完全沒有）"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTag.php:268
+#: src/Services/Broadcast/Conditions/UserTag.php:268
+msgid "搜尋或新增標籤..."
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:146
+#: src/Services/Broadcast/Conditions/UserTagCount.php:146
+msgid "標籤貼上次數"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:151
+#: src/Services/Broadcast/Conditions/UserTagCount.php:151
+msgid "大於等於"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:152
+#: src/Services/Broadcast/Conditions/UserTagCount.php:152
+msgid "標籤被貼上的次數大於等於指定值"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:155
+#: src/Services/Broadcast/Conditions/UserTagCount.php:155
+msgid "小於等於"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:156
+#: src/Services/Broadcast/Conditions/UserTagCount.php:156
+msgid "標籤被貼上的次數小於等於指定值"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:160
+#: src/Services/Broadcast/Conditions/UserTagCount.php:160
+msgid "標籤被貼上的次數等於指定值"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:163
+#: src/Services/Broadcast/Conditions/UserTagCount.php:163
+msgid "大於"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:164
+#: src/Services/Broadcast/Conditions/UserTagCount.php:164
+msgid "標籤被貼上的次數大於指定值"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:167
+#: src/Services/Broadcast/Conditions/UserTagCount.php:167
+msgid "小於"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:168
+#: src/Services/Broadcast/Conditions/UserTagCount.php:168
+msgid "標籤被貼上的次數小於指定值"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:175
+#: src/Services/Broadcast/Conditions/UserTagCount.php:175
+msgid "選擇標籤..."
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/Conditions/UserTagCount.php:176
+#: src/Services/Broadcast/Conditions/UserTagCount.php:176
+msgid "次數"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/SavePushHandler.php:90
+#: src/Services/Broadcast/SavePushHandler.php:90
+msgid "Campaign ID 不存在"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/SavePushHandler.php:153
+#: src/Services/Broadcast/SavePushHandler.php:153
+msgid "沒有找到已匯入的好友"
+msgstr ""
+
+#: build/order-chatz/src/Services/Broadcast/SavePushHandler.php:166
+#: src/Services/Broadcast/SavePushHandler.php:166
+msgid "不支援的受眾類型：%s"
+msgstr ""
+
+#: build/order-chatz/src/Services/MessageReplace.php:202
+#: build/order-chatz/src/Services/MessageReplace.php:246
+#: src/Services/MessageReplace.php:202 src/Services/MessageReplace.php:246
+msgid "LINE Display Name"
+msgstr "LINE 顯示名稱"
+
+#: build/order-chatz/src/Services/MessageReplace.php:203
+#: build/order-chatz/src/Services/MessageReplace.php:250
+#: build/order-chatz/views/admin/notes/view.php:24
+#: src/Services/MessageReplace.php:203 src/Services/MessageReplace.php:250
+#: views/admin/notes/view.php:24
+msgid "LINE User ID"
+msgstr "LINE User ID"
+
+#: build/order-chatz/src/Services/MessageReplace.php:206
+#: build/order-chatz/src/Services/MessageReplace.php:256
+#: src/Services/MessageReplace.php:206 src/Services/MessageReplace.php:256
+msgid "Username"
+msgstr "使用者名稱"
+
+#: build/order-chatz/src/Services/MessageReplace.php:207
+#: build/order-chatz/src/Services/MessageReplace.php:260
+#: src/Services/MessageReplace.php:207 src/Services/MessageReplace.php:260
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#: build/order-chatz/src/Services/MessageReplace.php:208
+#: build/order-chatz/src/Services/MessageReplace.php:264
+#: build/order-chatz/src/Services/MessageReplace.php:310
+#: build/order-chatz/views/admin/chat-interface.php:410
+#: src/Services/MessageReplace.php:208 src/Services/MessageReplace.php:264
+#: src/Services/MessageReplace.php:310 views/admin/chat-interface.php:410
+msgid "Email"
+msgstr "電子郵件"
+
+#: build/order-chatz/src/Services/MessageReplace.php:209
+#: build/order-chatz/src/Services/MessageReplace.php:268
+#: src/Services/MessageReplace.php:209 src/Services/MessageReplace.php:268
+msgid "User Role"
+msgstr "使用者角色"
+
+#: build/order-chatz/src/Services/MessageReplace.php:212
+#: src/Services/MessageReplace.php:212
+msgid "Billing - First Name"
+msgstr "帳單地址 - 名字"
+
+#: build/order-chatz/src/Services/MessageReplace.php:213
+#: src/Services/MessageReplace.php:213
+msgid "Billing - Last Name"
+msgstr "帳單地址 - 姓氏"
+
+#: build/order-chatz/src/Services/MessageReplace.php:214
+#: src/Services/MessageReplace.php:214
+msgid "Billing - Company"
+msgstr "帳單地址 - 公司"
+
+#: build/order-chatz/src/Services/MessageReplace.php:215
+#: src/Services/MessageReplace.php:215
+msgid "Billing - Address Line 1"
+msgstr "帳單地址 - 地址第 1 行"
+
+#: build/order-chatz/src/Services/MessageReplace.php:216
+#: src/Services/MessageReplace.php:216
+msgid "Billing - Address Line 2"
+msgstr "帳單地址 - 地址第 2 行"
+
+#: build/order-chatz/src/Services/MessageReplace.php:217
+#: src/Services/MessageReplace.php:217
+msgid "Billing - City"
+msgstr "帳單地址 - 城市"
+
+#: build/order-chatz/src/Services/MessageReplace.php:218
+#: src/Services/MessageReplace.php:218
+msgid "Billing - State"
+msgstr "帳單地址 - 縣/市"
+
+#: build/order-chatz/src/Services/MessageReplace.php:219
+#: src/Services/MessageReplace.php:219
+msgid "Billing - Postcode"
+msgstr "帳單地址 - 郵遞區號"
+
+#: build/order-chatz/src/Services/MessageReplace.php:220
+#: src/Services/MessageReplace.php:220
+msgid "Billing - Country"
+msgstr "帳單地址 - 國家"
+
+#: build/order-chatz/src/Services/MessageReplace.php:221
+#: src/Services/MessageReplace.php:221
+msgid "Billing - Email"
+msgstr "帳單地址 - 電子郵件"
+
+#: build/order-chatz/src/Services/MessageReplace.php:222
+#: src/Services/MessageReplace.php:222
+msgid "Billing - Phone"
+msgstr "帳單地址 - 聯絡電話"
+
+#: build/order-chatz/src/Services/MessageReplace.php:225
+#: src/Services/MessageReplace.php:225
+msgid "Shipping - First Name"
+msgstr "運送地址 - 名字"
+
+#: build/order-chatz/src/Services/MessageReplace.php:226
+#: src/Services/MessageReplace.php:226
+msgid "Shipping - Last Name"
+msgstr "運送地址 - 姓氏"
+
+#: build/order-chatz/src/Services/MessageReplace.php:227
+#: src/Services/MessageReplace.php:227
+msgid "Shipping - Company"
+msgstr "運送地址 - 公司"
+
+#: build/order-chatz/src/Services/MessageReplace.php:228
+#: src/Services/MessageReplace.php:228
+msgid "Shipping - Address Line 1"
+msgstr "運送地址 - 地址第 1 行"
+
+#: build/order-chatz/src/Services/MessageReplace.php:229
+#: src/Services/MessageReplace.php:229
+msgid "Shipping - Address Line 2"
+msgstr "運送地址 - 地址第 2 行"
+
+#: build/order-chatz/src/Services/MessageReplace.php:230
+#: src/Services/MessageReplace.php:230
+msgid "Shipping - City"
+msgstr "運送地址 - 城市"
+
+#: build/order-chatz/src/Services/MessageReplace.php:231
+#: src/Services/MessageReplace.php:231
+msgid "Shipping - State"
+msgstr "運送地址 - 縣/市"
+
+#: build/order-chatz/src/Services/MessageReplace.php:232
+#: src/Services/MessageReplace.php:232
+msgid "Shipping - Postcode"
+msgstr "運送地址 - 郵遞區號"
+
+#: build/order-chatz/src/Services/MessageReplace.php:233
+#: src/Services/MessageReplace.php:233
+msgid "Shipping - Country"
+msgstr "運送地址 - 國家"
+
+#: build/order-chatz/src/Services/MessageReplace.php:247
+#: build/order-chatz/src/Services/MessageReplace.php:251
+#: src/Services/MessageReplace.php:247 src/Services/MessageReplace.php:251
+msgid "LINE User Data"
+msgstr "LINE 使用者資料"
+
+#: build/order-chatz/src/Services/MessageReplace.php:257
+#: build/order-chatz/src/Services/MessageReplace.php:261
+#: build/order-chatz/src/Services/MessageReplace.php:265
+#: build/order-chatz/src/Services/MessageReplace.php:269
+#: src/Services/MessageReplace.php:257 src/Services/MessageReplace.php:261
+#: src/Services/MessageReplace.php:265 src/Services/MessageReplace.php:269
+msgid "WordPress User Data"
+msgstr "WordPress 使用者資料"
+
+#: build/order-chatz/src/Services/MessageReplace.php:274
+#: build/order-chatz/src/Services/MessageReplace.php:320
+#: src/Services/MessageReplace.php:274 src/Services/MessageReplace.php:320
+msgid "First Name"
+msgstr "名字"
+
+#: build/order-chatz/src/Services/MessageReplace.php:275
+#: build/order-chatz/src/Services/MessageReplace.php:279
+#: build/order-chatz/src/Services/MessageReplace.php:283
+#: build/order-chatz/src/Services/MessageReplace.php:287
+#: build/order-chatz/src/Services/MessageReplace.php:291
+#: build/order-chatz/src/Services/MessageReplace.php:295
+#: build/order-chatz/src/Services/MessageReplace.php:299
+#: build/order-chatz/src/Services/MessageReplace.php:303
+#: build/order-chatz/src/Services/MessageReplace.php:307
+#: build/order-chatz/src/Services/MessageReplace.php:311
+#: build/order-chatz/src/Services/MessageReplace.php:315
+#: src/Services/MessageReplace.php:275 src/Services/MessageReplace.php:279
+#: src/Services/MessageReplace.php:283 src/Services/MessageReplace.php:287
+#: src/Services/MessageReplace.php:291 src/Services/MessageReplace.php:295
+#: src/Services/MessageReplace.php:299 src/Services/MessageReplace.php:303
+#: src/Services/MessageReplace.php:307 src/Services/MessageReplace.php:311
+#: src/Services/MessageReplace.php:315
+msgid "Billing Address"
+msgstr "帳單地址"
+
+#: build/order-chatz/src/Services/MessageReplace.php:278
+#: build/order-chatz/src/Services/MessageReplace.php:324
+#: src/Services/MessageReplace.php:278 src/Services/MessageReplace.php:324
+msgid "Last Name"
+msgstr "姓氏"
+
+#: build/order-chatz/src/Services/MessageReplace.php:282
+#: build/order-chatz/src/Services/MessageReplace.php:328
+#: src/Services/MessageReplace.php:282 src/Services/MessageReplace.php:328
+msgid "Company"
+msgstr "公司"
+
+#: build/order-chatz/src/Services/MessageReplace.php:286
+#: build/order-chatz/src/Services/MessageReplace.php:332
+#: src/Services/MessageReplace.php:286 src/Services/MessageReplace.php:332
+msgid "Address Line 1"
+msgstr "地址第 1 行"
+
+#: build/order-chatz/src/Services/MessageReplace.php:290
+#: build/order-chatz/src/Services/MessageReplace.php:336
+#: src/Services/MessageReplace.php:290 src/Services/MessageReplace.php:336
+msgid "Address Line 2"
+msgstr "地址第 2 行"
+
+#: build/order-chatz/src/Services/MessageReplace.php:294
+#: build/order-chatz/src/Services/MessageReplace.php:340
+#: src/Services/MessageReplace.php:294 src/Services/MessageReplace.php:340
+msgid "City"
+msgstr "城市"
+
+#: build/order-chatz/src/Services/MessageReplace.php:298
+#: build/order-chatz/src/Services/MessageReplace.php:344
+#: src/Services/MessageReplace.php:298 src/Services/MessageReplace.php:344
+msgid "State"
+msgstr "縣/市"
+
+#: build/order-chatz/src/Services/MessageReplace.php:302
+#: build/order-chatz/src/Services/MessageReplace.php:348
+#: src/Services/MessageReplace.php:302 src/Services/MessageReplace.php:348
+msgid "Postcode"
+msgstr "郵遞區號"
+
+#: build/order-chatz/src/Services/MessageReplace.php:306
+#: build/order-chatz/src/Services/MessageReplace.php:352
+#: src/Services/MessageReplace.php:306 src/Services/MessageReplace.php:352
+msgid "Country"
+msgstr "國家"
+
+#: build/order-chatz/src/Services/MessageReplace.php:314
+#: src/Services/MessageReplace.php:314
+msgid "Phone"
+msgstr "聯絡電話"
+
+#: build/order-chatz/src/Services/MessageReplace.php:321
+#: build/order-chatz/src/Services/MessageReplace.php:325
+#: build/order-chatz/src/Services/MessageReplace.php:329
+#: build/order-chatz/src/Services/MessageReplace.php:333
+#: build/order-chatz/src/Services/MessageReplace.php:337
+#: build/order-chatz/src/Services/MessageReplace.php:341
+#: build/order-chatz/src/Services/MessageReplace.php:345
+#: build/order-chatz/src/Services/MessageReplace.php:349
+#: build/order-chatz/src/Services/MessageReplace.php:353
+#: src/Services/MessageReplace.php:321 src/Services/MessageReplace.php:325
+#: src/Services/MessageReplace.php:329 src/Services/MessageReplace.php:333
+#: src/Services/MessageReplace.php:337 src/Services/MessageReplace.php:341
+#: src/Services/MessageReplace.php:345 src/Services/MessageReplace.php:349
+#: src/Services/MessageReplace.php:353
+msgid "Shipping Address"
+msgstr "運送地址"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:63
+#: src/Admin/Lists/BotListTable.php:252
+#: src/Admin/Lists/BroadcastListTable.php:245 views/admin/broadcast/edit.php:63
+msgid "Edit"
+msgstr "編輯"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:63
+#: views/admin/broadcast/edit.php:63
+msgid "Add New"
+msgstr "新增"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:67
+#: views/admin/bot/edit.php:40 views/admin/broadcast/edit.php:67
+msgid "Back to List"
+msgstr "返回列表"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:71
+#: views/admin/broadcast/edit.php:71
+msgid "Add Schedule"
+msgstr "新增排程"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:92
+#: src/Admin/Lists/BroadcastListTable.php:57 views/admin/broadcast/edit.php:92
+msgid "Campaign Name"
+msgstr "活動名稱"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:101
+#: views/admin/broadcast/edit.php:101
+msgid "Enter campaign name"
+msgstr "輸入活動名稱"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:108
+#: views/admin/broadcast/edit.php:108
+msgid "Campaign Description"
+msgstr "活動描述"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:113
+#: views/admin/broadcast/edit.php:113
+msgid "Enter campaign description (optional)"
+msgstr "輸入活動描述（選填）"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:118
+#: views/admin/broadcast/edit.php:118
+msgid "Broadcast Settings"
+msgstr "推播設定"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:123
+#: src/Admin/Lists/BroadcastListTable.php:59 views/admin/broadcast/edit.php:123
+msgid "Message Type"
+msgstr "訊息類型"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:132
+#: views/admin/broadcast/edit.php:132
+msgid "Text Message"
+msgstr "文字訊息"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:140
+#: src/Admin/Lists/BroadcastListTable.php:290
+#: views/admin/broadcast/edit.php:140
+msgid "Flex Message"
+msgstr "Flex Message 訊息"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:148
+#: src/Admin/Lists/BroadcastListTable.php:288
+#: views/admin/broadcast/edit.php:148
+msgid "Image"
+msgstr "圖片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:156
+#: src/Admin/Lists/BroadcastListTable.php:289
+#: views/admin/broadcast/edit.php:156
+msgid "Video"
+msgstr "影片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:166
+#: src/Admin/Lists/BroadcastListTable.php:60 views/admin/broadcast/edit.php:166
+msgid "Message Content"
+msgstr "訊息內容"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:171
+#: views/admin/broadcast/edit.php:171
+msgid "Enter text message to send..."
+msgstr "輸入要發送的文字訊息..."
+
+#: build/order-chatz/views/admin/broadcast/edit.php:175
+#: views/admin/broadcast/edit.php:175
+msgid "characters"
+msgstr "字元"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:182
+#: views/admin/broadcast/edit.php:182
+msgid "Flex Message JSON"
+msgstr "Flex Message JSON"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:187
+#: views/admin/broadcast/edit.php:187
+msgid "Paste LINE Flex Message JSON..."
+msgstr "貼上 LINE Flex Message JSON..."
+
+#: build/order-chatz/views/admin/broadcast/edit.php:192
+#: views/admin/broadcast/edit.php:192
+msgid "Use %s to create Flex Message"
+msgstr "使用 %s 建立 Flex Message"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:201
+#: views/admin/broadcast/edit.php:201
+msgid "Upload Image"
+msgstr "上傳圖片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:204
+#: views/admin/broadcast/edit.php:204
+msgid "Click to upload image"
+msgstr "點擊上傳圖片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:206
+#: views/admin/broadcast/edit.php:206
+msgid "Select Image"
+msgstr "選擇圖片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:228
+#: views/admin/broadcast/edit.php:228
+msgid "Upload Video"
+msgstr "上傳影片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:231
+#: views/admin/broadcast/edit.php:231
+msgid "Click to upload video"
+msgstr "點擊上傳影片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:233
+#: views/admin/broadcast/edit.php:233
+msgid "Select Video"
+msgstr "選擇影片"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:252
+#: views/admin/broadcast/edit.php:252
+msgid "Upload Cover Image"
+msgstr "上傳封面圖"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:255
+#: views/admin/broadcast/edit.php:255
+msgid "Click to upload cover image"
+msgstr "點擊上傳封面圖"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:257
+#: views/admin/broadcast/edit.php:257
+msgid "Select Cover Image"
+msgstr "選擇封面圖"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:287
+#: views/admin/broadcast/edit.php:287
+msgid "Disable push notifications"
+msgstr "停用推播提醒"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:289
+#: views/admin/broadcast/edit.php:289
+msgid "Messages will not trigger notifications to avoid disturbing friends"
+msgstr "讓推播出去的訊息不會觸發通知,避免打擾好友"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:294
+#: views/admin/broadcast/edit.php:294
+msgid "Test Message"
+msgstr "測試訊息"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:296
+#: views/admin/broadcast/edit.php:296
+msgid "Test LINE User ID"
+msgstr "LINE User ID"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:303
+#: views/admin/broadcast/edit.php:303
+msgid "Enter LINE User ID..."
+msgstr "輸入 LINE User ID…"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:306
+#: views/admin/broadcast/edit.php:306
+msgid "Send Test Message"
+msgstr "發送測試訊息"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:310
+#: views/admin/broadcast/edit.php:310
+msgid "Please enter the LINE User ID to receive test message"
+msgstr "請輸入要接收測試訊息的 LINE User ID"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:310
+#: views/admin/broadcast/edit.php:310
+msgid "Note! Sending test messages will also deduct from monthly quota"
+msgstr "注意!發送測試訊息也會扣除每月剩餘額度"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:320
+#: views/admin/broadcast/edit.php:320
+msgid "Audience Settings"
+msgstr "受眾設定"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:325
+#: src/Admin/Lists/BroadcastListTable.php:58 views/admin/broadcast/edit.php:325
+msgid "Audience Type"
+msgstr "受眾類型"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:335
+#: src/Admin/Lists/BroadcastListTable.php:271
+#: views/admin/broadcast/edit.php:335
+msgid "All Followers"
+msgstr "全部好友"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:336
+#: views/admin/broadcast/edit.php:336
+msgid "Send to all LINE followers"
+msgstr "發送給所有 LINE 好友"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:346
+#: views/admin/broadcast/edit.php:346
+msgid "Imported Users"
+msgstr "已匯入好友"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:347
+#: views/admin/broadcast/edit.php:347
+msgid "Send to users imported to database"
+msgstr "發送給已匯入至資料庫的好友"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:357
+#: views/admin/broadcast/edit.php:357
+msgid "Filtered Users"
+msgstr "條件篩選好友"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:358
+#: views/admin/broadcast/edit.php:358
+msgid "Send to users filtered by specific conditions"
+msgstr "發送給根據特定條件篩選過的好友"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:379
+#: views/admin/broadcast/edit.php:379
+msgid "Group"
+msgstr "群組"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:380
+#: views/admin/broadcast/edit.php:380
+msgid "Delete Group"
+msgstr "刪除群組"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:387
+#: views/admin/broadcast/edit.php:387
+msgid "Add Rule"
+msgstr "新增排程"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:395
+#: views/admin/broadcast/edit.php:395
+msgid "Add Group"
+msgstr "新增群組"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:402
+#: views/admin/broadcast/edit.php:402
+msgid "Estimated Audience:"
+msgstr "預計受眾："
+
+#: build/order-chatz/views/admin/broadcast/edit.php:404
+#: views/admin/broadcast/edit.php:404
+msgid "people"
+msgstr "人"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:408
+#: views/admin/broadcast/edit.php:408
+msgid "Remaining monthly quota"
+msgstr "本月剩餘推播量"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:410
+#: views/admin/broadcast/edit.php:410
+msgid "messages"
+msgstr "則"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:413
+#: views/admin/broadcast/edit.php:413
+msgid "Preview Audience"
+msgstr "預覽受眾"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:425
+#: build/order-chatz/views/admin/broadcast/edit.php:463
+#: views/admin/bot/edit.php:360 views/admin/broadcast/edit.php:425
+#: views/admin/broadcast/edit.php:463
+msgid "Save"
+msgstr "儲存"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:431
+#: build/order-chatz/views/admin/broadcast/edit.php:471
+#: views/admin/broadcast/edit.php:431 views/admin/broadcast/edit.php:471
+msgid "Save and Broadcast"
+msgstr "儲存並推播"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:448
+#: views/admin/bot/edit.php:349 views/admin/broadcast/edit.php:448
+msgid "Publish"
+msgstr "發佈"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:483
+#: views/admin/broadcast/edit.php:483
+msgid "Schedule Settings"
+msgstr "排程設定"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:496
+#: views/admin/broadcast/edit.php:496
+msgid "Send Immediately"
+msgstr "立即發送"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:497
+#: views/admin/broadcast/edit.php:497
+msgid "Send broadcast immediately after saving"
+msgstr "儲存後立即發送推播"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:510
+#: views/admin/broadcast/edit.php:510
+msgid "Scheduled Send"
+msgstr "新增排程"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:511
+#: views/admin/broadcast/edit.php:511
+msgid "Send broadcast at specified time"
+msgstr "指定時間發送推播"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:518
+#: views/admin/broadcast/edit.php:518
+msgid "Send Time"
+msgstr "發送時間"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:531
+#: views/admin/broadcast/edit.php:531
+msgid "Category"
+msgstr "分類"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:538
+#: views/admin/broadcast/edit.php:538
+msgid "Enter category name"
+msgstr "輸入分類名稱"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:539
+#: views/admin/broadcast/edit.php:539
+msgid "Used to organize and categorize broadcast campaigns"
+msgstr "用於組織和分類推播活動"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:545
+#: src/Admin/Menu/TabNavigationRenderer.php:74
+#: views/admin/broadcast/edit.php:545
+msgid "Tags"
+msgstr "標籤"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:552
+#: views/admin/broadcast/edit.php:552
+msgid "Add Tag"
+msgstr "新增標籤"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:553
+#: views/admin/bot/edit.php:96 views/admin/broadcast/edit.php:553
+msgid "Add"
+msgstr "新增"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:564
+#: views/admin/broadcast/edit.php:564
+msgid "Use commas or Enter key to separate multiple tags"
+msgstr "使用逗號或 Enter 鍵分隔多個標籤"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:570
+#: views/admin/broadcast/edit.php:570
+msgid "Available Parameters"
+msgstr "可帶入參數"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:572
+#: views/admin/broadcast/edit.php:572
+msgid "Click parameter to copy to clipboard"
+msgstr "點擊參數即可複製到剪貼簿"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:583
+#: build/order-chatz/views/admin/broadcast/edit.php:634
+#: views/admin/broadcast/edit.php:583 views/admin/broadcast/edit.php:634
+msgid "Broadcast Logs"
+msgstr "推播紀錄"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:596
+#: views/admin/broadcast/edit.php:596
+msgid "Running"
+msgstr "執行中"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:597
+#: views/admin/broadcast/edit.php:597
+msgid "Success"
+msgstr "成功"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:598
+#: views/admin/broadcast/edit.php:598
+msgid "Partial Success"
+msgstr "部分成功"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:599
+#: build/order-chatz/views/admin/broadcast/edit.php:622
+#: views/admin/broadcast/edit.php:599 views/admin/broadcast/edit.php:622
+msgid "Failed"
+msgstr "失敗"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:613
+#: views/admin/broadcast/edit.php:613
+msgid "Total Broadcasts"
+msgstr "總推播數"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:617
+#: views/admin/broadcast/edit.php:617
+msgid "Successful"
+msgstr "成功數"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:636
+#: views/admin/broadcast/edit.php:636
+msgid "No broadcast logs yet"
+msgstr "尚無推播記錄"
+
+#: build/order-chatz/views/admin/broadcast/edit.php:650
+#: views/admin/broadcast/edit.php:650
+msgid "Copied to clipboard"
+msgstr "已複製到剪貼簿"
+
+#: build/order-chatz/views/admin/broadcast/list.php:21
+#: views/admin/broadcast/list.php:21
+msgid "新增推播"
+msgstr ""
+
+#: build/order-chatz/views/admin/broadcast/list.php:24
+#: build/order-chatz/views/admin/notes/list.php:61
+#: views/admin/broadcast/list.php:24 views/admin/notes/list.php:61
+msgid "搜尋"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:45
+#: views/admin/chat-interface.php:45
+msgid "載入好友列表中..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:74
+#: views/admin/chat-interface.php:74
+msgid "聊天訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:111
+#: views/admin/chat-interface.php:111
+msgid "饅頭人"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:114
+#: views/admin/chat-interface.php:114
+msgid "休閒敬語"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:117
+#: views/admin/chat-interface.php:117
+msgid "動態特別篇"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:126
+#: views/admin/chat-interface.php:126
+msgid "載入貼圖中..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:144
+#: views/admin/chat-interface.php:144
+msgid "訊息輸入框"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:167
+#: build/order-chatz/views/admin/chat-interface.php:168
+#: views/admin/chat-interface.php:167 views/admin/chat-interface.php:168
+msgid "上傳圖片"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:183
+#: build/order-chatz/views/admin/chat-interface.php:184
+#: views/admin/chat-interface.php:183 views/admin/chat-interface.php:184
+msgid "傳送商品"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:192
+#: build/order-chatz/views/admin/chat-interface.php:193
+#: views/admin/chat-interface.php:192 views/admin/chat-interface.php:193
+msgid "範本管理"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:201
+#: views/admin/chat-interface.php:201
+msgid "貼圖"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:202
+#: views/admin/chat-interface.php:202
+msgid "選擇貼圖"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:210
+#: build/order-chatz/views/admin/chat-interface.php:211
+#: views/admin/chat-interface.php:210 views/admin/chat-interface.php:211
+msgid "排程訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:222
+#: views/admin/chat-interface.php:222
+msgid "發送訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:230
+#: views/admin/chat-interface.php:230
+msgid "Enter：傳送 / Shift + Enter：換行"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:255
+#: views/admin/chat-interface.php:255
+msgid "請選擇好友查看客戶資訊"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:265
+#: views/admin/chat-interface.php:265
+msgid "載入客戶資訊中..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:292
+#: views/admin/chat-interface.php:292
+msgid "訊息範本管理"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:293
+#: build/order-chatz/views/admin/chat-interface.php:523
+#: build/order-chatz/views/admin/chat-interface.php:548
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:99
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:111
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:127
+#: build/order-chatz/views/admin/friends/message-import-modal.php:189
+#: build/order-chatz/views/admin/friends/sync-modal.php:118
+#: build/order-chatz/views/frontend/chat.php:177
+#: views/admin/chat-interface.php:293 views/admin/chat-interface.php:523
+#: views/admin/chat-interface.php:548
+#: views/admin/friends/line-sync-modal.php:99
+#: views/admin/friends/line-sync-modal.php:111
+#: views/admin/friends/line-sync-modal.php:127
+#: views/admin/friends/message-import-modal.php:189
+#: views/admin/friends/sync-modal.php:118 views/admin/tags/users-modal.php:72
+#: views/frontend/chat.php:177
+msgid "關閉"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:302
+#: views/admin/chat-interface.php:302
+msgid "現有範本"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:304
+#: views/admin/chat-interface.php:304
+msgid "新增"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:312
+#: build/order-chatz/views/admin/chat-interface.php:334
+#: views/admin/chat-interface.php:312 views/admin/chat-interface.php:334
+msgid "快速代碼"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:313
+#: build/order-chatz/views/admin/chat-interface.php:341
+#: views/admin/chat-interface.php:313 views/admin/chat-interface.php:341
+msgid "範本內容"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:327
+#: views/admin/chat-interface.php:327
+msgid "新增範本"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:335
+#: views/admin/chat-interface.php:335
+msgid "例如：thank"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:336
+#: views/admin/chat-interface.php:336
+msgid "只能包含英數字和底線，用於 #代碼 快速輸入"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:342
+#: views/admin/chat-interface.php:342
+msgid "輸入範本內容..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:351
+#: views/admin/chat-interface.php:351
+msgid "儲存範本"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:401
+#: views/admin/chat-interface.php:401
+msgid "基本資訊"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:406
+#: views/admin/chat-interface.php:406
+msgid "姓名"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:414
+#: views/admin/chat-interface.php:414
+msgid "電話"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:418
+#: views/admin/chat-interface.php:418
+msgid "加入日期"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:429
+#: views/admin/chat-interface.php:429
+msgid "訂單記錄"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:439
+#: views/admin/chat-interface.php:439
+msgid "搜尋訂單編號..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:455
+#: views/admin/chat-interface.php:455
+msgid "載入更多訂單"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:462
+#: views/admin/chat-interface.php:462
+msgid "載入訂單中..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:522
+#: views/admin/chat-interface.php:522
+msgid "傳送商品資訊"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:529
+#: views/admin/chat-interface.php:529
+msgid "搜尋商品："
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:531
+#: views/admin/chat-interface.php:531
+msgid "請輸入商品名稱進行搜尋..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:536
+#: views/admin/chat-interface.php:536
+msgid "傳送"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:547
+#: views/admin/chat-interface.php:547
+msgid "排程訊息管理"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:557
+#: views/admin/chat-interface.php:557
+msgid "排程列表"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:559
+#: build/order-chatz/views/admin/chat-interface.php:596
+#: views/admin/chat-interface.php:559 views/admin/chat-interface.php:596
+msgid "新增排程"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:566
+#: views/admin/chat-interface.php:566
+msgid "載入排程列表中..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:573
+#: views/admin/chat-interface.php:573
+msgid "目前沒有排程訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:579
+#: build/order-chatz/views/admin/chat-interface.php:631
+#: views/admin/chat-interface.php:579 views/admin/chat-interface.php:631
+msgid "訊息內容"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:581
+#: views/admin/chat-interface.php:581
+msgid "實際發送時間"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:582
+#: build/order-chatz/views/admin/notes/view.php:50
+#: views/admin/chat-interface.php:582 views/admin/notes/view.php:50
+msgid "狀態"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:597
+#: views/admin/chat-interface.php:597
+msgid "← 返回列表"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:624
+#: views/admin/chat-interface.php:624
+msgid "檔案"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:635
+#: views/admin/chat-interface.php:635
+msgid "輸入要排程發送的訊息內容..."
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:648
+#: build/order-chatz/views/admin/chat-interface.php:653
+#: build/order-chatz/views/admin/friends/message-import-modal.php:52
+#: views/admin/chat-interface.php:648 views/admin/chat-interface.php:653
+#: views/admin/friends/message-import-modal.php:52
+msgid "選擇檔案"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:656
+#: views/admin/chat-interface.php:656
+msgid "或拖曳檔案到此處"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:684
+#: views/admin/chat-interface.php:684
+msgid "排程類型"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:686
+#: views/admin/chat-interface.php:686
+msgid "單次排程"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:687
+#: views/admin/chat-interface.php:687
+msgid "重複排程"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:692
+#: views/admin/chat-interface.php:692
+msgid "重複間隔"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:694
+#: views/admin/chat-interface.php:694
+msgid "每日"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:695
+#: views/admin/chat-interface.php:695
+msgid "每週"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:696
+#: views/admin/chat-interface.php:696
+msgid "每月"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:701
+#: views/admin/chat-interface.php:701
+msgid "排程日期"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:711
+#: views/admin/chat-interface.php:711
+msgid "星期"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:713
+#: views/admin/chat-interface.php:713
+msgid "週一"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:714
+#: views/admin/chat-interface.php:714
+msgid "週二"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:715
+#: views/admin/chat-interface.php:715
+msgid "週三"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:716
+#: views/admin/chat-interface.php:716
+msgid "週四"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:717
+#: views/admin/chat-interface.php:717
+msgid "週五"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:718
+#: views/admin/chat-interface.php:718
+msgid "週六"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:719
+#: views/admin/chat-interface.php:719
+msgid "週日"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:725
+#: views/admin/chat-interface.php:725
+msgid "每月幾日"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:728
+#: views/admin/chat-interface.php:728
+msgid "日"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:734
+#: views/admin/chat-interface.php:734
+msgid "排程時間"
+msgstr ""
+
+#: build/order-chatz/views/admin/chat-interface.php:745
+#: views/admin/chat-interface.php:745
+msgid "儲存排程"
+msgstr ""
+
+#: build/order-chatz/views/admin/export.php:29 views/admin/export.php:29
+msgid "選擇要匯出的訊息日期範圍（最多 31 天）"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:16
+#: views/admin/friends/edit-form.php:16
+msgid "編輯好友"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:24
+#: views/admin/friends/edit-form.php:24
+msgid "頭像"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:31
+#: views/admin/friends/edit-form.php:31
+msgid "無頭像"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:49
+#: views/admin/friends/edit-form.php:49
+msgid "來源類型"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:53
+#: views/admin/friends/edit-form.php:53
+msgid "用戶"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:54
+#: views/admin/friends/edit-form.php:54
+msgid "群組"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:55
+#: views/admin/friends/edit-form.php:55
+msgid "聊天室"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:63
+#: views/admin/friends/edit-form.php:63
+msgid "群組/聊天室 ID"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:68
+#: views/admin/friends/edit-form.php:68
+msgid "無"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:79
+#: views/admin/friends/edit-form.php:79
+msgid "取消追蹤時間"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:84
+#: views/admin/friends/edit-form.php:84
+msgid "未取消追蹤"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:89
+#: views/admin/friends/edit-form.php:89
+msgid "用戶狀態"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:93
+#: build/order-chatz/views/admin/notes/view.php:54
+#: views/admin/friends/edit-form.php:93 views/admin/notes/view.php:54
+msgid "活躍"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:94
+#: views/admin/friends/edit-form.php:94
+msgid "已封鎖"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:95
+#: build/order-chatz/views/admin/notes/view.php:56
+#: views/admin/friends/edit-form.php:95 views/admin/notes/view.php:56
+msgid "已取消追蹤"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:107
+#: views/admin/friends/edit-form.php:107
+msgid "無活動記錄"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:129
+#: views/admin/friends/edit-form.php:129
+msgid ""
+"綁定 LINE 好友到網站會員帳號才能於聊天頁面顯示客戶訂單資訊，可透過用戶名或電"
+"子郵件搜尋。"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:135
+#: views/admin/friends/edit-form.php:135
+msgid "更新好友"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/edit-form.php:140
+#: views/admin/friends/edit-form.php:140
+msgid "返回好友列表"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:19
+#: views/admin/friends/line-sync-modal.php:19
+msgid "匯入 LINE 官方帳號好友"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:31
+#: views/admin/friends/line-sync-modal.php:31
+msgid "LINE 官方帳號認證說明"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:41
+#: views/admin/friends/line-sync-modal.php:41
+msgid "正在取得 LINE 好友清單..."
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:51
+#: views/admin/friends/line-sync-modal.php:51
+msgid "選擇要匯入的好友"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:57
+#: build/order-chatz/views/admin/friends/message-import-modal.php:116
+#: build/order-chatz/views/admin/friends/sync-modal.php:43
+#: views/admin/friends/line-sync-modal.php:57
+#: views/admin/friends/message-import-modal.php:116
+#: views/admin/friends/sync-modal.php:43
+msgid "全選"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:77
+#: views/admin/friends/line-sync-modal.php:77
+msgid "正在匯入選擇的好友..."
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:102
+#: views/admin/friends/line-sync-modal.php:102
+msgid "取得好友清單"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:114
+#: views/admin/friends/line-sync-modal.php:114
+msgid "重新取得"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:118
+#: views/admin/friends/line-sync-modal.php:118
+msgid "匯入選擇的好友"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:123
+#: build/order-chatz/views/admin/friends/message-import-modal.php:184
+#: views/admin/friends/line-sync-modal.php:123
+#: views/admin/friends/message-import-modal.php:184
+msgid "取消匯入"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/line-sync-modal.php:128
+#: build/order-chatz/views/admin/friends/sync-modal.php:119
+#: views/admin/friends/line-sync-modal.php:128
+#: views/admin/friends/sync-modal.php:119
+msgid "刷新頁面"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/list.php:20
+#: views/admin/friends/list.php:20
+msgid "匯入網站會員 ( OrderNotify 專用 )"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/list.php:23
+#: views/admin/friends/list.php:23
+msgid "匯入 LINE 官方帳號好友 ( 藍盾或綠盾專用 ) "
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/list.php:30
+#: views/admin/friends/list.php:30
+msgid "搜尋好友"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:19
+#: views/admin/friends/message-import-modal.php:19
+msgid "匯入 LINE 歷史訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:28
+#: views/admin/friends/message-import-modal.php:28
+msgid "匯入對象"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:36
+#: views/admin/friends/message-import-modal.php:36
+msgid "上傳說明"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:38
+#: views/admin/friends/message-import-modal.php:38
+msgid "請上傳從 LINE 匯出的 CSV 檔案"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:39
+#: views/admin/friends/message-import-modal.php:39
+msgid "檔案大小限制：10MB"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:41
+#: views/admin/friends/message-import-modal.php:41
+msgid "支援格式：僅限 .csv 檔案"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:49
+#: views/admin/friends/message-import-modal.php:49
+msgid "拖曳檔案到此處或點擊選擇檔案"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:62
+#: views/admin/friends/message-import-modal.php:62
+msgid "移除"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:79
+#: views/admin/friends/message-import-modal.php:79
+msgid "訊息預覽"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:87
+#: views/admin/friends/message-import-modal.php:87
+msgid "日期範圍："
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:89
+#: views/admin/friends/message-import-modal.php:89
+msgid "至"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:93
+#: views/admin/friends/message-import-modal.php:93
+msgid "關鍵字："
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:94
+#: views/admin/friends/message-import-modal.php:94
+msgid "搜尋訊息內容..."
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:97
+#: views/admin/friends/message-import-modal.php:97
+msgid "傳送者："
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:105
+#: views/admin/friends/message-import-modal.php:105
+msgid "套用篩選"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:108
+#: views/admin/friends/message-import-modal.php:108
+msgid "重設"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:154
+#: views/admin/friends/message-import-modal.php:154
+msgid "執行完成"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:169
+#: views/admin/friends/message-import-modal.php:169
+msgid "預覽訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:175
+#: build/order-chatz/views/admin/friends/sync-modal.php:106
+#: views/admin/friends/message-import-modal.php:175
+#: views/admin/friends/sync-modal.php:106
+msgid "上一步"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:178
+#: build/order-chatz/views/admin/friends/sync-modal.php:109
+#: views/admin/friends/message-import-modal.php:178
+#: views/admin/friends/sync-modal.php:109
+msgid "開始匯入"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/message-import-modal.php:192
+#: views/admin/friends/message-import-modal.php:192
+msgid "繼續匯入"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:19
+#: views/admin/friends/sync-modal.php:19
+msgid "匯入網站會員( OrderNotify 專用 )"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:27
+#: views/admin/friends/sync-modal.php:27
+msgid "匯入網站會員到好友清單"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:28
+#: views/admin/friends/sync-modal.php:28
+msgid "自動配對已使用 LINE 登入的會員"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:29
+#: views/admin/friends/sync-modal.php:29
+msgid "只有使用 OrderNotify 推播外掛 LINE 登入的會員才能直接傳訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:30
+#: views/admin/friends/sync-modal.php:30
+msgid "沒有使用 LINE 登入過的會員不會出現在聊天列表"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:37
+#: views/admin/friends/sync-modal.php:37
+msgid "選擇要匯入的會員"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:38
+#: views/admin/friends/sync-modal.php:38
+msgid "以下是具有 LINE 連結資訊的會員，請勾選要匯入的會員："
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:52
+#: views/admin/friends/sync-modal.php:52
+msgid "載入會員資料中..."
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:61
+#: views/admin/friends/sync-modal.php:61
+msgid "沒有找到具有 LINE 連結資訊的會員"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:76
+#: views/admin/friends/sync-modal.php:76
+msgid "正在同步會員資料..."
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:101
+#: views/admin/friends/sync-modal.php:101
+msgid "選擇會員"
+msgstr ""
+
+#: build/order-chatz/views/admin/friends/sync-modal.php:114
+#: views/admin/friends/sync-modal.php:114
+msgid "取消同步"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/edit.php:48
+#: views/admin/notes/edit.php:48
+msgid "輸入備註內容..."
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/edit.php:70
+#: views/admin/notes/edit.php:70
+msgid "返回列表"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/edit.php:78
+#: views/admin/notes/edit.php:78
+msgid "備註 ID"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/edit.php:91
+#: views/admin/notes/edit.php:91
+msgid "關聯客戶"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/edit.php:110
+#: views/admin/notes/edit.php:110
+msgid "移到垃圾桶"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/edit.php:116
+#: build/order-chatz/views/admin/notes/edit.php:117
+#: views/admin/notes/edit.php:116 views/admin/notes/edit.php:117
+msgid "更新"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/list.php:29
+#: views/admin/notes/list.php:29
+msgid "依分類篩選"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/list.php:31
+#: views/admin/notes/list.php:31
+msgid "所有分類"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/list.php:53
+#: views/admin/notes/list.php:53
+msgid "依商品篩選"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/list.php:57
+#: views/admin/notes/list.php:57
+msgid "篩選"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/list.php:58
+#: build/order-chatz/views/admin/notes/list.php:73
+#: views/admin/notes/list.php:58 views/admin/notes/list.php:73
+msgid "分類管理"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/view.php:55
+#: views/admin/notes/view.php:55
+msgid "封鎖"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/view.php:63
+#: views/admin/notes/view.php:63
+msgid "最後活動"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/view.php:86
+#: views/admin/notes/view.php:86
+msgid "目前沒有備註記錄"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/view.php:150
+#: build/order-chatz/views/admin/notes/view.php:172
+#: views/admin/notes/view.php:150 views/admin/notes/view.php:172
+msgid "新增備註"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/view.php:165
+#: views/admin/notes/view.php:165
+msgid "請輸入新的客戶備註..."
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/view.php:166
+#: views/admin/notes/view.php:166
+msgid "在此記錄與此客戶的互動備註、重要資訊等"
+msgstr ""
+
+#: build/order-chatz/views/admin/notes/view.php:177
+#: views/admin/notes/view.php:177
+msgid "返回備註列表"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:26
+#: views/admin/statistics-interface.php:26
+msgid "訊息配額概覽"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:30
+#: views/admin/statistics-interface.php:30
+msgid "本月配額"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:37
+#: build/order-chatz/views/admin/statistics-interface.php:47
+#: build/order-chatz/views/admin/statistics-interface.php:57
+#: views/admin/statistics-interface.php:37
+#: views/admin/statistics-interface.php:47
+#: views/admin/statistics-interface.php:57
+msgid "訊息數"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:43
+#: views/admin/statistics-interface.php:43
+msgid "已使用"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:63
+#: views/admin/statistics-interface.php:63
+msgid "使用率"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:86
+#: views/admin/statistics-interface.php:86
+msgid "好友統計"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:90
+#: views/admin/statistics-interface.php:90
+msgid "好友數量"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:97
+#: views/admin/statistics-interface.php:97
+msgid "總好友數"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:103
+#: views/admin/statistics-interface.php:103
+msgid "目標觸及數"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:110
+#: views/admin/statistics-interface.php:110
+msgid "可觸及用戶"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:118
+#: views/admin/statistics-interface.php:118
+msgid "使用趨勢圖表"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:122
+#: views/admin/statistics-interface.php:122
+msgid "每日訊息發送量"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:125
+#: views/admin/statistics-interface.php:125
+msgid "近 7 天"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:126
+#: views/admin/statistics-interface.php:126
+msgid "近 30 天"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:127
+#: views/admin/statistics-interface.php:127
+msgid "近 90 天"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:135
+#: build/order-chatz/views/admin/statistics-interface.php:148
+#: views/admin/statistics-interface.php:135
+#: views/admin/statistics-interface.php:148
+msgid "載入圖表中..."
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:142
+#: views/admin/statistics-interface.php:142
+msgid "訊息類型分佈"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:157
+#: views/admin/statistics-interface.php:157
+msgid "詳細統計"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:162
+#: views/admin/statistics-interface.php:162
+msgid "日期"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:163
+#: views/admin/statistics-interface.php:163
+msgid "回覆訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:164
+#: views/admin/statistics-interface.php:164
+msgid "推播訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:165
+#: views/admin/statistics-interface.php:165
+msgid "群發訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:166
+#: views/admin/statistics-interface.php:166
+msgid "廣播訊息"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:167
+#: views/admin/statistics-interface.php:167 views/admin/tags/users-modal.php:69
+msgid "總計"
+msgstr ""
+
+#: build/order-chatz/views/admin/statistics-interface.php:175
+#: views/admin/statistics-interface.php:175
+msgid "載入統計數據中..."
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:8 views/frontend/chat.php:8
+msgid "OrderChatz 行動聊天"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:64 views/frontend/chat.php:64
+msgid "資訊"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:75 views/frontend/chat.php:75
+msgid "網路連線中斷"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:81 views/frontend/chat.php:81
+msgid "此頁面專為行動裝置設計"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:82 views/frontend/chat.php:82
+msgid "請使用螢幕寬度小於 1024px 的裝置訪問，或調整瀏覽器視窗大小。"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:84 views/frontend/chat.php:84
+msgid "前往桌面版聊天室"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:94 views/frontend/chat.php:94
+msgid "開啟推播通知"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:98 views/frontend/chat.php:98
+msgid "開啟推播通知後，您將能夠："
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:100 views/frontend/chat.php:100
+msgid "即時收到新訊息通知"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:101 views/frontend/chat.php:101
+msgid "即使關閉網頁也能收到提醒"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:102 views/frontend/chat.php:102
+msgid "在手機鎖定畫面直接查看訊息"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:103 views/frontend/chat.php:103
+msgid "快速回應客戶，提升服務品質"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:104 views/frontend/chat.php:104
+msgid "您隨時可以在設定中關閉推播通知"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:108 views/frontend/chat.php:108
+msgid "稍後再說"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:109 views/frontend/chat.php:109
+msgid "立即開啟"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:123 views/frontend/chat.php:123
+msgid "啟用"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:134 views/frontend/chat.php:134
+msgid "如何開啟推播通知"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:138 views/frontend/chat.php:138
+msgid "請按照以下步驟開啟推播通知："
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:141 views/frontend/chat.php:141
+msgid "步驟 1："
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:142 views/frontend/chat.php:142
+msgid "點選瀏覽器網址列左側的「鎖頭」或「資訊」圖示"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:145 views/frontend/chat.php:145
+msgid "步驟 2："
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:146 views/frontend/chat.php:146
+msgid "找到「通知」或「Notifications」選項"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:149 views/frontend/chat.php:149
+msgid "步驟 3："
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:150 views/frontend/chat.php:150
+msgid "將設定改為「允許」或「Allow」"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:153 views/frontend/chat.php:153
+msgid "步驟 4："
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:154 views/frontend/chat.php:154
+msgid "重新整理頁面即可完成設定"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:159 views/frontend/chat.php:159
+msgid "我知道了"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:172 views/frontend/chat.php:172
+msgid "安裝 OrderChatz"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:173 views/frontend/chat.php:173
+msgid "將 OrderChatz 新增至主畫面，享受更快速的存取體驗"
+msgstr ""
+
+#: build/order-chatz/views/frontend/chat.php:176 views/frontend/chat.php:176
+msgid "安裝"
+msgstr ""
+
+#: src/Admin/Lists/BotListTable.php:42 src/Admin/Menu/MenuRegistrar.php:308
+#: src/Admin/Menu/Pages/Bot.php:53 src/Admin/Menu/TabNavigationRenderer.php:72
+msgid "Bot"
+msgstr "機器人"
+
+#: src/Admin/Lists/BotListTable.php:57
+msgid "Name"
+msgstr "名稱"
+
+#: src/Admin/Lists/BotListTable.php:58 views/admin/bot/edit.php:87
+msgid "Keywords"
+msgstr "關鍵字"
+
+#: src/Admin/Lists/BotListTable.php:59 views/admin/bot/edit.php:114
+msgid "Action Type"
+msgstr "動作類型"
+
+#: src/Admin/Lists/BotListTable.php:60 views/admin/bot/edit.php:298
+msgid "Quick Replies"
+msgstr "快速回覆"
+
+#: src/Admin/Lists/BotListTable.php:61 views/admin/bot/edit.php:370
+msgid "Status"
+msgstr "狀態"
+
+#: src/Admin/Lists/BotListTable.php:62 views/admin/bot/edit.php:381
+msgid "Priority"
+msgstr "優先順序"
+
+#: src/Admin/Lists/BotListTable.php:63 views/admin/bot/edit.php:400
+msgid "Trigger Count"
+msgstr "觸發次數"
+
+#: src/Admin/Lists/BotListTable.php:64
+msgid "Updated At"
+msgstr "更新時間"
+
+#: src/Admin/Lists/BotListTable.php:89 src/Admin/Lists/BotListTable.php:258
+#: src/Admin/Lists/BroadcastListTable.php:86
+#: src/Admin/Lists/BroadcastListTable.php:251
+msgid "Delete"
+msgstr "刪除"
+
+#. translators: %d: number of deleted bot skills
+#: src/Admin/Lists/BotListTable.php:132
+msgid "Successfully deleted %d bot(s)"
+msgstr "成功刪除 %d 個機器人"
+
+#: src/Admin/Lists/BotListTable.php:253
+#: src/Admin/Lists/BroadcastListTable.php:246
+msgid "Copy"
+msgstr "複製"
+
+#: src/Admin/Lists/BotListTable.php:257
+msgid "Are you sure you want to delete this bot?"
+msgstr "確定要刪除這個機器人嗎？"
+
+#: src/Admin/Lists/BotListTable.php:317
+msgid "AI"
+msgstr "AI"
+
+#: src/Admin/Lists/BotListTable.php:318
+msgid "Human Service"
+msgstr "人工客服"
+
+#: src/Admin/Lists/BotListTable.php:332 views/admin/bot/edit.php:373
+msgid "Active"
+msgstr "啟用"
+
+#: src/Admin/Lists/BotListTable.php:333 views/admin/bot/edit.php:374
+msgid "Inactive"
+msgstr "停用"
+
+#: src/Admin/Lists/BotListTable.php:383
+msgid "No bot found."
+msgstr "找不到機器人。"
+
+#: src/Admin/Lists/BotListTable.php:401
+msgid "Search bot name..."
+msgstr "搜尋機器人名稱..."
+
+#: src/Admin/Lists/BroadcastListTable.php:42
+msgid "Broadcast Campaign"
+msgstr "推播活動"
+
+#: src/Admin/Lists/BroadcastListTable.php:61
+msgid "Scheduled Time"
+msgstr "預計發送時間"
+
+#: src/Admin/Lists/BroadcastListTable.php:62
+msgid "Updated Time"
+msgstr "更新時間"
+
+#. translators: %d: number of deleted campaigns.
+#: src/Admin/Lists/BroadcastListTable.php:129
+msgid "Successfully deleted %d broadcast campaigns"
+msgstr "成功刪除 %d 個推播活動"
+
+#: src/Admin/Lists/BroadcastListTable.php:250
+msgid "Are you sure you want to delete this broadcast campaign?"
+msgstr "確定要刪除這個推播活動嗎？"
+
+#: src/Admin/Lists/BroadcastListTable.php:272
+msgid "Imported Followers"
+msgstr "已匯入好友"
+
+#: src/Admin/Lists/BroadcastListTable.php:273
+msgid "Filtered Followers"
+msgstr "篩選好友"
+
+#: src/Admin/Lists/BroadcastListTable.php:287
+msgid "Text"
+msgstr "文字"
+
+#: src/Admin/Lists/BroadcastListTable.php:367
+msgid "Manual Broadcast"
+msgstr "手動推播"
+
+#: src/Admin/Lists/BroadcastListTable.php:374
+msgid "No broadcast campaigns found"
+msgstr "目前沒有任何推播活動"
+
+#: src/Admin/Lists/BroadcastListTable.php:392
+msgid "Search campaign name..."
+msgstr "搜尋活動名稱..."
+
+#: src/Admin/Menu/Pages/Bot.php:120 src/Admin/Menu/Pages/Bot.php:162
+msgid "Template file not found."
+msgstr "找不到範本檔案。"
+
+#: src/Admin/Menu/Pages/Bot.php:136 src/Admin/Menu/Pages/Bot.php:210
+msgid "Bot not found."
+msgstr "找不到機器人。"
+
+#: src/Admin/Menu/Pages/Bot.php:176 src/Admin/Menu/Pages/Bot.php:203
+#: src/Admin/Menu/Pages/Bot.php:246
+msgid "Security check failed."
+msgstr "安全性檢查失敗。"
+
+#: src/Admin/Menu/Pages/Bot.php:181
+msgid "Bot deleted successfully."
+msgstr "機器人已成功刪除。"
+
+#: src/Admin/Menu/Pages/Bot.php:189
+msgid "Failed to delete bot."
+msgstr "刪除機器人失敗。"
+
+#. translators: %s: original bot name
+#: src/Admin/Menu/Pages/Bot.php:221
+msgid "%s (Copy)"
+msgstr "%s（副本）"
+
+#: src/Admin/Menu/Pages/Bot.php:226
+msgid "Bot copied successfully."
+msgstr "機器人已成功複製。"
+
+#: src/Admin/Menu/Pages/Bot.php:234
+msgid "Failed to copy bot."
+msgstr "複製機器人失敗。"
+
+#: src/Admin/Menu/Pages/Bot.php:343
+msgid "Bot updated successfully."
+msgstr "機器人更新成功。"
+
+#: src/Admin/Menu/Pages/Bot.php:343
+msgid "Bot created successfully."
+msgstr "機器人建立成功。"
+
+#: src/Admin/Menu/Pages/Bot.php:353
+msgid "Failed to save bot."
+msgstr "儲存機器人失敗。"
+
+#: src/Admin/Menu/Pages/Bot.php:443
+msgid "Bot name is required"
+msgstr "機器人名稱為必填"
+
+#: src/Admin/Menu/Pages/Bot.php:444
+msgid "At least one keyword is required"
+msgstr "至少需要一個關鍵字"
+
+#: src/Admin/Menu/Pages/Bot.php:445
+msgid "This keyword already exists"
+msgstr "此關鍵字已存在"
+
+#: src/Admin/Menu/Pages/Bot.php:446
+msgid "Handoff message is required"
+msgstr "轉接訊息為必填欄位"
+
+#: src/Admin/Menu/Pages/Bot.php:447 views/admin/bot/edit.php:314
+#: views/admin/bot/edit.php:328
+msgid "Enter question..."
+msgstr "輸入問題..."
+
+#: src/Admin/Menu/Pages/Bot.php:448
+msgid "Are you sure you want to delete this?"
+msgstr "確定要刪除嗎？"
+
+#: src/Admin/Menu/Pages/Bot.php:449
+msgid "Select post types..."
+msgstr "選擇文章類型..."
+
+#: src/Admin/Menu/Pages/Bot.php:450
+msgid "Please select at least one post type"
+msgstr ""
+
+#: src/Admin/Menu/Pages/Chat.php:363
+msgid "目前為 AI 自動回應模式"
+msgstr "目前為 AI 自動回應模式"
+
+#: src/Admin/Menu/Pages/Chat.php:364
+msgid "切換為手動回覆"
+msgstr "切換為手動回覆"
+
+#: src/Admin/Menu/Pages/Tags.php:228 views/admin/tags/users-modal.php:22
+msgid "使用此標籤的好友"
+msgstr ""
+
+#: src/Admin/Menu/Pages/Tags.php:229
+msgid "載入好友資料失敗，請稍後再試"
+msgstr ""
+
+#: src/Admin/Menu/Pages/Tags.php:300
+msgid "標籤列表"
+msgstr ""
+
+#: src/Admin/Menu/Pages/Tags.php:356
+msgid "標籤已存在"
+msgstr ""
+
+#: src/Admin/Menu/TabNavigationRenderer.php:70
+msgid "Chat"
+msgstr "聊天"
+
+#: src/Admin/Menu/TabNavigationRenderer.php:71
+msgid "Broadcast"
+msgstr "推播"
+
+#: src/Admin/Menu/TabNavigationRenderer.php:73
+msgid "Friends"
+msgstr "好友"
+
+#: src/Admin/Menu/TabNavigationRenderer.php:75
+msgid "Notes"
+msgstr "備註"
+
+#: src/Admin/Menu/TabNavigationRenderer.php:77
+msgid "Export"
+msgstr "匯出"
+
+#: src/Admin/Menu/TabNavigationRenderer.php:78 views/admin/bot/edit.php:397
+msgid "Statistics"
+msgstr "統計"
+
+#: src/Admin/Menu/TabNavigationRenderer.php:79
+msgid "Subscriber Management"
+msgstr "訂閱管理"
+
+#: src/Admin/Menu/TabNavigationRenderer.php:80
+msgid "License"
+msgstr "授權"
+
+#: views/admin/bot/edit.php:36
+msgid "Edit Bot"
+msgstr "編輯機器人"
+
+#: views/admin/bot/edit.php:36 views/admin/bot/list.php:21
+msgid "Add New Bot"
+msgstr "新增機器人"
+
+#: views/admin/bot/edit.php:61
+msgid "Bot Name"
+msgstr "機器人名稱"
+
+#: views/admin/bot/edit.php:70
+msgid "Enter bot name"
+msgstr "輸入機器人名稱"
+
+#: views/admin/bot/edit.php:77
+msgid "Description"
+msgstr "描述"
+
+#: views/admin/bot/edit.php:82
+msgid "Enter description (optional)"
+msgstr "輸入描述（選填）"
+
+#: views/admin/bot/edit.php:90
+msgid "Trigger Keywords"
+msgstr "觸發關鍵字"
+
+#: views/admin/bot/edit.php:95
+msgid "Add keyword"
+msgstr "新增關鍵字"
+
+#: views/admin/bot/edit.php:107
+msgid "Keywords that trigger this bot"
+msgstr "會觸發此機器人的關鍵字"
+
+#: views/admin/bot/edit.php:126
+msgid "AI-powered automatic response"
+msgstr "AI 自動回應"
+
+#: views/admin/bot/edit.php:137
+msgid "Disable AI-powered automatic response"
+msgstr "停用 AI 自動回應"
+
+#: views/admin/bot/edit.php:146
+msgid "Handoff Message"
+msgstr "停用 AI 轉接訊息"
+
+#: views/admin/bot/edit.php:150
+msgid "Message to Customer"
+msgstr "發送給好友的訊息"
+
+#: views/admin/bot/edit.php:156
+msgid "Enter handoff message..."
+msgstr "輸入轉接訊息..."
+
+#: views/admin/bot/edit.php:158
+msgid "This message will be sent when switching to human service."
+msgstr "當停用 AI 回應時，此訊息將會發送給好友。"
+
+#: views/admin/bot/edit.php:166
+msgid "AI Settings"
+msgstr "AI 設定"
+
+#: views/admin/bot/edit.php:171
+msgid "API Key"
+msgstr "API 金鑰"
+
+#: views/admin/bot/edit.php:177
+msgid "Enter API key"
+msgstr "輸入 API 金鑰"
+
+#. translators: %1$s: OpenAI API link, %2$s: Anthropic API link
+#: views/admin/bot/edit.php:183
+msgid ""
+"Enter your AI provider API key. Get your key from: <a href=\"%1$s\" "
+"target=\"_blank\">OpenAI</a>"
+msgstr ""
+"輸入你的 AI 服務提供商 API 金鑰。可從此處取得金鑰 <a href=\"%1$s\" "
+"target=\"_blank\">OpenAI</a>"
+
+#: views/admin/bot/edit.php:199
+msgid "Model"
+msgstr "模型"
+
+#: views/admin/bot/edit.php:201
+msgid "Select model"
+msgstr "選擇模型"
+
+#: views/admin/bot/edit.php:210
+msgid ""
+"Select the AI model to use. Different models have different capabilities and "
+"pricing."
+msgstr "選擇要使用的 AI 模型。不同模型具有不同的功能與價格。"
+
+#: views/admin/bot/edit.php:215
+msgid "System Prompt"
+msgstr "系統提示詞"
+
+#: views/admin/bot/edit.php:220
+msgid "Enter system prompt..."
+msgstr "輸入系統提示詞..."
+
+#: views/admin/bot/edit.php:221
+msgid ""
+"Define the AI's role, personality, and behavioral guidelines. This sets the "
+"context for all interactions. Example: \"You are a helpful customer service "
+"assistant for an e-commerce store.\""
+msgstr ""
+"定義 AI 的角色、個性與行為準則。這將設定所有互動的情境。範例：「你是一位協助"
+"電商網站的客服助理。」"
+
+#: views/admin/bot/edit.php:229
+msgid "Function Tools"
+msgstr "功能工具"
+
+#: views/admin/bot/edit.php:231
+msgid "Select AI tools to enable"
+msgstr "選擇要啟用的 AI 工具"
+
+#: views/admin/bot/edit.php:235
+msgid "Query Customer Orders (Historical Orders)"
+msgstr "查詢客戶訂單（歷史訂單）"
+
+#: views/admin/bot/edit.php:236
+msgid "Query Single Order (Order Details)"
+msgstr "查詢單一訂單（訂單詳細資訊）"
+
+#: views/admin/bot/edit.php:237
+msgid "Query Customer Info (Basic Information)"
+msgstr "查詢客戶資訊（基本資料）"
+
+#: views/admin/bot/edit.php:238
+msgid "Query Product Info (Product Details)"
+msgstr "查詢商品資訊（商品詳細資料）"
+
+#: views/admin/bot/edit.php:239
+msgid "Query Custom Post Type (Specific Post Type)"
+msgstr "查詢自訂文章類型（特定文章類型）"
+
+#: views/admin/bot/edit.php:289
+msgid "Select which post types the AI can query"
+msgstr "選擇 AI 可以查詢的文章類型"
+
+#: views/admin/bot/edit.php:301
+msgid "Pre-set questions for quick user access"
+msgstr "預先設定的快速提問選項"
+
+#: views/admin/bot/edit.php:303
+msgid ""
+"Each question must be 15 characters or less (exceeding items will be "
+"filtered)"
+msgstr ""
+
+#: views/admin/bot/edit.php:337
+msgid "Add Question"
+msgstr "新增問題"
+
+#: views/admin/bot/edit.php:360
+msgid "Update"
+msgstr "更新"
+
+#: views/admin/bot/edit.php:390
+msgid "Lower number = higher priority"
+msgstr "數字越小優先順序越高"
+
+#: views/admin/bot/edit.php:404
+msgid "Total Tokens"
+msgstr "總 Token 數"
+
+#: views/admin/bot/edit.php:408
+msgid "Avg Response Time"
+msgstr "平均回應時間"
+
+#: views/admin/bot/list.php:24
+msgid "Search"
+msgstr "搜尋"
+
+#: views/admin/tags/users-modal.php:45
+msgid "載入更多中..."
+msgstr ""
+
+#: views/admin/tags/users-modal.php:50
+msgid "已載入全部好友"
+msgstr ""
+
+#: views/admin/tags/users-modal.php:56
+msgid "載入好友資料中..."
+msgstr ""
+
+#: views/admin/tags/users-modal.php:68
+msgid "已載入"
+msgstr ""
+
+#: views/admin/tags/users-modal.php:69
+msgid "人"
+msgstr ""

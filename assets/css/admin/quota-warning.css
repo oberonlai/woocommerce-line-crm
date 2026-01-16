@@ -1,0 +1,133 @@
+/**
+ * OrderChatz 配額警告通知樣式
+ *
+ * 提供配額警告通知的視覺樣式
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+.otz-quota-warning-notice {
+    border-left: 4px solid #f56e28 !important;
+    background: #fef7f0 !important;
+}
+
+.otz-quota-warning-notice.critical {
+    border-left-color: #dc3232 !important;
+    background: #fef2f2 !important;
+}
+
+.otz-quota-warning-notice .notice-content {
+    display: flex;
+    align-items: center;
+    padding: 15px 12px;
+}
+
+.otz-quota-warning-notice .notice-icon {
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.otz-quota-warning-notice .notice-icon .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #f56e28;
+}
+
+.otz-quota-warning-notice.critical .notice-icon .dashicons {
+    color: #dc3232;
+}
+
+.otz-quota-warning-notice .notice-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.otz-quota-warning-notice .notice-title {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.otz-quota-warning-notice .notice-description {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #3c434a;
+    line-height: 1.4;
+}
+
+.otz-quota-warning-notice .notice-critical {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #dc3232;
+}
+
+.otz-quota-warning-notice .notice-actions {
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.otz-quota-warning-notice .notice-actions .button {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* 進度條樣式 */
+.otz-quota-progress {
+    width: 200px;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.otz-quota-progress-bar {
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.otz-quota-progress-bar.low {
+    background-color: #00a32a;
+}
+
+.otz-quota-progress-bar.medium {
+    background-color: #dba617;
+}
+
+.otz-quota-progress-bar.high {
+    background-color: #f56e28;
+}
+
+.otz-quota-progress-bar.critical {
+    background-color: #dc3232;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 782px) {
+    .otz-quota-warning-notice .notice-content {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .otz-quota-warning-notice .notice-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .otz-quota-warning-notice .notice-actions {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .otz-quota-progress {
+        width: 100%;
+        max-width: 300px;
+    }
+}

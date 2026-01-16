@@ -1,0 +1,674 @@
+/* ===== 排程訊息樣式 ===== */
+
+/* 排程按鈕樣式 */
+.schedule-message-btn {
+    transition: all 0.2s ease;
+}
+
+.schedule-message-btn:hover {
+    background: #e9ecef;
+    color: #06c755;
+}
+
+.schedule-message-btn .dashicons-clock {
+    font-size: 16px;
+}
+
+/* 排程 Modal 樣式 */
+.message-cron-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+}
+
+.message-cron-modal .modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.message-cron-modal .modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    margin: 5% auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-cron-modal .modal-header {
+    padding: 20px 30px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.message-cron-modal .modal-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.message-cron-modal .modal-close {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #666;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.message-cron-modal .modal-close:hover {
+    color: #d63638;
+}
+
+.message-cron-modal .modal-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
+
+/* 排程列表區域樣式 */
+.cron-list-section {
+    padding: 30px;
+}
+
+.cron-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cron-list-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.cron-add-new-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* 載入和空狀態樣式 */
+.cron-list-loading,
+.cron-list-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.cron-list-loading .loading-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e5e5e5;
+    border-top: 3px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.cron-list-empty .empty-icon {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.cron-list-empty .empty-icon .dashicons {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+}
+
+/* 排程列表表格樣式 */
+.cron-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.cron-list-table th,
+.cron-list-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: middle;
+}
+
+.cron-list-table th {
+    background: #f9f9f9;
+    font-weight: 600;
+    color: #23282d;
+    font-size: 13px;
+}
+
+.cron-list-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+/* 排程內容樣式 */
+.cron-content-preview {
+    max-width: 250px;
+    line-height: 1.4;
+    color: #23282d;
+    word-break: break-word;
+}
+
+/* 圖片預覽樣式 */
+.cron-image-preview {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+/* 檔案連結樣式 */
+.cron-file-link {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cron-file-link:hover {
+    color: #005a87;
+    text-decoration: underline;
+}
+
+.cron-file-link::before {
+    content: '📎';
+    font-size: 14px;
+}
+
+/* 狀態標籤樣式 */
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.status-pending {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.status-badge.status-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-badge.status-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status-badge.status-warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.status-badge.status-secondary {
+    background: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #d6d8db;
+}
+
+/* 操作按鈕樣式 */
+.cron-actions .action-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.cron-actions .button {
+    font-size: 11px;
+    padding: 4px 8px;
+    min-height: auto;
+    line-height: 1.2;
+}
+
+/* 排程表單區域樣式 */
+.cron-form-section {
+    padding: 30px;
+    background: #f9f9f9;
+}
+
+.cron-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cron-form-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.cron-form-back-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+}
+
+/* 表單欄位樣式 */
+
+.cron-form-field-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.cron-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cron-form-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #23282d;
+    font-size: 13px;
+    width: 100%;
+}
+
+.cron-form-field select {
+    width: 100%;
+}
+
+.cron-form-field .required {
+    color: #d63638;
+}
+
+.cron-form-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    background: #fff;
+    transition: border-color 0.2s ease;
+}
+
+.cron-form-input:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+}
+
+.cron-form-input[type="textarea"] {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* 字數統計樣式 */
+.cron-form-char-count {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #666;
+}
+
+/* 錯誤訊息樣式 */
+.cron-form-error {
+    margin-top: 5px;
+    padding: 6px 10px;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+/* 表單操作按鈕樣式 */
+.cron-form-actions {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.cron-form-actions .button {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* 訊息類型選擇器樣式 */
+.message-type-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.message-type-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    background: #fff;
+    min-width: 80px;
+    justify-content: center;
+}
+
+.message-type-option:hover {
+    border-color: #0073aa;
+    background: #f8f9fa;
+}
+
+.message-type-option input[type="radio"] {
+    margin: 0;
+    display: none;
+}
+
+.message-type-option input[type="radio"]:checked + .dashicons {
+    color: #0073aa;
+}
+
+.message-type-option:has(input[type="radio"]:checked) {
+    border-color: #0073aa;
+    background: #e7f3ff;
+    color: #0073aa;
+    font-weight: 500;
+}
+
+.message-type-option .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+/* 檔案上傳編輯器樣式 */
+.file-upload-container {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.file-upload-container:hover {
+    border-color: #222;
+    background-color: #f8f9fa;
+}
+
+/* 拖曳懸停狀態 */
+.file-upload-container.drag-hover {
+    border-color: #0073AA;
+}
+
+/* 拖曳提示文字樣式 */
+.drag-drop-hint {
+    color: #888;
+    font-style: italic;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.file-upload-container.drag-hover .drag-drop-hint {
+    font-weight: 500;
+    font-style: normal;
+}
+
+.cron-file-select-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.cron-file-select-btn:hover {
+    background: #005a87;
+    color: #fff;
+}
+
+.cron-file-select-btn .dashicons {
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.file-upload-info {
+    margin-top: 10px;
+}
+
+.file-upload-info small {
+    color: #666;
+    font-size: 12px;
+}
+
+/* 檔案預覽樣式 */
+.file-preview-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    background: #f9f9f9;
+}
+
+.file-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.file-info .file-name {
+    font-weight: 500;
+    color: #23282d;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.file-info .file-size {
+    font-size: 12px;
+    color: #666;
+}
+
+.cron-file-remove-btn {
+    background: none;
+    border: none;
+    color: #dc3232;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.cron-file-remove-btn:hover {
+    background: #ffebee;
+}
+
+.cron-file-remove-btn .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* 上傳進度樣式 */
+.upload-progress {
+    margin-top: 10px;
+}
+
+.upload-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.upload-progress-fill {
+    height: 100%;
+    background: #0073aa;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.upload-progress-text {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    display: block;
+}
+
+/* 圖片預覽樣式 */
+.image-preview {
+    margin-bottom: 10px;
+}
+
+.preview-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .message-cron-modal .modal-container {
+        width: 95%;
+        height: 90vh;
+        margin: 2.5% auto;
+    }
+
+    .message-cron-modal .modal-header {
+        padding: 15px 20px;
+    }
+
+    .cron-list-section,
+    .cron-form-section {
+        padding: 20px;
+    }
+
+    .cron-list-header,
+    .cron-form-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .cron-list-table {
+        font-size: 12px;
+    }
+
+    .cron-list-table th,
+    .cron-list-table td {
+        padding: 8px 6px;
+    }
+
+    .cron-content-preview {
+        max-width: 150px;
+    }
+
+    .cron-actions .action-buttons {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .cron-form-actions {
+        flex-direction: column;
+    }
+
+    /* 訊息類型選擇器移動端樣式 */
+    .message-type-selector {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message-type-option {
+        justify-content: flex-start;
+        min-width: auto;
+        width: 100%;
+    }
+
+    /* 檔案上傳區域移動端樣式 */
+    .file-upload-container {
+        padding: 15px;
+    }
+
+    .cron-file-select-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .file-preview-container {
+        padding: 12px;
+    }
+
+    .file-preview {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* 圖片預覽移動端樣式 */
+    .preview-image {
+        max-width: 100%;
+        max-height: 150px;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

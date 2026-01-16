@@ -1,0 +1,708 @@
+/**
+ * Mobile Backend Override - Frontend Only
+ * OrderChatz Frontend Mobile Chat Interface
+ * 
+ * Overrides backend chat styles for mobile-specific layout
+ * Only loaded in frontend to avoid affecting backend interface
+ * 
+ * @version 1.0.8
+ */
+
+/* === Body and Container Overrides === */
+.otz-frontend-chat .orderchatz-chat-interface {
+    height: 100vh; /* 舊瀏覽器 fallback */
+    height: 100svh; /* iOS Safari 可視區域高度 */
+    height: 100dvh; /* 動態視窗高度 */
+    overflow: visible; /* 改為 visible，允許子容器處理滾動 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    /* 防止意外的頁面滾動 */
+    touch-action: none;
+}
+
+.otz-frontend-chat .chat-container {
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    height: 100vh; /* 舊瀏覽器 fallback */
+    height: 100svh; /* iOS Safari 可視區域高度 */
+    height: 100dvh; /* 動態視窗高度 */
+    width: 100vw;
+    position: relative;
+    max-height: 100vh;
+    max-height: 100svh; /* iOS Safari 可視區域高度 */
+    max-height: 100dvh; /* 動態視窗高度 */
+    min-height: 100vh;
+    min-height: 100svh; /* iOS Safari 可視區域高度 */
+    min-height: 100dvh; /* 動態視窗高度 */
+    /* 允許子容器處理觸控事件 */
+    touch-action: none;
+}
+
+/* === Hide Desktop Features === */
+.otz-frontend-chat .panel-resizer {
+    display: none;
+}
+
+.otz-frontend-chat .mobile-toggle-buttons {
+    display: none;
+}
+
+.otz-frontend-chat .mobile-overlay {
+    display: none;
+}
+
+/* 隱藏後台專用的上方切換按鈕 */
+.otz-frontend-chat .mobile-toggle-friend-list,
+.otz-frontend-chat .mobile-toggle-customer-info,
+.otz-frontend-chat .mobile-toggle-buttons,
+.otz-frontend-chat #mobile-toggle-buttons {
+    display: none;
+}
+
+/* 隱藏手機版切換按鈕 (後台的舊移動版功能) */
+.otz-frontend-chat #toggle-friends,
+.otz-frontend-chat #toggle-customer-info,
+.otz-frontend-chat .mobile-toggle {
+    display: none;
+}
+
+/* 隱藏後台頂部工具列 */
+.otz-frontend-chat .chat-toolbar {
+    display: none;
+}
+
+/* 隱藏桌面版的面板切換控制項 */
+.otz-frontend-chat .panel-controls {
+    display: none;
+}
+
+/* 隱藏桌面版的狀態列 */
+.otz-frontend-chat .status-bar {
+    display: none;
+}
+
+/* 隱藏桌面版遮罩 */
+.otz-frontend-chat .mobile-overlay,
+.otz-frontend-chat #mobile-overlay {
+    display: none;
+}
+
+/* 隱藏不必要的桌面版元素 */
+.otz-frontend-chat .desktop-only {
+    display: none;
+}
+
+/* === Panel Layout Override === */
+.otz-frontend-chat .friend-list-panel,
+.otz-frontend-chat .chat-area-panel,
+.otz-frontend-chat .customer-info-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    /* iOS Safari 視窗高度修正 */
+    height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+    height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+    height: calc(100dvh - 60px); /* 動態視窗高度 */
+    max-height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+    max-height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+    max-height: calc(100dvh - 60px); /* 動態視窗高度 */
+    flex-direction: column;
+    background: #ffffff;
+    z-index: 1;
+    /* 重置後台響應式樣式的 transform */
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    border: none;
+    /* 讓 JavaScript 控制顯示狀態 */
+    display: none;
+}
+
+/* Show active panel - 這些類別由 JavaScript 控制 */
+.otz-frontend-chat .friend-list-panel.active,
+.otz-frontend-chat .chat-area-panel.active,
+.otz-frontend-chat .customer-info-panel.active {
+    display: flex;
+}
+
+/* === Friend List Panel Mobile Styles === */
+.otz-frontend-chat .friend-list-panel {
+    overflow: visible; /* 讓子容器處理滾動 */
+}
+
+.otz-frontend-chat .friend-search-container {
+    flex-shrink: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #ffffff;
+}
+
+.otz-frontend-chat .friend-list-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    /* 強制觸控滾動行為 */
+    touch-action: pan-y;
+    /* iOS Safari 視窗高度修正 - 減去底部導覽和搜尋區域 */
+    max-height: calc(100vh - 60px - 60px); /* 舊瀏覽器 fallback */
+    max-height: calc(100svh - 60px - 60px); /* iOS Safari 可視區域 */
+    max-height: calc(100dvh - 60px - 60px); /* 動態視窗高度 */
+    position: relative;
+    z-index: 1;
+}
+
+.otz-frontend-chat .friend-list {
+    padding: 8px 0;
+}
+
+.otz-frontend-chat .friend-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.otz-frontend-chat .friend-item:hover,
+.otz-frontend-chat .friend-item.touch-active {
+    background-color: #f6f7f7;
+}
+
+.otz-frontend-chat .friend-item.selected {
+    background-color: #e3f2fd;
+}
+
+/* === Chat Area Panel Mobile Styles === */
+.otz-frontend-chat .chat-area-panel {
+    overflow: visible; /* 讓子容器處理滾動 */
+}
+
+.otz-frontend-chat .chat-header {
+    flex-shrink: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #ffffff;
+    min-height: 56px;
+}
+
+.otz-frontend-chat .chat-messages-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 0;
+    /* 強制觸控滾動行為 */
+    touch-action: pan-y;
+    /* iOS Safari 視窗高度修正 - 減去底部導覽、標題和輸入區域 */
+    max-height: calc(100vh - 60px - 56px - 60px); /* 舊瀏覽器 fallback */
+    max-height: calc(100svh - 60px - 56px - 60px); /* iOS Safari 可視區域 */
+    max-height: calc(100dvh - 60px - 56px - 60px); /* 動態視窗高度 */
+    position: relative;
+    z-index: 1;
+}
+
+.otz-frontend-chat .chat-messages-container .chat-messages {
+    overflow-x: hidden;
+}
+
+.otz-frontend-chat .chat-input-area {
+    flex-shrink: 0;
+    border-top: 1px solid #e0e0e0;
+    background: #ffffff;
+}
+
+.otz-frontend-chat .message-input {
+    border: 0;
+    outline: none;
+    font-size: 16px; /* Prevent zoom on iOS */
+    height: 90px;
+}
+
+.otz-frontend-chat .input-actions-left {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.otz-frontend-chat .input-actions-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.otz-frontend-chat .send-button {
+    background: #05C755;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    min-height: 36px;
+}
+
+.otz-frontend-chat .send-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.otz-frontend-chat .action-button:hover {
+    background: #e0e0e0;
+}
+
+.otz-frontend-chat .action-button .dashicons {
+    font-size: 18px;
+    color: #666;
+}
+
+/* === Customer Info Panel Mobile Styles === */
+.otz-frontend-chat .customer-info-panel {
+    overflow: visible; /* 讓子容器處理滾動 */
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.otz-frontend-chat .customer-info-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    padding: 0; /* 讓內部元素自己控制 padding */
+    /* 強制觸控滾動行為 */
+    touch-action: pan-y;
+    /* iOS Safari 視窗高度修正 - 減去底部導覽 */
+    max-height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+    max-height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+    max-height: calc(100dvh - 60px); /* 動態視窗高度 */
+    z-index: 1;
+}
+
+.otz-frontend-chat .customer-info {
+    padding: 0;
+    min-height: 100%;
+}
+
+/* 確保客戶資訊內容正常顯示 */
+.otz-frontend-chat .customer-info > * {
+    display: block;
+}
+
+/* 確保沒有選擇客戶時的提示正常顯示 */
+.otz-frontend-chat .no-customer-selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+/* 客戶資訊區塊樣式 */
+.otz-frontend-chat .info-section {
+    margin-bottom: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    background: #ffffff;
+}
+
+.otz-frontend-chat .info-header {
+    background: #f6f7f7;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.otz-frontend-chat .info-content {
+    padding: 16px;
+    background: #ffffff;
+    display: block;
+}
+
+.otz-frontend-chat .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.otz-frontend-chat .info-row:last-child {
+    border-bottom: none;
+}
+
+.otz-frontend-chat .info-row label {
+    font-weight: 600;
+    color: #333;
+    min-width: 80px;
+}
+
+.otz-frontend-chat .info-row span {
+    color: #666;
+    flex: 1;
+    text-align: right;
+}
+
+/* 確保所有客戶資訊相關元素都顯示 */
+.otz-frontend-chat .customer-basic,
+.otz-frontend-chat .customer-orders,
+.otz-frontend-chat .customer-notes,
+.otz-frontend-chat .customer-tags {
+    display: block;
+    margin-bottom: 16px;
+}
+
+/* 訂單和備註內容區域 */
+.otz-frontend-chat .orders-content,
+.otz-frontend-chat .tags-content {
+    padding: 12px 16px;
+    display: block;
+}
+
+/* 載入狀態 */
+.otz-frontend-chat .chat-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* === No Selection States === */
+.otz-frontend-chat .no-chat-selected,
+.otz-frontend-chat .no-customer-selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.otz-frontend-chat .no-chat-icon,
+.otz-frontend-chat .no-customer-icon {
+    margin-bottom: 16px;
+}
+
+.otz-frontend-chat .no-chat-icon .dashicons,
+.otz-frontend-chat .no-customer-icon .dashicons {
+    font-size: 48px;
+    color: #ccc;
+}
+
+/* === Override Backend Mobile Responsive Styles === */
+/* 強制重置所有後台移動版樣式 - 包含所有可能的 layout 類別 */
+.otz-frontend-chat .layout-mobile .friend-list-panel,
+.otz-frontend-chat .layout-mobile .customer-info-panel,
+.otz-frontend-chat .friend-list-panel,
+.otz-frontend-chat .customer-info-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    /* iOS Safari 視窗高度修正 */
+    height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+    height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+    height: calc(100dvh - 60px); /* 動態視窗高度 */
+    max-width: none;
+    max-height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+    max-height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+    max-height: calc(100dvh - 60px); /* 動態視窗高度 */
+    transform: none;
+    transition: none;
+    z-index: 1;
+    box-shadow: none;
+    border: none;
+    will-change: auto;
+}
+
+/* 重置移動版激活狀態 */
+.otz-frontend-chat .layout-mobile .friend-list-panel.mobile-active,
+.otz-frontend-chat .layout-mobile .customer-info-panel.mobile-active,
+.otz-frontend-chat .friend-list-panel.mobile-active,
+.otz-frontend-chat .customer-info-panel.mobile-active {
+    transform: none;
+}
+
+/* 確保聊天區域不受後台移動版樣式影響 */
+.otz-frontend-chat .layout-mobile .chat-area-panel,
+.otz-frontend-chat .chat-area-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    /* iOS Safari 視窗高度修正 */
+    height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+    height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+    height: calc(100dvh - 60px); /* 動態視窗高度 */
+    max-height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+    max-height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+    max-height: calc(100dvh - 60px); /* 動態視窗高度 */
+    order: initial;
+    border: none;
+    transform: none;
+    will-change: auto;
+}
+
+/* === Default Panel Visibility === */
+/* 移除預設顯示設定 - 完全由 JavaScript 控制面板顯示狀態 */
+
+/* === Loading States === */
+.otz-frontend-chat .friend-list-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #666;
+}
+
+.otz-frontend-chat .loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f0f0f0;
+    border-top: 2px solid #007cba;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 8px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* === Emoji Size Control === */
+/* 限制好友列表中最後訊息的表情符號大小 */
+.otz-frontend-chat .last-message img,
+.otz-frontend-chat .last-message .line-emoji {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+/* 限制好友名稱中的表情符號大小 */
+.otz-frontend-chat .friend-name img,
+.otz-frontend-chat .friend-name .line-emoji {
+    width: 14px !important;
+    height: 14px !important;
+    max-width: 14px !important;
+    max-height: 14px !important;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+/* 通用表情符號限制（防止任何地方的表情符號過大） */
+.otz-frontend-chat .friend-list-container img:not(.friend-avatar):not([class*="avatar"]),
+.otz-frontend-chat .friend-item img:not(.friend-avatar):not([class*="avatar"]) {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* === Touch Optimizations === */
+.otz-frontend-chat .touch-active {
+    background-color: #f0f0f0;
+    transform: scale(0.98);
+    transition: all 0.1s ease;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 320px) {
+    .otz-frontend-chat .friend-search-container,
+    .otz-frontend-chat .chat-header {
+        padding: 8px 12px;
+    }
+
+    .otz-frontend-chat .friend-item {
+        padding: 10px 12px;
+    }
+
+    .otz-frontend-chat .customer-info-container {
+        padding: 12px;
+    }
+}
+
+/* === Keyboard Support === */
+.otz-frontend-chat.keyboard-open .otz-content-container {
+    padding-bottom: calc(60px + var(--keyboard-height, 0px));
+}
+
+/* === Animation Classes for Panel Switching === */
+.otz-frontend-chat .panel-slide-in-left {
+    animation: slideInFromLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.otz-frontend-chat .panel-slide-in-right {
+    animation: slideInFromRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.otz-frontend-chat .panel-slide-out-left {
+    animation: slideOutToLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.otz-frontend-chat .panel-slide-out-right {
+    animation: slideOutToRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* === Character Counter === */
+.otz-frontend-chat .input-info {
+    display: none;
+}
+
+.otz-frontend-chat .input-tip {
+    display: none; /* Hide keyboard shortcuts on mobile */
+}
+
+.otz-frontend-chat .char-counter {
+    font-size: 11px;
+}
+
+/* === Bottom Navigation Button States === */
+/* 確保底部導覽按鈕不會被禁用狀態影響外觀 */
+.otz-frontend-chat .otz-tab-btn {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    border-right: 1px solid #ddd;
+}
+
+.otz-frontend-chat .otz-tab-btn[disabled] {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+}
+
+.otz-frontend-chat .otz-tab-btn.active {
+    background-color: #05C755;
+    color: white;
+}
+
+.otz-frontend-chat .otz-tab-btn:not(.active) {
+    background-color: transparent;
+    color: #666;
+}
+
+/* === Media Query Overrides === */
+/* 覆蓋後台響應式樣式的媒體查詢 */
+@media (max-width: 767px) {
+    .otz-frontend-chat .friend-list-panel,
+    .otz-frontend-chat .chat-area-panel,
+    .otz-frontend-chat .customer-info-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        /* iOS Safari 視窗高度修正 */
+        height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+        height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+        height: calc(100dvh - 60px); /* 動態視窗高度 */
+        max-height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+        max-height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+        max-height: calc(100dvh - 60px); /* 動態視窗高度 */
+        transform: none;
+        transition: none;
+        box-shadow: none;
+        border: none;
+        max-width: none;
+        will-change: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .otz-frontend-chat .friend-list-panel,
+    .otz-frontend-chat .chat-area-panel,
+    .otz-frontend-chat .customer-info-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        /* iOS Safari 視窗高度修正 */
+        height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+        height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+        height: calc(100dvh - 60px); /* 動態視窗高度 */
+        max-height: calc(100vh - 60px); /* 舊瀏覽器 fallback */
+        max-height: calc(100svh - 60px); /* iOS Safari 可視區域 */
+        max-height: calc(100dvh - 60px); /* 動態視窗高度 */
+        transform: none;
+        transition: none;
+        box-shadow: none;
+        border: none;
+        max-width: none;
+        will-change: auto;
+    }
+}

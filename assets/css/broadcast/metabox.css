@@ -1,0 +1,147 @@
+/**
+ * OrderChatz 推播編輯介面 - Metabox 樣式
+ *
+ * Metabox 容器、標題和內部元素樣式
+ *
+ * @package OrderChatz
+ * @since 1.1.3
+ */
+
+/* ==========================================================================
+   Metabox 標題
+   ========================================================================== */
+
+.postbox h2,
+.postbox h3 {
+    margin: 0;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-bottom: 1px solid #c3c4c7;
+    background: #f6f7f7;
+}
+
+.postbox h2 .dashicons,
+.postbox h3 .dashicons {
+    margin-right: 8px;
+    color: #2271b1;
+}
+
+/* ==========================================================================
+   Metabox 內容區
+   ========================================================================== */
+
+.postbox .inside {
+    padding: 16px;
+}
+
+.postbox .inside p:first-child {
+    margin-top: 0;
+}
+
+.postbox .inside p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   表單群組
+   ========================================================================== */
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+.form-field:last-child {
+    margin-bottom: 0;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #1d2327;
+    font-size: 13px;
+}
+
+.form-field .description {
+    display: block;
+    margin-top: 4px;
+    color: #646970;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   選項群組
+   ========================================================================== */
+
+.options-group {
+    margin: 0;
+    padding: 0;
+}
+
+.option-item {
+    margin-bottom: 12px;
+    padding: 8px 0;
+}
+
+.option-item:last-child {
+    margin-bottom: 0;
+}
+
+.option-item label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+    margin: 0;
+}
+
+.option-item input[type="radio"],
+.option-item input[type="checkbox"] {
+    margin: 4px 0 0 0;
+    flex-shrink: 0;
+}
+
+.option-item .option-label {
+    flex: 1;
+}
+
+.option-item .option-description {
+    display: block;
+    color: #646970;
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   分隔線
+   ========================================================================== */
+
+.postbox .inside hr {
+    border: 0;
+    border-top: 1px solid #dcdcde;
+    margin: 16px 0;
+}
+
+/* ==========================================================================
+   響應式調整
+   ========================================================================== */
+
+@media (max-width: 782px) {
+    .postbox h2,
+    .postbox h3 {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .postbox .inside {
+        padding: 12px;
+    }
+
+    .form-field {
+        margin-bottom: 12px;
+    }
+}

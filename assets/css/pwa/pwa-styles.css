@@ -1,0 +1,367 @@
+/**
+ * OrderChatz PWA Styles
+ * 
+ * Core PWA styling for installation prompts and PWA-specific UI elements
+ * 
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+/* PWA Installation Prompt */
+.otz-pwa-install-prompt {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	padding: 16px 20px;
+	z-index: 10000;
+	max-width: 360px;
+	width: calc(100% - 40px);
+	display: none;
+}
+
+.otz-pwa-install-prompt.visible {
+	display: block;
+	animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateX(-50%) translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(-50%) translateY(0);
+		opacity: 1;
+	}
+}
+
+.otz-pwa-install-content {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.otz-pwa-install-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 6px;
+	background: #0073aa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 18px;
+}
+
+.otz-pwa-install-text {
+	flex: 1;
+}
+
+.otz-pwa-install-title {
+	font-weight: 600;
+	margin: 0 0 4px 0;
+	font-size: 14px;
+	color: #333;
+}
+
+.otz-pwa-install-description {
+	margin: 0;
+	font-size: 12px;
+	color: #666;
+	line-height: 1.3;
+}
+
+.otz-pwa-install-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.otz-pwa-install-btn {
+	padding: 6px 12px;
+	border: none;
+	border-radius: 4px;
+	font-size: 12px;
+	cursor: pointer;
+	font-weight: 500;
+	transition: background-color 0.2s ease;
+}
+
+.otz-pwa-install-btn.primary {
+	background: #0073aa;
+	color: white;
+}
+
+.otz-pwa-install-btn.primary:hover {
+	background: #005a87;
+}
+
+.otz-pwa-install-btn.secondary {
+	background: #f1f1f1;
+	color: #666;
+}
+
+.otz-pwa-install-btn.secondary:hover {
+	background: #e1e1e1;
+}
+
+.otz-pwa-install-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: none;
+	border: none;
+	color: #999;
+	cursor: pointer;
+	font-size: 16px;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.otz-pwa-install-close:hover {
+	color: #666;
+}
+
+/* PWA Status Indicator */
+.otz-pwa-status {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: 10px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.otz-pwa-status.installed {
+	background: #d1ecf1;
+	color: #0c5460;
+}
+
+.otz-pwa-status.available {
+	background: #fff3cd;
+	color: #856404;
+}
+
+/* Notification Permission Prompt */
+.otz-notification-permission-prompt {
+	background: #f8f9fa;
+	border: 1px solid #dee2e6;
+	border-radius: 6px;
+	padding: 12px;
+	margin: 12px 0;
+	display: none;
+}
+
+.otz-notification-permission-prompt.visible {
+	display: block;
+}
+
+.otz-notification-permission-content {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.otz-notification-permission-icon {
+	width: 32px;
+	height: 32px;
+	background: #ffc107;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 14px;
+}
+
+.otz-notification-permission-text {
+	flex: 1;
+	font-size: 13px;
+	color: #495057;
+}
+
+.otz-notification-permission-actions {
+	display: flex;
+	gap: 6px;
+}
+
+.otz-notification-permission-btn {
+	padding: 4px 8px;
+	border: 1px solid #dee2e6;
+	border-radius: 3px;
+	font-size: 11px;
+	cursor: pointer;
+	background: white;
+	color: #495057;
+	transition: all 0.2s ease;
+}
+
+.otz-notification-permission-btn:hover {
+	background: #f8f9fa;
+}
+
+.otz-notification-permission-btn.primary {
+	background: #007bff;
+	border-color: #007bff;
+	color: white;
+}
+
+.otz-notification-permission-btn.primary:hover {
+	background: #0056b3;
+	border-color: #0056b3;
+}
+
+/* PWA Badge Styles */
+.otz-pwa-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	padding: 2px 6px;
+	border-radius: 10px;
+	font-size: 10px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.otz-pwa-badge::before {
+	content: "📱";
+	font-size: 8px;
+}
+
+/* Update Available Notification */
+.otz-pwa-update-available {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: #28a745;
+	color: white;
+	padding: 12px 16px;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	z-index: 9999;
+	display: none;
+	max-width: 300px;
+}
+
+.otz-pwa-update-available.visible {
+	display: block;
+	animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.otz-pwa-update-title {
+	font-weight: 600;
+	margin: 0 0 4px 0;
+	font-size: 13px;
+}
+
+.otz-pwa-update-description {
+	margin: 0 0 8px 0;
+	font-size: 11px;
+	opacity: 0.9;
+}
+
+.otz-pwa-update-actions {
+	display: flex;
+	gap: 8px;
+}
+
+.otz-pwa-update-btn {
+	padding: 4px 8px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 3px;
+	font-size: 10px;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	transition: background-color 0.2s ease;
+}
+
+.otz-pwa-update-btn:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile-specific PWA styles */
+@media (max-width: 768px) {
+	.otz-pwa-install-prompt {
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+		transform: none;
+		max-width: none;
+		width: auto;
+	}
+	
+	.otz-pwa-update-available {
+		top: 10px;
+		right: 10px;
+		left: 10px;
+		max-width: none;
+	}
+}
+
+/* Offline indicator */
+.otz-offline-indicator {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #dc3545;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	font-size: 12px;
+	z-index: 10001;
+	transform: translateY(-100%);
+	transition: transform 0.3s ease;
+}
+
+.otz-offline-indicator.visible {
+	transform: translateY(0);
+}
+
+/* PWA loading states */
+.otz-pwa-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.otz-pwa-loading::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 -10px;
+	border: 2px solid #f3f3f3;
+	border-top: 2px solid #0073aa;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

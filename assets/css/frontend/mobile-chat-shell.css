@@ -1,0 +1,503 @@
+/**
+ * Mobile Chat Shell - Core Styles
+ * OrderChatz Frontend Mobile Chat Interface
+ * 
+ * Provides app-like single column layout with fixed bottom navigation
+ * Designed for mobile devices with max-width 1024px
+ * 
+ * @version 1.0.1
+ */
+
+/* === Reset and Base === */
+.otz-frontend-chat {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.4;
+    background-color: #f0f0f1;
+    overflow-x: hidden;
+}
+
+.otz-frontend-chat * {
+    box-sizing: border-box;
+}
+
+/* === Mobile App Container === */
+.otz-mobile-app {
+    width: 100%;
+    height: 100vh; /* 舊瀏覽器 fallback */
+    height: 100svh; /* 小視窗高度（不含瀏覽器 UI）*/
+    height: 100dvh; /* 動態視窗高度 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+/* === Loading Screen === */
+.otz-loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 舊瀏覽器 fallback */
+    height: 100svh; /* 小視窗高度（不含瀏覽器 UI）*/
+    height: 100dvh; /* 動態視窗高度 */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.otz-loading-spinner {
+    text-align: center;
+}
+
+.otz-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f0f0f1;
+    border-top: 4px solid #007cba;
+    border-radius: 50%;
+    animation: otz-spin 1s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes otz-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.otz-loading-spinner p {
+    color: #646970;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* === Main Content Container === */
+.otz-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 舊瀏覽器 fallback */
+    height: 100svh; /* 小視窗高度（不含瀏覽器 UI）*/
+    height: 100dvh; /* 動態視窗高度 */
+    position: relative;
+}
+
+/* === Content Container === */
+.otz-content-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px; /* Space for bottom navigation */
+}
+
+/* === Content Panels === */
+.otz-content-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.otz-content-panel.active {
+    transform: translateX(0);
+}
+
+.otz-content-panel.sliding-left {
+    transform: translateX(-100%);
+}
+
+/* === Panel Headers === */
+.otz-panel-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.otz-panel-header h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d2327;
+    text-align: center;
+}
+
+/* Back buttons */
+.otz-back-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otz-back-btn:hover {
+    background-color: #f6f7f7;
+}
+
+.otz-back-btn .dashicons {
+    font-size: 20px;
+    color: #3c434a;
+}
+
+/* Customer info button */
+.otz-customer-info-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otz-customer-info-btn:hover {
+    background-color: #f6f7f7;
+}
+
+.otz-customer-info-btn .dashicons {
+    font-size: 20px;
+    color: #3c434a;
+}
+
+/* === Panel Content === */
+.otz-panel-content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+/* === Bottom Navigation === */
+.otz-bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ddd;
+    background-color: #efefef;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+}
+
+.otz-tab-btn {
+    flex: 1;
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 44px; /* Ensure touch-friendly size */
+}
+
+.otz-tab-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.otz-tab-btn:not(:disabled):hover {
+    background-color: #f6f7f7;
+}
+
+.otz-tab-btn.active {
+    color: #007cba;
+}
+
+.otz-tab-btn .dashicons {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.otz-tab-btn .tab-label {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.otz-tab-btn:not(.active) {
+    color: #646970;
+}
+
+/* === Network Status Indicator === */
+.otz-network-status {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #d63638;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-align: center;
+    z-index: 1000;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otz-network-status .dashicons {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* Adjust content when network status is shown */
+.otz-mobile-app.network-offline .otz-main-content {
+    padding-top: 36px;
+}
+
+/* === Desktop Warning === */
+.otz-desktop-warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.warning-content {
+    max-width: 400px;
+}
+
+.warning-content h2 {
+    color: #1d2327;
+    margin-bottom: 16px;
+}
+
+.warning-content p {
+    color: #646970;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.warning-content .button {
+    background-color: #007cba;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.warning-content .button:hover {
+    background-color: #005a87;
+    color: #ffffff;
+}
+
+/* === Responsive Breakpoints === */
+
+/* Desktop warning disabled - show mobile interface on all screens */
+/* Uncomment below to re-enable desktop warnings */
+/*
+@media (min-width: 1025px) {
+    .otz-desktop-warning {
+        display: flex;
+    }
+    
+    .otz-main-content {
+        display: none;
+    }
+}
+*/
+
+/* Large mobile/tablet landscape (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .otz-mobile-app {
+        max-width: 1024px;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .otz-panel-header h2 {
+        font-size: 20px;
+    }
+
+    .otz-bottom-navigation {
+        max-width: 1024px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Small mobile (320px - 479px) */
+@media (max-width: 479px) {
+    .otz-panel-header {
+        padding: 8px 12px;
+    }
+
+    .otz-panel-header h2 {
+        font-size: 16px;
+    }
+
+    .otz-tab-btn .dashicons {
+        font-size: 18px;
+    }
+}
+
+/* === Accessibility === */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .otz-content-panel,
+    .otz-panel-header,
+    .otz-bottom-navigation {
+        border-width: 2px;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .otz-content-panel {
+        transition: none;
+    }
+
+    .otz-spinner {
+        animation: none;
+    }
+
+    .otz-tab-btn {
+        transition: none;
+    }
+}
+
+
+/* === Android-like Visual Effects === */
+.otz-mobile-app {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+@media (min-width: 768px) {
+    .otz-mobile-app {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+}
+
+/* === JavaScript 動態視窗高度支援 === */
+.otz-mobile-app {
+    /* 使用 JS 設定的自訂屬性作為最優先選擇 */
+    height: calc(var(--actual-height, 100vh) * 1px);
+}
+
+/* iOS 系統專用調整 */
+.otz-ios .otz-mobile-app {
+    height: calc(var(--safe-vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
+}
+
+/* iOS Safari 底部工具列存在時 */
+.otz-ios-bottom-bar .otz-mobile-app {
+    height: 100svh;
+}
+
+/* Android Chrome 專用調整 */
+.otz-android .otz-mobile-app {
+    height: calc(var(--actual-height, 100vh) * 1px);
+}
+
+/* PWA 模式使用完整視窗 */
+.otz-pwa-mode .otz-mobile-app {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+/* === iOS Safari 特殊處理 === */
+@supports (-webkit-touch-callout: none) {
+    /* iOS Safari 使用小視窗高度，避免底部工具列影響 */
+    .otz-mobile-app {
+        height: 100svh;
+        min-height: -webkit-fill-available;
+    }
+
+    .otz-loading-screen {
+        height: 100svh;
+        min-height: -webkit-fill-available;
+    }
+
+    .otz-main-content {
+        height: 100svh;
+        min-height: -webkit-fill-available;
+    }
+
+    /* 確保底部導覽不被遮蔽 */
+    .otz-content-container {
+        padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+    }
+
+    /* 當有虛擬鍵盤時調整 */
+    .otz-keyboard-open .otz-content-container {
+        height: calc(100vh - var(--keyboard-height, 0px) - 60px);
+    }
+}
+
+/* === Safe Area Support (for devices with notches) === */
+@supports (padding: max(0px)) {
+    .otz-panel-header {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    .otz-bottom-navigation {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* === Select2 下拉選單 z-index 修復 === */
+.select2-container {
+    z-index: 10001 !important;
+}
+
+.select2-dropdown {
+    z-index: 10001 !important;
+}
+
+.select2-container--open .select2-dropdown {
+    z-index: 10001 !important;
+}

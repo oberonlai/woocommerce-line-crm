@@ -1,0 +1,395 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-14T03:55:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: otz\n"
+
+#: edit-form.php:16
+msgid "Edit Friend"
+msgstr ""
+
+#: edit-form.php:24
+msgid "Avatar"
+msgstr ""
+
+#: edit-form.php:31
+msgid "No Avatar"
+msgstr ""
+
+#: edit-form.php:37
+msgid "LINE Display Name"
+msgstr ""
+
+#: edit-form.php:43
+msgid "LINE ID"
+msgstr ""
+
+#: edit-form.php:49
+msgid "Source Type"
+msgstr ""
+
+#: edit-form.php:53
+msgid "User"
+msgstr ""
+
+#: edit-form.php:54
+msgid "Group"
+msgstr ""
+
+#: edit-form.php:55
+msgid "Room"
+msgstr ""
+
+#: edit-form.php:63
+msgid "Group/Room ID"
+msgstr ""
+
+#: edit-form.php:68
+msgid "None"
+msgstr ""
+
+#: edit-form.php:73
+msgid "Followed At"
+msgstr ""
+
+#: edit-form.php:79
+msgid "Unfollowed At"
+msgstr ""
+
+#: edit-form.php:84
+msgid "Not Unfollowed"
+msgstr ""
+
+#: edit-form.php:89
+msgid "User Status"
+msgstr ""
+
+#: edit-form.php:93
+msgid "Active"
+msgstr ""
+
+#: edit-form.php:94
+msgid "Blocked"
+msgstr ""
+
+#: edit-form.php:95
+msgid "Unfollowed"
+msgstr ""
+
+#: edit-form.php:102
+msgid "Last Active"
+msgstr ""
+
+#: edit-form.php:107
+msgid "No Activity Record"
+msgstr ""
+
+#: edit-form.php:112
+msgid "Website Member"
+msgstr ""
+
+#: edit-form.php:129
+msgid "Bind LINE friend to website member account to display customer order information on chat page. Search by username or email."
+msgstr ""
+
+#: edit-form.php:135
+msgid "Update Friend"
+msgstr ""
+
+#: edit-form.php:140
+msgid "Back to Friend List"
+msgstr ""
+
+#: line-sync-modal.php:19
+msgid "Import LINE Official Account Friends"
+msgstr ""
+
+#: line-sync-modal.php:27
+msgid "Important Notice!"
+msgstr ""
+
+#: line-sync-modal.php:28
+msgid "Only verified LINE Official Accounts (Blue or Green Badge)"
+msgstr ""
+
+#: line-sync-modal.php:28
+msgid "can retrieve friend lists for import"
+msgstr ""
+
+#: line-sync-modal.php:31
+msgid "LINE Official Account Verification Guide"
+msgstr ""
+
+#: line-sync-modal.php:41
+msgid "Fetching LINE friend list..."
+msgstr ""
+
+#: line-sync-modal.php:45
+msgid "Connecting to LINE API..."
+msgstr ""
+
+#: line-sync-modal.php:51
+msgid "Select friends to import"
+msgstr ""
+
+#: line-sync-modal.php:57
+#: message-import-modal.php:116
+#: sync-modal.php:43
+msgid "Select All"
+msgstr ""
+
+#: line-sync-modal.php:64
+msgid "Selected 0 friends"
+msgstr ""
+
+#: line-sync-modal.php:77
+msgid "Importing selected friends..."
+msgstr ""
+
+#: line-sync-modal.php:81
+#: message-import-modal.php:144
+#: sync-modal.php:80
+msgid "Preparing..."
+msgstr ""
+
+#: line-sync-modal.php:89
+msgid "LINE friends import completed!"
+msgstr ""
+
+#: line-sync-modal.php:99
+#: line-sync-modal.php:111
+#: line-sync-modal.php:127
+#: message-import-modal.php:189
+#: sync-modal.php:118
+msgid "Close"
+msgstr ""
+
+#: line-sync-modal.php:102
+msgid "Get Friend List"
+msgstr ""
+
+#: line-sync-modal.php:107
+#: message-import-modal.php:166
+#: sync-modal.php:98
+msgid "Cancel"
+msgstr ""
+
+#: line-sync-modal.php:114
+msgid "Refresh"
+msgstr ""
+
+#: line-sync-modal.php:118
+msgid "Import Selected Friends"
+msgstr ""
+
+#: line-sync-modal.php:123
+#: message-import-modal.php:184
+msgid "Cancel Import"
+msgstr ""
+
+#: line-sync-modal.php:128
+#: sync-modal.php:119
+msgid "Refresh Page"
+msgstr ""
+
+#: list.php:20
+msgid "匯入網站會員 ( OrderNotify 專用 )"
+msgstr ""
+
+#: list.php:23
+msgid "匯入 LINE 官方帳號好友 ( 藍盾或綠盾專用 ) "
+msgstr ""
+
+#: list.php:30
+msgid "搜尋好友"
+msgstr ""
+
+#: message-import-modal.php:19
+msgid "Import LINE Message History"
+msgstr ""
+
+#: message-import-modal.php:28
+msgid "Import Target"
+msgstr ""
+
+#: message-import-modal.php:36
+msgid "Upload Instructions"
+msgstr ""
+
+#: message-import-modal.php:38
+msgid "Please upload CSV file exported from LINE"
+msgstr ""
+
+#: message-import-modal.php:39
+msgid "File size limit: 10MB"
+msgstr ""
+
+#: message-import-modal.php:40
+msgid "Message limit: 5000 records. Files exceeding this limit cannot be imported, please split the file manually"
+msgstr ""
+
+#: message-import-modal.php:41
+msgid "Supported format: .csv files only"
+msgstr ""
+
+#: message-import-modal.php:49
+msgid "Drag file here or click to select file"
+msgstr ""
+
+#: message-import-modal.php:52
+msgid "Select File"
+msgstr ""
+
+#: message-import-modal.php:62
+msgid "Remove"
+msgstr ""
+
+#: message-import-modal.php:74
+msgid "Parsing CSV file..."
+msgstr ""
+
+#: message-import-modal.php:79
+msgid "Message Preview"
+msgstr ""
+
+#: message-import-modal.php:87
+msgid "Date Range:"
+msgstr ""
+
+#: message-import-modal.php:89
+msgid "to"
+msgstr ""
+
+#: message-import-modal.php:93
+msgid "Keyword:"
+msgstr ""
+
+#: message-import-modal.php:94
+msgid "Search message content..."
+msgstr ""
+
+#: message-import-modal.php:97
+msgid "Sender:"
+msgstr ""
+
+#: message-import-modal.php:99
+msgid "Friend Messages"
+msgstr ""
+
+#: message-import-modal.php:102
+msgid "Official Account Messages"
+msgstr ""
+
+#: message-import-modal.php:105
+msgid "Apply Filter"
+msgstr ""
+
+#: message-import-modal.php:108
+msgid "Reset"
+msgstr ""
+
+#: message-import-modal.php:140
+msgid "Importing messages..."
+msgstr ""
+
+#: message-import-modal.php:154
+msgid "Execution Completed"
+msgstr ""
+
+#: message-import-modal.php:169
+msgid "Preview Messages"
+msgstr ""
+
+#: message-import-modal.php:175
+#: sync-modal.php:106
+msgid "Previous"
+msgstr ""
+
+#: message-import-modal.php:178
+#: sync-modal.php:109
+msgid "Start Import"
+msgstr ""
+
+#: message-import-modal.php:192
+msgid "Continue Import"
+msgstr ""
+
+#: sync-modal.php:19
+msgid "Import Site Members (For OrderNotify only)"
+msgstr ""
+
+#: sync-modal.php:27
+msgid "Import site members to friend list"
+msgstr ""
+
+#: sync-modal.php:28
+msgid "Automatically match members who have logged in with LINE"
+msgstr ""
+
+#: sync-modal.php:29
+msgid "Only members who logged in via LINE in OrderNotify plugin can directly send messages"
+msgstr ""
+
+#: sync-modal.php:30
+msgid "Members who have not logged in with LINE will not appear in the chat list"
+msgstr ""
+
+#: sync-modal.php:37
+msgid "Select members to import"
+msgstr ""
+
+#: sync-modal.php:38
+msgid "Below are members with LINE connection information, please select members to import:"
+msgstr ""
+
+#: sync-modal.php:46
+msgid "Selected: 0 members"
+msgstr ""
+
+#: sync-modal.php:52
+msgid "Loading member data..."
+msgstr ""
+
+#: sync-modal.php:61
+msgid "No members found with LINE connection information"
+msgstr ""
+
+#: sync-modal.php:63
+msgid "Possible reasons:"
+msgstr ""
+
+#: sync-modal.php:65
+msgid "No members have logged in via LINE through OrderNotify yet"
+msgstr ""
+
+#: sync-modal.php:66
+msgid "Member's LINE connection information has expired or is invalid"
+msgstr ""
+
+#: sync-modal.php:67
+msgid "No related member records in database"
+msgstr ""
+
+#: sync-modal.php:76
+msgid "Synchronizing member data..."
+msgstr ""
+
+#: sync-modal.php:88
+msgid "Synchronization completed!"
+msgstr ""
+
+#: sync-modal.php:101
+msgid "Select Members"
+msgstr ""
+
+#: sync-modal.php:114
+msgid "Cancel Sync"
+msgstr ""

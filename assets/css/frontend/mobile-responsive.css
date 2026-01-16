@@ -1,0 +1,624 @@
+/**
+ * Mobile Responsive Optimizations
+ * OrderChatz Frontend Mobile Chat Interface
+ * 
+ * Comprehensive responsive design for 320px-1024px range
+ * Handles device orientation changes and various screen sizes
+ * Provides desktop fallback messages
+ * 
+ * @version 1.0.0
+ */
+
+/* === Base Responsive Framework === */
+
+/* Ultra-small mobile (320px - 374px) */
+@media screen and (max-width: 374px) {
+    .otz-panel-header {
+        padding: 6px 8px;
+        min-height: 48px;
+    }
+
+    .otz-panel-header h2 {
+        font-size: 15px;
+    }
+
+    .otz-back-btn,
+    .otz-customer-info-btn {
+        padding: 6px;
+    }
+
+    .otz-back-btn .dashicons,
+    .otz-customer-info-btn .dashicons {
+        font-size: 18px;
+    }
+
+    .otz-bottom-navigation {
+        height: 56px;
+    }
+
+    .otz-tab-btn {
+        padding: 4px 2px;
+    }
+
+    .otz-tab-btn .dashicons {
+        font-size: 16px;
+    }
+
+    .otz-content-container {
+        padding-bottom: 56px;
+    }
+
+    /* Friend list adaptations */
+    .otz-friends-panel .friend-item {
+        padding: 12px 8px;
+        min-height: 56px;
+    }
+
+    .otz-friends-panel .friend-avatar {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+
+    .otz-friends-panel .friend-name {
+        font-size: 14px;
+    }
+
+    .otz-friends-panel .friend-last-message {
+        font-size: 12px;
+    }
+
+    /* Chat area adaptations */
+    .otz-chat-panel .messages-container {
+        padding: 8px;
+    }
+
+    .otz-chat-panel .message {
+        max-width: 85%;
+        margin-bottom: 12px;
+    }
+
+    .otz-chat-panel .message-content {
+        padding: 8px 12px;
+        border-radius: 12px;
+    }
+
+    .otz-chat-panel .message-input-area {
+        padding: 8px;
+    }
+
+    .otz-chat-panel .message-input {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .otz-chat-panel .send-message-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Customer info adaptations */
+    .otz-customer-panel .customer-info {
+        padding: 12px 8px;
+    }
+
+    .otz-customer-panel .customer-avatar {
+        width: 64px;
+        height: 64px;
+    }
+
+    .otz-customer-panel .customer-name {
+        font-size: 18px;
+    }
+
+    .otz-customer-panel .info-section {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+/* Small mobile (375px - 479px) */
+@media screen and (min-width: 375px) and (max-width: 479px) {
+    .otz-panel-header {
+        padding: 8px 12px;
+        min-height: 52px;
+    }
+
+    .otz-panel-header h2 {
+        font-size: 16px;
+    }
+
+    .otz-bottom-navigation {
+        height: 58px;
+    }
+
+    .otz-content-container {
+        padding-bottom: 58px;
+    }
+
+    .otz-friends-panel .friend-item {
+        padding: 14px 12px;
+        min-height: 60px;
+    }
+
+    .otz-friends-panel .friend-avatar {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+    }
+
+    .otz-chat-panel .messages-container {
+        padding: 12px;
+    }
+
+    .otz-customer-panel .customer-info {
+        padding: 14px 12px;
+    }
+
+    .otz-customer-panel .customer-avatar {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+/* Standard mobile (480px - 599px) */
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .otz-panel-header h2 {
+        font-size: 17px;
+    }
+
+    .otz-friends-panel .friend-item {
+        min-height: 64px;
+    }
+
+    .otz-chat-panel .message {
+        max-width: 78%;
+    }
+
+    .otz-customer-panel .customer-avatar {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Large mobile (600px - 767px) */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .otz-panel-header {
+        padding: 12px 16px;
+        min-height: 56px;
+    }
+
+    .otz-panel-header h2 {
+        font-size: 18px;
+    }
+
+    .otz-bottom-navigation {
+        height: 64px;
+    }
+
+    .otz-content-container {
+        padding-bottom: 64px;
+    }
+
+    .otz-tab-btn {
+        padding: 8px 4px;
+    }
+
+    .otz-tab-btn .dashicons {
+        font-size: 22px;
+    }
+
+    .otz-friends-panel .friend-item {
+        padding: 16px;
+        min-height: 68px;
+    }
+
+    .otz-chat-panel .message {
+        max-width: 75%;
+    }
+
+    .otz-chat-panel .message-content {
+        padding: 12px 16px;
+        border-radius: 16px;
+    }
+
+    .otz-chat-panel .message-input {
+        padding: 10px 16px;
+    }
+
+    .otz-chat-panel .send-message-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .otz-customer-panel .info-section {
+        padding: 18px;
+    }
+}
+
+/* Tablet portrait (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .otz-mobile-app {
+        max-width: 1024px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .otz-panel-header {
+        padding: 16px 24px;
+        min-height: 64px;
+    }
+
+    .otz-panel-header h2 {
+        font-size: 20px;
+    }
+
+    .otz-back-btn .dashicons,
+    .otz-customer-info-btn .dashicons {
+        font-size: 24px;
+    }
+
+    .otz-bottom-navigation {
+        height: 68px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 1024px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .otz-content-container {
+        padding-bottom: 68px;
+    }
+
+    .otz-tab-btn {
+        padding: 10px 8px;
+    }
+
+    .otz-tab-btn .dashicons {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+
+    .otz-tab-btn .tab-label {
+        font-size: 13px;
+    }
+
+    .otz-friends-panel .friend-item {
+        padding: 20px 24px;
+        min-height: 72px;
+    }
+
+    .otz-friends-panel .friend-avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+    }
+
+    .otz-friends-panel .friend-name {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .otz-friends-panel .friend-last-message {
+        font-size: 14px;
+    }
+
+    .otz-chat-panel .messages-container {
+        padding: 20px 24px;
+    }
+
+    .otz-chat-panel .message {
+        max-width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .otz-chat-panel .message-content {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+
+    .otz-chat-panel .message-input-area {
+        padding: 16px 24px;
+    }
+
+    .otz-chat-panel .message-input {
+        font-size: 16px;
+        padding: 12px 18px;
+        border-radius: 24px;
+    }
+
+    .otz-chat-panel .send-message-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .otz-customer-panel .customer-info {
+        padding: 20px 24px;
+    }
+
+    .otz-customer-panel .customer-avatar {
+        width: 96px;
+        height: 96px;
+    }
+
+    .otz-customer-panel .customer-name {
+        font-size: 24px;
+    }
+
+    .otz-customer-panel .info-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* === Orientation Handling === */
+
+/* Landscape mode optimizations */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .otz-panel-header {
+        min-height: 48px;
+        padding: 8px 16px;
+    }
+
+    .otz-panel-header h2 {
+        font-size: 16px;
+    }
+
+    .otz-bottom-navigation {
+        height: 52px;
+    }
+
+    .otz-content-container {
+        padding-bottom: 52px;
+    }
+
+    .otz-tab-btn {
+        padding: 6px 4px;
+    }
+
+    .otz-tab-btn .dashicons {
+        font-size: 18px;
+        margin-bottom: 1px;
+    }
+
+    .otz-customer-panel .customer-avatar {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 12px;
+    }
+
+    .otz-customer-panel .customer-name {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .otz-customer-panel .customer-status {
+        margin-bottom: 16px;
+    }
+}
+
+/* === Desktop Override - Disabled for development === */
+/* Uncomment below to re-enable desktop warnings */
+/*
+@media screen and (min-width: 1025px) {
+    .otz-desktop-warning {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+        z-index: 99999;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    .otz-main-content {
+        display: none !important;
+    }
+}
+*/
+
+/* === Desktop development mode === */
+@media screen and (min-width: 1025px) {
+    .otz-mobile-app {
+        margin: 0 auto;
+        height: calc(100vh - 40px);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
+
+    .otz-desktop-warning {
+        display: none !important;
+    }
+
+    .warning-content {
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #1d2327;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .warning-content h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .warning-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #646970;
+        margin-bottom: 20px;
+    }
+
+    .warning-content .button {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .warning-content .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+        color: #ffffff;
+    }
+}
+
+/* === High DPI Display Support === */
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    .otz-friends-panel .friend-avatar,
+    .otz-customer-panel .customer-avatar {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* === Print Styles === */
+@media print {
+    .otz-mobile-app {
+        display: none !important;
+    }
+
+    body::before {
+        content: "This page is optimized for mobile viewing and cannot be printed.";
+        display: block;
+        text-align: center;
+        padding: 50px;
+        font-size: 18px;
+    }
+}
+
+/* === Accessibility Responsive Enhancements === */
+
+/* Large text support */
+@media screen and (max-width: 1024px) {
+    .otz-frontend-chat {
+        font-size: 14px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .otz-content-panel {
+            transition: none !important;
+        }
+
+        .otz-content-panel.slide-in-right,
+        .otz-content-panel.slide-in-left,
+        .otz-content-panel.slide-out-right,
+        .otz-content-panel.slide-out-left {
+            animation: none !important;
+        }
+
+        .otz-tab-btn {
+            transition: none !important;
+        }
+
+        .otz-friends-panel .friend-item:active,
+        .otz-customer-panel .order-item:active,
+        .otz-tab-btn:active {
+            transform: none !important;
+        }
+    }
+}
+
+/* High contrast mode responsive adjustments */
+@media (prefers-contrast: high) {
+    .otz-content-panel,
+    .otz-panel-header,
+    .otz-bottom-navigation {
+        border-width: 2px;
+        border-style: solid;
+    }
+
+    .otz-friends-panel .friend-item,
+    .otz-customer-panel .order-item {
+        border: 2px solid currentColor;
+        margin-bottom: 4px;
+    }
+
+    .otz-tab-btn.active {
+        background-color: currentColor;
+        color: white;
+    }
+}
+
+/* === Dynamic Viewport Support === */
+@supports (height: 100dvh) {
+    .otz-mobile-app {
+        height: 100dvh;
+    }
+}
+
+@supports (height: 100svh) {
+    @media screen and (max-width: 1024px) {
+        .otz-mobile-app {
+            height: 100svh; /* Use small viewport height for mobile */
+        }
+    }
+}
+
+/* === Container Query Support (Progressive Enhancement) === */
+@supports (container-type: inline-size) {
+    .otz-content-container {
+        container-type: inline-size;
+    }
+
+    @container (max-width: 400px) {
+        .otz-friends-panel .friend-item {
+            padding: 12px 8px;
+        }
+
+        .otz-chat-panel .message {
+            max-width: 90%;
+        }
+    }
+
+    @container (min-width: 600px) {
+        .otz-friends-panel .friend-item {
+            padding: 20px 16px;
+        }
+
+        .otz-chat-panel .message {
+            max-width: 70%;
+        }
+    }
+}
+
+/* === Safe Area Insets for All Screen Sizes === */
+@supports (padding: max(0px)) {
+    @media screen and (max-width: 1024px) {
+        .otz-panel-header {
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+            padding-top: max(12px, env(safe-area-inset-top));
+        }
+
+        .otz-bottom-navigation {
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .otz-content-container {
+            padding-bottom: max(60px, calc(60px + env(safe-area-inset-bottom)));
+        }
+    }
+}

@@ -1,0 +1,430 @@
+/**
+ * OrderChatz 推播編輯介面 - 訊息編輯器
+ *
+ * 訊息類型選擇、內容編輯器、媒體上傳樣式
+ *
+ * @package OrderChatz
+ * @since 1.1.3
+ */
+
+/* ==========================================================================
+   訊息類型選擇器
+   ========================================================================== */
+
+.message-type-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.message-type-selector label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #1d2327;
+    font-weight: normal;
+    padding: 12px;
+    background: #f9f9f9;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+
+.message-type-selector label:hover {
+    border-color: #2271b1;
+}
+
+.message-type-selector label.active {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.message-type-selector input[type="radio"] {
+    margin: 0;
+}
+
+/* ==========================================================================
+   訊息編輯器
+   ========================================================================== */
+
+.message-editor {
+    margin-top: 16px;
+}
+
+.message-editor-section {
+    display: none;
+}
+
+.video-upload-wrapper,
+.video-preview-image-wrapper {
+    width: 49%;
+}
+
+.message-editor-section label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.message-editor-section.active {
+    display: block;
+}
+
+.message-editor-section.video-message-editor.active {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 文字訊息編輯器 */
+.text-message-editor textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.message-meta {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char-count {
+    font-size: 11px;
+    color: #646970;
+}
+
+.char-count.warning {
+    color: #dba617;
+}
+
+.char-count.error {
+    color: #d63638;
+}
+
+/* ==========================================================================
+   圖片上傳區
+   ========================================================================== */
+
+.image-upload-area {
+    border: 2px dashed #c3c4c7;
+    border-radius: 6px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #fafafa;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.image-upload-area:hover {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.image-upload-area .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #c3c4c7;
+    margin-bottom: 10px;
+}
+
+.image-upload-area p {
+    margin: 0;
+    color: #646970;
+    font-size: 13px;
+}
+
+.image-upload-area .upload-button {
+    margin-top: 12px;
+}
+
+/* 圖片預覽 */
+.image-preview {
+    margin-top: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.remove-image {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: #d63638;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.remove-image:hover {
+    background: #a02323;
+}
+
+/* ==========================================================================
+   影片上傳區
+   ========================================================================== */
+
+.video-upload-wrapper,
+.video-preview-image-wrapper {
+    margin-bottom: 20px;
+}
+
+.video-upload-wrapper:last-child,
+.video-preview-image-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.video-upload-area,
+.video-preview-image-upload-area {
+    border: 2px dashed #c3c4c7;
+    border-radius: 6px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #fafafa;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.video-upload-area:hover,
+.video-preview-image-upload-area:hover {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.video-upload-area .dashicons,
+.video-preview-image-upload-area .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #c3c4c7;
+    margin-bottom: 10px;
+}
+
+.video-upload-area p,
+.video-preview-image-upload-area p {
+    margin: 0;
+    color: #646970;
+    font-size: 13px;
+}
+
+.video-upload-area .upload-button,
+.video-preview-image-upload-area .upload-button {
+    margin-top: 12px;
+}
+
+.video-preview,
+.video-preview-image-preview {
+    margin-top: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.video-preview video {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.video-preview-image-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.remove-media {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: #d63638;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.remove-media:hover {
+    background: #a02323;
+}
+
+/* ==========================================================================
+   Flex 訊息編輯器
+   ========================================================================== */
+
+.flex-message-editor {
+
+}
+
+.flex-message-editor textarea {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    min-height: 400px;
+}
+
+.flex-preview-button {
+    margin-top: 12px;
+}
+
+/* ==========================================================================
+   訊息選項
+   ========================================================================== */
+
+.message-options {
+    margin-top: 16px;
+}
+
+.message-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.message-options input[type="checkbox"] {
+    margin: 0;
+}
+
+/* ==========================================================================
+   測試訊息區塊
+   ========================================================================== */
+
+.test-message-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #dcdcde;
+}
+
+.test-message-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.test-message-section .form-field {
+    margin-bottom: 12px;
+}
+
+.test-message-section .form-field label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.test-message-section input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+}
+
+.test-message-section .description {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #646970;
+}
+
+.test-message-section .description span {
+    color: red;
+    display: block;
+}
+
+.test-message-section button#send-test-message {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.test-message-section button#send-test-message .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.test-message-status {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.test-message-status.success {
+    color: #00a32a;
+}
+
+.test-message-status.error {
+    color: #d63638;
+}
+
+/* ==========================================================================
+   快速儲存區塊
+   ========================================================================== */
+
+.quick-save-section {
+    margin-top: 20px;
+}
+
+.quick-save-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-save-actions input[type="submit"] {
+    margin: 0;
+}
+
+/* ==========================================================================
+   響應式設計
+   ========================================================================== */
+
+@media (max-width: 782px) {
+    .message-type-selector {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-upload-area,
+    .video-upload-area {
+        padding: 30px 15px;
+    }
+
+    .image-preview img,
+    .video-preview video {
+        max-height: 200px;
+    }
+}

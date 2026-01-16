@@ -1,0 +1,242 @@
+/**
+ * OrderChatz Pull-to-Refresh Styles
+ * 
+ * Mobile pull-to-refresh functionality styling
+ * 
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+/* Pull to Refresh Container */
+.otz-pull-to-refresh {
+	position: relative;
+	overflow: hidden;
+}
+
+/* Pull to Refresh Indicator */
+.otz-ptr-indicator {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(-100%);
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	z-index: 1000;
+}
+
+.otz-ptr-indicator.visible {
+	transform: translateX(-50%) translateY(10px);
+}
+
+.otz-ptr-indicator.refreshing {
+	animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: translateX(-50%) translateY(10px) scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(-50%) translateY(10px) scale(1.1);
+		opacity: 0.7;
+	}
+	100% {
+		transform: translateX(-50%) translateY(10px) scale(1);
+		opacity: 1;
+	}
+}
+
+/* Pull to Refresh Icon */
+.otz-ptr-icon {
+	width: 24px;
+	height: 24px;
+	color: #0073aa;
+	transition: transform 0.3s ease;
+}
+
+.otz-ptr-indicator.pulling .otz-ptr-icon {
+	transform: rotate(180deg);
+}
+
+.otz-ptr-indicator.refreshing .otz-ptr-icon {
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Pull to Refresh Text */
+.otz-ptr-text {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 12px;
+	color: #666;
+	white-space: nowrap;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.otz-ptr-indicator.visible + .otz-ptr-text,
+.otz-ptr-text.visible {
+	opacity: 1;
+}
+
+/* Content wrapper for pull effect */
+.otz-ptr-content {
+	transition: transform 0.3s ease;
+	transform: translateY(0);
+}
+
+.otz-ptr-content.pulling {
+	transform: translateY(60px);
+}
+
+.otz-ptr-content.refreshing {
+	transform: translateY(80px);
+}
+
+/* Refresh states */
+.otz-ptr-state-idle .otz-ptr-icon {
+	/* Down arrow icon */
+}
+
+.otz-ptr-state-pulling .otz-ptr-icon {
+	transform: rotate(180deg);
+}
+
+.otz-ptr-state-refreshing .otz-ptr-icon {
+	animation: spin 1s linear infinite;
+}
+
+/* Touch feedback */
+.otz-ptr-touch-feedback {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #0073aa, transparent);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.otz-ptr-touch-feedback.active {
+	opacity: 0.5;
+	animation: shimmer 1s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200px 0;
+	}
+	100% {
+		background-position: 200px 0;
+	}
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+	.otz-ptr-indicator {
+		width: 50px;
+		height: 50px;
+	}
+	
+	.otz-ptr-icon {
+		width: 20px;
+		height: 20px;
+	}
+	
+	.otz-ptr-text {
+		top: 60px;
+		font-size: 11px;
+	}
+	
+	.otz-ptr-content.pulling {
+		transform: translateY(50px);
+	}
+	
+	.otz-ptr-content.refreshing {
+		transform: translateY(70px);
+	}
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+	.otz-ptr-indicator {
+		background: rgba(30, 30, 30, 0.9);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	}
+	
+	.otz-ptr-text {
+		color: #ccc;
+	}
+	
+	.otz-ptr-icon {
+		color: #4a90e2;
+	}
+}
+
+/* Accessibility improvements */
+.otz-ptr-indicator:focus {
+	outline: 2px solid #0073aa;
+	outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	.otz-ptr-indicator,
+	.otz-ptr-content,
+	.otz-ptr-icon,
+	.otz-ptr-text {
+		transition: none;
+		animation: none;
+	}
+	
+	.otz-ptr-indicator.refreshing .otz-ptr-icon {
+		animation: none;
+		transform: none;
+	}
+	
+	.otz-ptr-indicator.refreshing {
+		animation: none;
+	}
+	
+	.otz-ptr-touch-feedback.active {
+		animation: none;
+	}
+}
+
+/* Custom scrollbar for pull-to-refresh container */
+.otz-pull-to-refresh::-webkit-scrollbar {
+	width: 4px;
+}
+
+.otz-pull-to-refresh::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+.otz-pull-to-refresh::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 2px;
+}
+
+.otz-pull-to-refresh::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}

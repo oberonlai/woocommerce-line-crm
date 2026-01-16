@@ -1,0 +1,472 @@
+/**
+ * OrderChatz 匯出頁面樣式
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+.orderchatz-export-page {
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+/* Export Section */
+.export-section {
+    margin-bottom: 30px;
+}
+
+.export-section h2 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 18px;
+    color: #23282d;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Export Card */
+.export-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: 2px solid transparent;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.form-actions .button {
+    min-height: 36px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-actions .button-delete {
+    background-color: #d63638;
+    border-color: #d63638;
+    color: #fff;
+}
+
+.form-actions .button-delete:hover {
+    background-color: #b32d2e;
+    border-color: #b32d2e;
+}
+
+.form-actions .button-delete:focus {
+    border-color: #135e96;
+    box-shadow: 0 0 0 1px #135e96;
+}
+
+/* Status Messages */
+.export-status {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.export-status.loading {
+    color: #2271b1;
+}
+
+.export-status.success {
+    color: #00a32a;
+}
+
+.export-status.error {
+    color: #d63638;
+}
+
+/* Storage Info */
+.storage-info,
+.file-info {
+    background: #f6f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.storage-info .loading,
+.file-info .loading {
+    text-align: center;
+    color: #646970;
+    font-style: italic;
+}
+
+.storage-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.storage-table th,
+.storage-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.storage-table th {
+    background-color: #f6f7f7;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.storage-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.storage-table tbody tr:hover {
+    background-color: #f0f6fc;
+}
+
+.storage-summary {
+    background: #e7f3ff;
+    border: 1px solid #72aee6;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+.storage-summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.storage-summary-item:last-child {
+    margin-bottom: 0;
+}
+
+.storage-summary-label {
+    font-weight: 600;
+    color: #23282d;
+}
+
+.storage-summary-value {
+    font-weight: 500;
+    color: #2271b1;
+}
+
+/* File Info */
+.file-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.file-info-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+}
+
+.file-info-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2271b1;
+    margin-bottom: 5px;
+}
+
+.file-info-label {
+    font-size: 14px;
+    color: #646970;
+    font-weight: 500;
+}
+
+/* Progress Indicators */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #00a32a;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .orderchatz-export-page {
+        margin: 10px 0;
+    }
+    
+    .export-card {
+        padding: 15px;
+    }
+    
+    .form-group select,
+    .form-group input {
+        max-width: none;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-actions .button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .storage-table {
+        font-size: 13px;
+    }
+    
+    .storage-table th,
+    .storage-table td {
+        padding: 6px 8px;
+    }
+    
+    .file-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #2271b1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+/* Notice Styles */
+.export-notice {
+    margin: 15px 0;
+    padding: 12px 15px;
+    border-left: 4px solid #72aee6;
+    background: #f0f6fc;
+    border-radius: 0 4px 4px 0;
+}
+
+.export-notice.success {
+    border-left-color: #00a32a;
+    background: #f0f6fc;
+}
+
+.export-notice.error {
+    border-left-color: #d63638;
+    background: #fcf0f1;
+}
+
+.export-notice.warning {
+    border-left-color: #dba617;
+    background: #fcf9e8;
+}
+
+/* Date Range Inputs */
+.date-range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.date-range-inputs input[type="date"] {
+    flex: 1;
+    min-width: 150px;
+    padding: 8px 12px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.date-range-inputs input[type="date"]:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: 2px solid transparent;
+}
+
+.date-separator {
+    font-weight: 500;
+    color: #646970;
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .date-range-inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .date-separator {
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Download Link Styles */
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2271b1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border: 1px solid #2271b1;
+    border-radius: 4px;
+    background: #f0f6fc;
+    transition: all 0.2s ease;
+}
+
+.download-link:hover {
+    background: #2271b1;
+    color: #fff;
+    text-decoration: none;
+}
+
+.download-link:focus {
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: 2px solid transparent;
+}
+
+.download-link .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+/* Table Styles for Better Mobile Experience */
+@media (max-width: 600px) {
+    .storage-table,
+    .storage-table thead,
+    .storage-table tbody,
+    .storage-table th,
+    .storage-table td,
+    .storage-table tr {
+        display: block;
+    }
+    
+    .storage-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .storage-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        background: #fff;
+    }
+    
+    .storage-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50% !important;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .storage-table td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #23282d;
+    }
+    
+    .storage-table td:last-child {
+        border-bottom: 0;
+    }
+}

@@ -1,0 +1,622 @@
+/**
+ * OrderChatz 聊天介面響應式樣式
+ * 
+ * 提供完整的響應式設計支援，包含桌面版、平板版、手機版的佈局切換
+ * 實作手機版側邊面板滑出效果和觸控友善的介面元素
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+/* ===== 響應式斷點定義 ===== */
+
+/* 桌面版: 1024px 以上 - 三欄並列顯示 */
+@media (min-width: 1024px) {
+    .chat-container {
+        grid-template-columns: 25% 50% 25%;
+    }
+
+    .layout-desktop .friend-list-panel,
+    .layout-desktop .customer-info-panel {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .layout-desktop .mobile-toggle-buttons {
+        display: none;
+    }
+}
+
+/* 平板版: 768px - 1023px - 調整比例顯示 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .chat-container {
+        grid-template-columns: 30% 45% 25%;
+        min-height: 500px;
+    }
+
+    .layout-tablet .friend-list-panel,
+    .layout-tablet .customer-info-panel {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .layout-tablet .mobile-toggle-buttons {
+        display: none;
+    }
+
+    /* 平板版字體微調 */
+    .friend-name {
+        font-size: 16px;
+    }
+
+    .last-message {
+        font-size: 14px;
+    }
+
+    .current-friend-name {
+        font-size: 15px;
+    }
+
+    .message-bubble {
+        font-size: 14px;
+    }
+}
+
+/* 手機版: 767px 以下 - 堆疊布局 */
+@media (max-width: 767px) {
+    .orderchatz-chat-interface {
+        margin: 0;
+    }
+
+    .chat-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        height: 600px; /* 手機版使用適中的固定高度 */
+        max-height: calc(100vh - 150px);
+        min-height: 450px;
+        border-radius: 4px;
+    }
+
+    /* 手機版顯示切換按鈕 */
+    .layout-mobile .mobile-toggle-buttons {
+        display: flex;
+        order: 2;
+    }
+
+    /* 側邊面板預設隱藏 */
+    .layout-mobile .friend-list-panel,
+    .layout-mobile .customer-info-panel {
+        position: fixed;
+        top: 32px; /* WordPress admin bar height */
+        height: calc(100% - 32px);
+        width: 85%;
+        max-width: 320px;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+        border-right: none;
+        border-left: none;
+    }
+
+    /* 右側面板從右側滑入 */
+    .layout-mobile .customer-info-panel {
+        right: 0;
+        left: auto;
+        transform: translateX(100%);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+        border-left: 1px solid #e5e5e5;
+        border-right: none;
+    }
+
+    /* 啟用狀態的面板 */
+    .layout-mobile .friend-list-panel.mobile-active,
+    .layout-mobile .customer-info-panel.mobile-active {
+        transform: translateX(0);
+    }
+
+    /* 聊天區域佔滿整個空間 */
+    .layout-mobile .chat-area-panel {
+        order: 1;
+        border-right: none;
+        border-left: none;
+    }
+
+    /* 手機版字體和間距調整 */
+    .current-friend-name {
+        font-size: 14px;
+    }
+
+    .chat-header {
+        padding: 12px 15px;
+    }
+
+    .chat-input-area {
+        padding: 10px 15px;
+    }
+
+    .message-bubble {
+        font-size: 14px;
+        padding: 8px 12px;
+        max-width: 90%;
+    }
+
+    .input-group {
+        gap: 8px;
+    }
+
+    .message-input {
+        padding: 8px 12px;
+        border-radius: 18px;
+    }
+
+    .send-button {
+        padding: 8px 12px;
+        border-radius: 18px;
+    }
+
+    /* 好友列表項目間距調整 */
+    .friend-item {
+        padding: 15px;
+    }
+
+    .friend-avatar .avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* 客戶資訊面板調整 */
+    .customer-info-header,
+    .info-header {
+        padding: 12px 15px;
+    }
+
+    /* 手機版排序控制 */
+    .sort-controls {
+        gap: 8px;
+    }
+
+    .sort-reset-button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .sort-help-text {
+        display: none; /* 手機版隱藏提示文字 */
+    }
+
+    .info-content,
+    .orders-content,
+    .tags-content {
+        padding: 12px 15px;
+    }
+}
+
+/* 極小螢幕優化: 480px 以下 */
+@media (max-width: 480px) {
+    .layout-mobile .friend-list-panel,
+    .layout-mobile .customer-info-panel {
+        max-width: none;
+    }
+
+    .chat-header {
+        padding: 10px 12px;
+    }
+
+    .chat-input-area {
+        padding: 8px 12px;
+    }
+
+    .message-bubble {
+        padding: 6px 10px;
+        border-radius: 16px;
+    }
+
+    .message-input {
+        padding: 6px 10px;
+        border-radius: 16px;
+    }
+
+    .send-button {
+        padding: 6px 10px;
+        border-radius: 16px;
+    }
+
+    .friend-item {
+        padding: 12px;
+    }
+
+    .friend-avatar .avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .current-friend-avatar img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* 減小字體 */
+    .current-friend-name {
+        font-size: 13px;
+    }
+
+    .friend-name {
+        font-size: 13px;
+    }
+
+    .last-message {
+        font-size: 12px;
+    }
+
+    .message-bubble {
+        font-size: 13px;
+    }
+}
+
+/* ===== 裝置方向變化 ===== */
+
+/* 橫向模式調整 */
+@media (orientation: landscape) and (max-height: 500px) {
+    .chat-container {
+        height: 400px; /* 橫向模式使用較小的固定高度 */
+        max-height: calc(100vh - 80px);
+        min-height: 350px;
+    }
+
+    .layout-mobile .friend-list-panel,
+    .layout-mobile .customer-info-panel {
+        top: 0;
+        height: 100%;
+    }
+
+    /* 縮小頭部區域 */
+    .chat-header {
+        padding: 8px 15px;
+    }
+
+    .friend-list-header,
+    .customer-info-header {
+        padding: 8px 15px;
+    }
+
+    .friend-search-container {
+        padding: 8px 15px;
+    }
+
+    .chat-input-area {
+        padding: 8px 15px;
+    }
+}
+
+/* ===== 觸控裝置優化 ===== */
+
+@media (hover: none) and (pointer: coarse) {
+    /* 增大可點擊區域 */
+    .friend-item {
+        min-height: 60px;
+        padding: 15px;
+    }
+
+    .send-button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .mobile-toggle {
+        min-height: 44px;
+        min-width: 80px;
+    }
+
+    .friend-search-clear {
+        min-height: 32px;
+        min-width: 32px;
+    }
+
+    /* 移除 hover 效果 */
+    .friend-item:hover {
+        background-color: transparent;
+    }
+
+    .send-button:hover {
+        transform: none;
+    }
+
+    /* 增強 focus 效果 */
+    .friend-item:focus {
+        background-color: #e8f5e8;
+    }
+
+    .message-input:focus {
+        box-shadow: 0 0 0 3px rgba(6, 199, 85, 0.2);
+    }
+}
+
+/* ===== 高對比模式支援 ===== */
+
+@media (prefers-contrast: high) {
+    .message-bubble.customer {
+        background-color: #e9ecef;
+        border: 1px solid #6c757d;
+    }
+
+    .message-bubble.agent {
+        background-color: #198754;
+        border: 1px solid #146c43;
+    }
+
+    .friend-item.selected {
+        border-left-width: 4px;
+        background-color: #d1ecf1;
+    }
+
+    .send-button {
+        border: 2px solid #146c43;
+    }
+
+    .mobile-toggle {
+        border: 2px solid #004085;
+    }
+}
+
+/* ===== 減少動畫偏好 ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    .friend-list-panel,
+    .customer-info-panel,
+    .message-bubble,
+    .send-button {
+        transition: none;
+    }
+
+    .chat-messages {
+        scroll-behavior: auto;
+    }
+
+    @keyframes messageSlideIn {
+        from, to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes spin {
+        from, to {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+/* ===== 深色模式支援 ===== */
+
+@media (prefers-color-scheme: dark) {
+    /* 深色模式預留，可以根據需要啟用 */
+    /*
+    .orderchatz-chat-interface {
+        color-scheme: dark;
+    }
+    
+    .chat-container,
+    .friend-list-panel,
+    .chat-area-panel,
+    .customer-info-panel {
+        background-color: #2c3e50;
+        border-color: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .message-bubble.customer {
+        background-color: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .message-bubble.agent {
+        background-color: #27ae60;
+    }
+    
+    .friend-item:hover {
+        background-color: #34495e;
+    }
+    
+    .friend-item.selected {
+        background-color: #2d4a2b;
+    }
+    */
+}
+
+/* ===== 列印樣式 ===== */
+
+@media print {
+    .orderchatz-chat-interface {
+        break-inside: avoid;
+    }
+
+    .mobile-toggle-buttons,
+    .chat-input-area,
+    .friend-search-container {
+        display: none;
+    }
+
+    .chat-container {
+        height: auto;
+        min-height: auto;
+        display: block;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+    .friend-list-panel,
+    .chat-area-panel,
+    .customer-info-panel {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none;
+    }
+
+    .chat-messages {
+        height: auto;
+        overflow: visible;
+    }
+
+    .message-bubble {
+        break-inside: avoid;
+    }
+
+    /* 黑白列印優化 */
+    .message-bubble.customer {
+        background-color: #f8f9fa !important;
+        border: 1px solid #000;
+    }
+
+    .message-bubble.agent {
+        background-color: #e9ecef !important;
+        border: 1px solid #000;
+        color: #000 !important;
+    }
+}
+
+/* ===== 輔助功能優化 ===== */
+
+/* 增強焦點指示器 */
+@media (prefers-reduced-motion: no-preference) {
+    .friend-item:focus,
+    .message-input:focus,
+    .send-button:focus,
+    .mobile-toggle:focus {
+        outline: 2px solid #06c755;
+        outline-offset: 2px;
+        transition: outline-offset 0.2s ease;
+    }
+}
+
+/* 大字體模式 */
+@media (min-resolution: 2dppx) {
+    .friend-name,
+    .current-friend-name {
+        font-weight: 500;
+    }
+
+    .message-bubble {
+        font-weight: 400;
+    }
+}
+
+/* ===== 容器查詢支援（未來擴展） ===== */
+
+/* 當瀏覽器支援容器查詢時，可以進行更精細的響應式控制 */
+/*
+@container chat-container (max-width: 600px) {
+    .friend-list-panel {
+        display: none;
+    }
+    
+    .chat-container {
+        grid-template-columns: 1fr 30%;
+    }
+}
+*/
+
+/* ===== 實用類別 ===== */
+
+/* 手機版隱藏/顯示 */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-mobile-only {
+        display: none !important;
+    }
+}
+
+/* 桌面版隱藏/顯示 */
+@media (min-width: 1024px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .show-desktop-only {
+        display: none !important;
+    }
+}
+
+/* 觸控友善間距 */
+.touch-friendly {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* 手機版拖曳排序優化 */
+@media (max-width: 767px) {
+    .drag-handle {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    .drag-handle .dashicons {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+    }
+
+    /* 增加拖曳區域以便觸控操作 */
+    .customer-basic-info[draggable="true"],
+    .customer-orders[draggable="true"],
+    .customer-notes[draggable="true"],
+    .customer-tags[draggable="true"] {
+        min-height: 60px;
+    }
+
+    /* 手機版拖曳提示 */
+    .drag-hint {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* 觸控拖曳時的視覺回饋 */
+    .customer-basic-info.dragging,
+    .customer-orders.dragging,
+    .customer-notes.dragging,
+    .customer-tags.dragging {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* 響應式文字 */
+.text-responsive {
+    font-size: clamp(12px, 2.5vw, 16px);
+}
+
+/* 響應式間距 */
+.padding-responsive {
+    padding: clamp(8px, 2vw, 15px);
+}
+
+/* ===== 效能優化 ===== */
+
+/* 使用 transform 而非改變 left/right 來提升性能 */
+.layout-mobile .friend-list-panel,
+.layout-mobile .customer-info-panel {
+    will-change: transform;
+}
+
+/* 為滾動容器啟用硬體加速 */
+.friend-list,
+.chat-messages,
+.customer-info {
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
+}

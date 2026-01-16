@@ -1,0 +1,285 @@
+/**
+ * OrderChatz 好友頁面同步燈箱樣式
+ *
+ * @package OrderChatz
+ * @since 1.0.0
+ */
+
+.otz-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+}
+
+.otz-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.otz-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.otz-modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.otz-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.otz-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otz-modal-close:hover {
+    color: #000;
+}
+
+.otz-modal-body {
+    padding: 24px;
+}
+
+.sync-info-content ul {
+    list-style-type: disc;
+}
+
+.upload-instructions {
+    padding: 15px;
+}
+
+.sync-status {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.otz-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+.otz-modal-footer .button {
+    margin-left: 10px;
+}
+
+.sync-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#sync-members-btn .dashicons {
+    vertical-align: text-top;
+}
+
+/* 用戶選擇步驟樣式 */
+.sync-selection-content {
+    text-align: left;
+}
+
+.sync-selection-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sync-selection-content p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.selection-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.selection-controls label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+.selection-summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#selected-count {
+    font-size: 14px;
+    color: #666;
+}
+
+.users-selection-list {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.user-item:last-child {
+    border-bottom: none;
+}
+
+.user-item:hover {
+    background-color: #f8f9fa;
+}
+
+.user-checkbox-container {
+    margin-right: 12px;
+}
+
+.user-checkbox {
+    margin: 0;
+}
+
+.user-avatar {
+    margin-right: 12px;
+}
+
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.user-email {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.user-line-id {
+    color: #888;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.user-status {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.user-status.status-imported {
+    background: #d4edda;
+    color: #155724;
+}
+
+.user-status.status-new {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* 載入動畫 */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .otz-modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .user-item {
+        padding: 10px;
+    }
+
+    .user-avatar img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .user-info {
+        font-size: 14px;
+    }
+
+    .selection-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .selection-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
