@@ -87,3 +87,17 @@ WooCommerce 的訂單記錄，能夠實現以下的推播場景：
 具體的設定方式可以參考以下文件：
 
 - [AI 機器人回覆](https://oberonlai.blog/docs/order-chatz-doc/chat/ai-bot/)
+
+## 技術支援
+
+外掛安裝、啟用及 LINE Webhook 設定使用教學：
+
+https://oberonlai.blog/docs/order-chatz-doc/settings/line-messaging-api-webhook/
+
+本開源程式碼僅維護重大錯誤或是安全性問題，後續版本將不會更新，如果實際使用之後有功能建議或是維護需求，可以購買我們的付費版本以獲得完整的技術支援：
+
+https://oberonlai.blog/product/order-chatz-for-woocommerce/
+
+如果有更進一步的客製化需求可以加入我們的 LINE 官方帳號詳談：
+
+https://page.line.me/vrf7844t
