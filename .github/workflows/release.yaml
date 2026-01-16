@@ -1,0 +1,74 @@
+name: Release
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, pdo_sqlite
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-dev --optimize-autoloader
+
+      - name: Download and run Strauss
+        run: |
+          mkdir -p bin
+          curl -o bin/strauss.phar -L https://github.com/BrianHenryIE/strauss/releases/latest/download/strauss.phar
+          php bin/strauss.phar --updateCallSites=src,order-chatz.php
+
+      - name: Create plugin directory
+        run: |
+          mkdir -p build/order-chatz
+
+          rsync -av --progress . build/order-chatz \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.claude' \
+            --exclude='.kiro' \
+            --exclude='.tinkersan' \
+            --exclude='.playwright-mcp' \
+            --exclude='bin' \
+            --exclude='build' \
+            --exclude='docs' \
+            --exclude='tests' \
+            --exclude='phpunit.xml' \
+            --exclude='phpunit.xml.dist' \
+            --exclude='.gitignore' \
+            --exclude='.gitattributes' \
+            --exclude='composer.json' \
+            --exclude='composer.lock' \
+            --exclude='*.md' \
+            --exclude='coverage' \
+            --exclude='.phpunit.cache' \
+            --exclude='.phpunit.result.cache' \
+            --exclude='vendor' \
+            --exclude='zip.sh' \
+            --exclude='CLAUDE.md'
+
+          cp README.md build/order-chatz/ 2>/dev/null || true
+
+      - name: Create ZIP archive
+        run: |
+          cd build
+          zip -r order-chatz.zip order-chatz
+
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/order-chatz.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

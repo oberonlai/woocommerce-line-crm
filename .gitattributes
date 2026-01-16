@@ -1,0 +1,16 @@
+# Exclude from release archives (composer --prefer-dist)
+/.github export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.claude export-ignore
+/.kiro export-ignore
+/.tinkersan export-ignore
+/.playwright-mcp export-ignore
+/bin export-ignore
+/build export-ignore
+/docs export-ignore
+/tests export-ignore
+/phpunit.xml export-ignore
+/phpunit.xml.dist export-ignore
+/zip.sh export-ignore
+/CLAUDE.md export-ignore
