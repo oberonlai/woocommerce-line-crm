@@ -51,15 +51,18 @@ jobs:
             --exclude='.gitattributes' \
             --exclude='composer.json' \
             --exclude='composer.lock' \
-            --exclude='*.md' \
             --exclude='coverage' \
             --exclude='.phpunit.cache' \
             --exclude='.phpunit.result.cache' \
             --exclude='vendor' \
             --exclude='zip.sh' \
-            --exclude='CLAUDE.md'
+            --exclude='*.md' \
+            --exclude='*.backup' \
+            --exclude='*~' \
+            --exclude='views/admin/friends/languages'
 
           cp README.md build/order-chatz/ 2>/dev/null || true
+          cp Readme.txt build/order-chatz/ 2>/dev/null || true
 
       - name: Create ZIP archive
         run: |
