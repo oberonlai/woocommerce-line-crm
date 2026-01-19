@@ -37,12 +37,16 @@
 		"build:clean": "rm -rf build vendor",
 		"post-build": [
 			"@build:dev"
-		]
+		],
+		"test": "phpunit",
+		"test:install": "bash bin/install-wp-tests.sh wordpress_test root root 127.0.0.1 latest"
 	},
 	"scripts-descriptions": {
 		"build": "建立包含正式環境依賴的發布版本 ZIP 檔",
 		"build:prod": "只安裝正式環境依賴套件(不含測試工具)",
 		"build:dev": "安裝所有依賴套件(包含開發工具)",
-		"build:clean": "清理建置檔案和 vendor 資料夾"
+		"build:clean": "清理建置檔案和 vendor 資料夾",
+		"test": "執行 PHPUnit 單元測試",
+		"test:install": "安裝 WordPress 測試環境(只需執行一次)"
 	}
 }

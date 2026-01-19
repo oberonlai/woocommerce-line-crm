@@ -82,9 +82,9 @@ echo BLUE . "清理 Composer 檔案..." . NC . PHP_EOL;
 @unlink("{$tempDir}/composer.lock");
 
 // 建立 ZIP 檔案
-$zipFile = "{$buildDir}/{$pluginName}-{$version}.zip";
+$zipFile = "{$buildDir}/{$pluginName}-v{$version}.zip";
 echo BLUE . "建立 ZIP 檔案..." . NC . PHP_EOL;
-exec("cd {$buildDir} && zip -r {$pluginName}-{$version}.zip {$pluginName} -q");
+exec("cd {$buildDir} && zip -r {$pluginName}-v{$version}.zip {$pluginName} -q");
 
 // 清理暫存資料夾
 echo BLUE . "清理暫存檔案..." . NC . PHP_EOL;
