@@ -1,0 +1,103 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # 當推送 v1.0.0 這樣的 tag 時觸發
+
+jobs:
+  build:
+    name: Build and Release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Get plugin version
+        id: version
+        run: |
+          VERSION=$(grep "Version:" order-chatz.php | awk '{print $2}' | tr -d '\r')
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Plugin Version: ${VERSION}"
+
+      - name: Install production dependencies
+        run: composer install --no-dev --optimize-autoloader --no-interaction
+
+      - name: Create build directory
+        run: |
+          mkdir -p build/order-chatz
+          
+      - name: Copy plugin files
+        run: |
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.gitignore' \
+            --exclude='.phpcs.xml.dist' \
+            --exclude='node_modules' \
+            --exclude='tests' \
+            --exclude='bin' \
+            --exclude='build' \
+            --exclude='composer.json' \
+            --exclude='composer.lock' \
+            --exclude='phpunit.xml.dist' \
+            --exclude='phpunit.xml' \
+            --exclude='*.sh' \
+            --exclude='CLAUDE.md' \
+            --exclude='.claude' \
+            --exclude='.kiro' \
+            --exclude='.tinkersan' \
+            --exclude='.playwright-mcp' \
+            . build/order-chatz/
+
+      - name: Create ZIP file
+        run: |
+          cd build
+          zip -r order-chatz-${{ steps.version.outputs.version }}.zip order-chatz
+          cd ..
+          
+      - name: Generate changelog
+        id: changelog
+        run: |
+          # 取得最新的 tag 之間的 commits
+          PREVIOUS_TAG=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1) 2>/dev/null || echo "")
+          if [ -z "$PREVIOUS_TAG" ]; then
+            CHANGELOG=$(git log --pretty=format:"- %s" --no-merges)
+          else
+            CHANGELOG=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s" --no-merges)
+          fi
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release ${{ steps.version.outputs.version }}
+          body: |
+            ## 🎉 版本 ${{ steps.version.outputs.version }}
+            
+            ### 📝 更新內容
+            ${{ steps.changelog.outputs.changelog }}
+            
+            ### 📦 安裝方式
+            1. 下載下方的 `order-chatz-${{ steps.version.outputs.version }}.zip` 檔案
+            2. 到 WordPress 後台 > 外掛 > 安裝外掛 > 上傳外掛
+            3. 選擇下載的 ZIP 檔案並安裝
+            4. 啟用外掛
+            
+            ### ✅ 包含的依賴套件
+            - firebase/php-jwt (正式環境必要套件)
+          files: |
+            build/order-chatz-${{ steps.version.outputs.version }}.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
