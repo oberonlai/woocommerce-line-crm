@@ -63,13 +63,36 @@ https://github.com/oberonlai/woocommerce-line-crm/actions
 
 ## 🛠️ 本地測試打包
 
-如果想在本地測試打包流程,可以執行:
+使用 Composer Scripts 進行本地打包:
 
 ```bash
-./build.sh
+# 完整建置流程:清理 → 安裝正式依賴 → 打包 → 恢復開發依賴
+composer build
 ```
 
-這會在 `build/` 資料夾中產生 ZIP 檔案。
+這個指令會自動執行:
+1. 清理舊的 `build/` 和 `vendor/` 資料夾
+2. 安裝正式環境依賴 (`composer install --no-dev`)
+3. 執行打包腳本建立 ZIP 檔
+4. 自動恢復開發環境依賴
+
+### 其他可用的 Composer Scripts
+
+```bash
+# 只安裝正式環境依賴
+composer build:prod
+
+# 安裝開發環境依賴
+composer build:dev
+
+# 清理建置檔案
+composer build:clean
+
+# 查看所有可用的 scripts
+composer list
+```
+
+打包完成後,ZIP 檔案會在 `build/` 資料夾中。
 
 ## 📌 注意事項
 

@@ -45,6 +45,7 @@ jobs:
             --exclude='tests' \
             --exclude='bin' \
             --exclude='build' \
+            --exclude='scripts' \
             --exclude='composer.json' \
             --exclude='composer.lock' \
             --exclude='phpunit.xml.dist' \

@@ -1,29 +1,48 @@
 {
-    "name": "oberonlai/order-chatz",
-    "type": "wordpress-plugin",
-    "description": "OrderChatz - LINE Customer Service Integration for WooCommerce",
-    "version": "1.0.0",
-    "authors": [
-        {
-            "name": "Oberon Lai",
-            "homepage": "https://oberonlai.blog"
-        }
-    ],
-    "require": {
-        "php": ">=8.0",
-        "firebase/php-jwt": "^6.11"
-    },
-    "autoload": {
-        "psr-4": {
-            "OrderChatz\\": "src/"
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "require-dev": {
-        "wp-phpunit/wp-phpunit": "^6.3",
-        "yoast/phpunit-polyfills": "^1.0"
-    }
+	"name": "oberonlai/order-chatz",
+	"type": "wordpress-plugin",
+	"description": "OrderChatz - LINE Customer Service Integration for WooCommerce",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Oberon Lai",
+			"homepage": "https://oberonlai.blog"
+		}
+	],
+	"require": {
+		"php": ">=8.0",
+		"firebase/php-jwt": "^6.11"
+	},
+	"autoload": {
+		"psr-4": {
+			"OrderChatz\\": "src/"
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"sort-packages": true
+	},
+	"require-dev": {
+		"wp-phpunit/wp-phpunit": "^6.3",
+		"yoast/phpunit-polyfills": "^1.0"
+	},
+	"scripts": {
+		"build": [
+			"@build:clean",
+			"@build:prod",
+			"php scripts/build.php"
+		],
+		"build:prod": "composer install --no-dev --optimize-autoloader",
+		"build:dev": "composer install",
+		"build:clean": "rm -rf build vendor",
+		"post-build": [
+			"@build:dev"
+		]
+	},
+	"scripts-descriptions": {
+		"build": "建立包含正式環境依賴的發布版本 ZIP 檔",
+		"build:prod": "只安裝正式環境依賴套件(不含測試工具)",
+		"build:dev": "安裝所有依賴套件(包含開發工具)",
+		"build:clean": "清理建置檔案和 vendor 資料夾"
+	}
 }
