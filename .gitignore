@@ -7,6 +7,9 @@ zip.sh
 build
 docs
 CLAUDE.md
-composer.json
-composer.lock
+
+# Ignore 整個 vendor 資料夾
+/vendor/
+
+# 測試設定檔
 phpunit.xml

@@ -1,0 +1,29 @@
+{
+    "name": "oberonlai/order-chatz",
+    "type": "wordpress-plugin",
+    "description": "OrderChatz - LINE Customer Service Integration for WooCommerce",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Oberon Lai",
+            "homepage": "https://oberonlai.blog"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "firebase/php-jwt": "^6.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "OrderChatz\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "require-dev": {
+        "wp-phpunit/wp-phpunit": "^6.3",
+        "yoast/phpunit-polyfills": "^1.0"
+    }
+}
