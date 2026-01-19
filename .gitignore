@@ -2,7 +2,6 @@
 .kiro
 .tinkersan
 .playwright-mcp
-tests
 zip.sh
 build
 docs

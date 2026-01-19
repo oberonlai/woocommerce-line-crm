@@ -39,7 +39,7 @@
 			"@build:dev"
 		],
 		"test": "phpunit",
-		"test:install": "bash bin/install-wp-tests.sh wordpress_test root root 127.0.0.1 latest"
+		"test:install": "bash bin/install-wp-tests.sh wordpress_test root '' localhost latest"
 	},
 	"scripts-descriptions": {
 		"build": "建立包含正式環境依賴的發布版本 ZIP 檔",
