@@ -2,7 +2,7 @@
 Requires at least: 4.9.8
 Tested up to: 6.3.1
 Requires PHP: 7.4
-Stable Tag: 1.2.09
+Stable Tag: 1.2.13
 WC requires at least: 5.0
 WC tested up to: 8.6.1
 License: GPLv3

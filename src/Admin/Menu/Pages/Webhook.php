@@ -97,7 +97,7 @@ class Webhook extends PageRenderer {
 	 * 註冊 WordPress 設定
 	 */
 	public function register_webhook_settings(): void {
-		// Register setting groups
+		// Register setting groups.
 		register_setting(
 			self::SETTINGS_GROUP,
 			'otz_access_token',
@@ -115,6 +115,16 @@ class Webhook extends PageRenderer {
 				'type'              => 'string',
 				'sanitize_callback' => array( $this, 'sanitize_channel_secret' ),
 				'default'           => '',
+			)
+		);
+
+		register_setting(
+			self::SETTINGS_GROUP,
+			'otz_show_sender_name',
+			array(
+				'type'              => 'boolean',
+				'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
+				'default'           => false,
 			)
 		);
 	}
@@ -148,8 +158,9 @@ class Webhook extends PageRenderer {
 	 * 渲染 Webhook 設定表單
 	 */
 	private function render_webhook_settings_form(): void {
-		$access_token   = get_option( 'otz_access_token', '' );
-		$channel_secret = get_option( 'otz_channel_secret', '' );
+		$access_token     = get_option( 'otz_access_token', '' );
+		$channel_secret   = get_option( 'otz_channel_secret', '' );
+		$show_sender_name = get_option( 'otz_show_sender_name', false );
 
 		?>
 		<div class="wrap">
@@ -200,8 +211,26 @@ class Webhook extends PageRenderer {
 								</p>
 							</td>
 						</tr>
-						
-						
+					<tr>
+						<th scope="row">
+							<?php _e( '訊息設定', 'otz' ); ?>
+						</th>
+						<td>
+							<label>
+								<input type="checkbox"
+									   id="otz_show_sender_name"
+									   name="otz_show_sender_name"
+									   value="1"
+									   <?php checked( $show_sender_name, true ); ?> />
+								<?php _e( '在訊息前顯示發送者名稱', 'otz' ); ?>
+							</label>
+							<p class="description">
+								<?php _e( '啟用後，從後台發送的訊息將會在前面加上發送者的使用者名稱', 'otz' ); ?>
+							</p>
+						</td>
+					</tr>
+
+
 					</tbody>
 				</table>
 				
@@ -361,7 +390,8 @@ class Webhook extends PageRenderer {
 					action: 'otz_save_webhook_settings',
 					nonce: '<?php echo wp_create_nonce( 'otz_admin_nonce' ); ?>',
 					access_token: $('#otz_access_token').val(),
-					channel_secret: $('#otz_channel_secret').val()
+					channel_secret: $('#otz_channel_secret').val(),
+					show_sender_name: $('#otz_show_sender_name').is(':checked') ? '1' : '0'
 				};
 				
 				$.ajax({
@@ -509,11 +539,13 @@ class Webhook extends PageRenderer {
 			wp_send_json_error( array( 'message' => __( '權限不足', 'otz' ) ) );
 		}
 
-		$access_token   = sanitize_text_field( $_POST['access_token'] ?? '' );
-		$channel_secret = sanitize_text_field( $_POST['channel_secret'] ?? '' );
+		$access_token     = sanitize_text_field( $_POST['access_token'] ?? '' );
+		$channel_secret   = sanitize_text_field( $_POST['channel_secret'] ?? '' );
+		$show_sender_name = isset( $_POST['show_sender_name'] ) ? (bool) $_POST['show_sender_name'] : false;
 
 		update_option( 'otz_access_token', $access_token );
 		update_option( 'otz_channel_secret', $channel_secret );
+		update_option( 'otz_show_sender_name', $show_sender_name );
 
 		wp_send_json_success( array( 'message' => __( '設定已儲存', 'otz' ) ) );
 	}
@@ -560,5 +592,15 @@ class Webhook extends PageRenderer {
 	public function sanitize_channel_secret( string $value ): string {
 		$sanitized = sanitize_text_field( $value );
 		return $sanitized;
+	}
+
+	/**
+	 * 清理 checkbox 值
+	 *
+	 * @param mixed $value 欄位值.
+	 * @return bool 清理後的布林值.
+	 */
+	public function sanitize_checkbox( $value ): bool {
+		return (bool) $value;
 	}
 }

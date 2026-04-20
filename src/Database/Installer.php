@@ -40,6 +40,8 @@ final class Installer {
 		'subscribers',
 		'broadcast',
 		'broadcast_logs',
+		'groups',
+		'group_members',
 	);
 
 	/**

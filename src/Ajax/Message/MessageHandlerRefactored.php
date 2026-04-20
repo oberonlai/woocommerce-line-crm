@@ -150,9 +150,14 @@ class MessageHandlerRefactored extends AbstractAjaxHandler {
 			}
 
 			// 取得當前使用者的 display name，並在訊息前面加上發送者名稱。
-			$current_user  = wp_get_current_user();
-			$sender_name   = $current_user->display_name ?: 'OrderChatz Bot';
-			$message_to_line = $sender_name . ': ' . $message;
+			$show_sender_name = get_option( 'otz_show_sender_name', false );
+			$message_to_line  = $message;
+
+			if ( $show_sender_name ) {
+				$current_user    = wp_get_current_user();
+				$sender_name     = $current_user->display_name;
+				$message_to_line = $sender_name . ': ' . $message;
+			}
 
 			$reply_token = $this->message_query_service->getLatestReplyToken( $line_user_id, $group_id );
 

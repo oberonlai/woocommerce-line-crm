@@ -403,6 +403,60 @@ class TableCreator {
 	}
 
 	/**
+	 * 建立 LINE 群組資訊表
+	 *
+	 * @param string $table_name Full table name with prefix.
+	 * @return bool True on success, false on failure.
+	 */
+	public function create_groups_table( string $table_name ): bool {
+		$sql = "CREATE TABLE {$table_name} (
+			id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			group_id VARCHAR(64) NOT NULL UNIQUE COMMENT 'LINE Group/Room ID',
+			group_name VARCHAR(255) NULL COMMENT 'Group name',
+			group_avatar VARCHAR(500) NULL COMMENT 'Group avatar URL',
+			source_type ENUM('group','room') NOT NULL DEFAULT 'group' COMMENT 'Source type',
+			member_count INT UNSIGNED DEFAULT 0 COMMENT 'Total member count',
+			last_message_time DATETIME NULL COMMENT 'Last message timestamp',
+			created_at DATETIME NOT NULL COMMENT 'Record creation time',
+			updated_at DATETIME NULL COMMENT 'Last update time',
+			KEY idx_group_id (group_id),
+			KEY idx_last_message_time (last_message_time),
+			KEY idx_source_type (source_type)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+		COMMENT='LINE Groups and Rooms Information';";
+
+		return $this->execute_table_creation( $table_name, $sql );
+	}
+
+	/**
+	 * 建立群組成員關聯表
+	 *
+	 * @param string $table_name Full table name with prefix.
+	 * @return bool True on success, false on failure.
+	 */
+	public function create_group_members_table( string $table_name ): bool {
+		$sql = "CREATE TABLE {$table_name} (
+			id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			group_id VARCHAR(64) NOT NULL COMMENT 'Reference to wp_otz_groups.group_id',
+			line_user_id VARCHAR(64) NOT NULL COMMENT 'LINE User ID',
+			display_name VARCHAR(255) NULL COMMENT 'Member display name',
+			avatar_url VARCHAR(500) NULL COMMENT 'Member avatar URL',
+			joined_at DATETIME NOT NULL COMMENT 'Join timestamp',
+			left_at DATETIME NULL COMMENT 'Leave timestamp (NULL = still in group)',
+			role VARCHAR(50) DEFAULT 'member' COMMENT 'Member role (reserved)',
+			created_at DATETIME NOT NULL COMMENT 'Record creation time',
+			updated_at DATETIME NULL COMMENT 'Last update time',
+			UNIQUE KEY uk_group_user (group_id, line_user_id),
+			KEY idx_group_id (group_id),
+			KEY idx_line_user_id (line_user_id),
+			KEY idx_left_at (left_at)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+		COMMENT='Group Members Association Table';";
+
+		return $this->execute_table_creation( $table_name, $sql );
+	}
+
+	/**
 	 * Check if a table exists in the database
 	 *
 	 * @param string $table_name Full table name.

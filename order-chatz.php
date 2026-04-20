@@ -11,7 +11,7 @@
  * Plugin Name:       OrderChatz
  * Plugin URI:        https://oberonlai.blog/order-chatz
  * Description:       OrderChatz 是一款專為 WooCommerce 打造的客服管理工具，可以直接在後台或網頁 App 與 LINE 好友即時進行聊天互動，並整合訂單資訊以及推播功能的實用外掛。
- * Version:           1.2.09
+ * Version:           1.2.13
  * Author:            DailyWP
  * Author URI:        https://oberonlai.blog
  * License:           GPL-2.0+
@@ -26,7 +26,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'OTZ_VERSION', '1.2.09' );
+define( 'OTZ_VERSION', '1.2.13' );
 define( 'OTZ_PLUGIN_FILE', __FILE__ );
 define( 'OTZ_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'OTZ_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );

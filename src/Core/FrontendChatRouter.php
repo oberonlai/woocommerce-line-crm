@@ -131,10 +131,10 @@ class FrontendChatRouter {
 	 *
 	 * @return string Template path
 	 */
-	public function load_chat_template( string $template ): string {
-		// Only load our template for authenticated chat requests
+	public function load_chat_template( ?string $template ): string {
+		// 非聊天路由時回傳原始範本.
 		if ( ! get_query_var( 'is_order_chatz' ) ) {
-			return $template;
+			return $template ?? '';
 		}
 
 		$chat_template = $this->get_chat_template_path();

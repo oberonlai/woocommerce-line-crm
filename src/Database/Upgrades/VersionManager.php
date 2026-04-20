@@ -51,7 +51,7 @@ class VersionManager {
 	/**
 	 * Database version constants
 	 */
-	private const DB_VERSION                = '1.2.2';
+	private const DB_VERSION                = '1.2.3';
 	private const DB_VERSION_OPTION         = 'otz_db_version';
 	private const DB_UPGRADE_HISTORY_OPTION = 'otz_db_upgrade_history';
 
@@ -165,6 +165,11 @@ class VersionManager {
 			'target'      => '1.2.2',
 			'class'       => 'Upgrade_1_2_2',
 			'description' => '修正 groups 資料表 collation 為 utf8mb4_unicode_ci',
+		),
+		'1.2.2' => array(
+			'target'      => '1.2.3',
+			'class'       => 'Upgrade_1_2_3',
+			'description' => '補建缺失的 groups 和 group_members 表',
 		),
 	);
 
